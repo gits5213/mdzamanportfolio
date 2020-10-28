@@ -1,9 +1,25 @@
 {
+  "homepage": "https://msz5213.github.io/mdzamanportfolio",
   "name": "mdzaman-portfolio",
   "version": "1.0.0",
   "description": "protfolio",
-  "keywords": [],
+  "github": "git@github.com:msz5213/mdzamanportfolio.git",
   "main": "src/index.js",
+  "keywords": [
+    "Portfolio",
+    "Javascript",
+    "ReactJS",
+    "HTML5",
+    "CSS3"
+  ],
+  "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
   "dependencies": {
     "react": "16.8.6",
     "react-dom": "16.8.6",
@@ -12,13 +28,8 @@
     "react-scripts": "^3.4.4"
   },
   "devDependencies": {
+    "gh-pages": "^3.1.0",
     "typescript": "3.3.3"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
   },
   "browserslist": [
     ">0.2%",
