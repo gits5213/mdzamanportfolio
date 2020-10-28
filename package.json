@@ -12,6 +12,7 @@
     "react-scripts": "^3.4.4"
   },
   "devDependencies": {
+    "copy-webpack-plugin": "^6.2.1",
     "typescript": "3.3.3"
   },
   "scripts": {
