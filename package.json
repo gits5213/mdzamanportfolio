@@ -6,11 +6,11 @@
   "github": "git@github.com:msz5213/mdzamanportfolio.git",
   "main": "src/index.js",
   "keywords": [
-    "Portfolio",
-    "Javascript",
-    "ReactJS",
-    "HTML5",
-    "CSS3"
+    "portfolio",
+    "javascript",
+    "reactJS",
+    "html5",
+    "css3"
   ],
   "scripts": {
     "predeploy": "npm run build",
