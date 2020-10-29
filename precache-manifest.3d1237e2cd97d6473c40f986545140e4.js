@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a06848c1cc1d4675f74e641655a43412",
+    "revision": "8ac171e94c3abf54caa0384fee6ee155",
     "url": "/mdzamanportfolio/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/mdzamanportfolio/static/css/2.cd1c2086.chunk.css"
   },
   {
-    "revision": "4ae1d7602b95ed08659e",
+    "revision": "cca2c18a02dbd323ea5e",
     "url": "/mdzamanportfolio/static/css/main.f3cdbfca.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/mdzamanportfolio/static/js/2.047d8a23.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "4ae1d7602b95ed08659e",
-    "url": "/mdzamanportfolio/static/js/main.8e4a3217.chunk.js"
+    "revision": "cca2c18a02dbd323ea5e",
+    "url": "/mdzamanportfolio/static/js/main.79c60159.chunk.js"
   },
   {
     "revision": "a40a410c190dec23a868",
@@ -32,7 +32,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/mdzamanportfolio/static/media/Md_Zaman_Picture.aa08acda.png"
   },
   {
-    "revision": "a0a99baa74f41c2ef588cb0f3a045f2f",
-    "url": "/mdzamanportfolio/static/media/resume_md.a0a99baa.pdf"
+    "revision": "f13a3018a07fb46e34f17b1ffcef5020",
+    "url": "/mdzamanportfolio/static/media/resume_md.f13a3018.pdf"
   }
 ]);
