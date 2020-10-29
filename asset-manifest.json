@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/mdzamanportfolio/static/css/main.4db000ac.chunk.css",
+    "main.css": "/mdzamanportfolio/static/css/main.19360c2a.chunk.css",
     "main.js": "/mdzamanportfolio/static/js/main.fefe8b4d.chunk.js",
     "main.js.map": "/mdzamanportfolio/static/js/main.fefe8b4d.chunk.js.map",
     "runtime-main.js": "/mdzamanportfolio/static/js/runtime-main.99422cfc.js",
@@ -9,10 +9,10 @@
     "static/js/2.a7244ea1.chunk.js": "/mdzamanportfolio/static/js/2.a7244ea1.chunk.js",
     "static/js/2.a7244ea1.chunk.js.map": "/mdzamanportfolio/static/js/2.a7244ea1.chunk.js.map",
     "index.html": "/mdzamanportfolio/index.html",
-    "precache-manifest.691f01bfe2ed6b343e62b468a9a0c1cd.js": "/mdzamanportfolio/precache-manifest.691f01bfe2ed6b343e62b468a9a0c1cd.js",
+    "precache-manifest.d39c585957515b17e5ac92b8b683adf2.js": "/mdzamanportfolio/precache-manifest.d39c585957515b17e5ac92b8b683adf2.js",
     "service-worker.js": "/mdzamanportfolio/service-worker.js",
     "static/css/2.cd1c2086.chunk.css.map": "/mdzamanportfolio/static/css/2.cd1c2086.chunk.css.map",
-    "static/css/main.4db000ac.chunk.css.map": "/mdzamanportfolio/static/css/main.4db000ac.chunk.css.map",
+    "static/css/main.19360c2a.chunk.css.map": "/mdzamanportfolio/static/css/main.19360c2a.chunk.css.map",
     "static/js/2.a7244ea1.chunk.js.LICENSE.txt": "/mdzamanportfolio/static/js/2.a7244ea1.chunk.js.LICENSE.txt",
     "static/media/Md_Zaman_Picture.png": "/mdzamanportfolio/static/media/Md_Zaman_Picture.aa08acda.png",
     "static/media/resume_md.pdf": "/mdzamanportfolio/static/media/resume_md.f13a3018.pdf"
@@ -21,7 +21,7 @@
     "static/js/runtime-main.99422cfc.js",
     "static/css/2.cd1c2086.chunk.css",
     "static/js/2.a7244ea1.chunk.js",
-    "static/css/main.4db000ac.chunk.css",
+    "static/css/main.19360c2a.chunk.css",
     "static/js/main.fefe8b4d.chunk.js"
   ]
 }
