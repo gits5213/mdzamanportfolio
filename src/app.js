@@ -26,9 +26,9 @@ class App extends Component {
           </Header>
           <Drawer
             style={{ 
-              textShadow: "2px 2px #ffffff",
-              backgroundColor: "#d9e4f5",
-              backgroundImage: "linear-gradient(315deg, #d9e4f5 0%, #f5e3e6 74%)"
+              background: "#00416A",  
+              background: "-webkit-linear-gradient(to right, #FFE000, #799F0C, #00416A)",  
+              background: "linear-gradient(to right, #FFE000, #799F0C, #00416A)" 
             }}
             title={
               <Link 
