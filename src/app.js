@@ -18,22 +18,31 @@ class App extends Component {
             scroll
           >
             <Navigation>
+              <Link to="/">Home</Link>
               <Link to="/resume">Resume</Link>
-              {/* <Link to="/aboutme">About Me</Link> */}
               <Link to="/projects">Projects</Link>
               <Link to="/contact">Contact</Link>
             </Navigation>
           </Header>
           <Drawer
+            style={{ 
+              textShadow: "2px 2px #ffffff",
+              backgroundColor: "#d9e4f5",
+              backgroundImage: "linear-gradient(315deg, #d9e4f5 0%, #f5e3e6 74%)"
+            }}
             title={
-              <Link style={{ textDecoration: "none", color: "black" }} to="/">
-                My Portfolio
+              <Link 
+                style={{ 
+                  textDecoration: "none", 
+                  color: "black" 
+                  }} to="/">
+                Md's Portfolio
               </Link>
             }
           >
             <Navigation>
+              <Link to="/">Home</Link>
               <Link to="/resume">Resume</Link>
-              {/* <Link to="/aboutme">About Me</Link> */}
               <Link to="/projects">Projects</Link>
               <Link to="/contact">Contact</Link>
             </Navigation>
