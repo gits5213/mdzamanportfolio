@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "ee2742fecff055932f864a5ea73e67e4",
+    "revision": "f1a61953b920bcbf3200927f1f4ef68a",
     "url": "/mdzamanportfolio/index.html"
   },
   {
-    "revision": "9b881bac782139757a3f",
+    "revision": "174b3f0eede4e2c1c2ac",
     "url": "/mdzamanportfolio/static/css/2.cd1c2086.chunk.css"
   },
   {
-    "revision": "a109c043442d3e504cc9",
-    "url": "/mdzamanportfolio/static/css/main.4cf7c8e7.chunk.css"
+    "revision": "68a64ca9a6d471ce1de5",
+    "url": "/mdzamanportfolio/static/css/main.4db000ac.chunk.css"
   },
   {
-    "revision": "9b881bac782139757a3f",
-    "url": "/mdzamanportfolio/static/js/2.047d8a23.chunk.js"
+    "revision": "174b3f0eede4e2c1c2ac",
+    "url": "/mdzamanportfolio/static/js/2.a7244ea1.chunk.js"
   },
   {
     "revision": "e6139f805ebc917050ae28ff20bd10e5",
-    "url": "/mdzamanportfolio/static/js/2.047d8a23.chunk.js.LICENSE.txt"
+    "url": "/mdzamanportfolio/static/js/2.a7244ea1.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "a109c043442d3e504cc9",
-    "url": "/mdzamanportfolio/static/js/main.f6d7a88d.chunk.js"
+    "revision": "68a64ca9a6d471ce1de5",
+    "url": "/mdzamanportfolio/static/js/main.fefe8b4d.chunk.js"
   },
   {
     "revision": "a40a410c190dec23a868",
