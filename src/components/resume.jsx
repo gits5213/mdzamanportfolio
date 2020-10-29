@@ -41,11 +41,11 @@ class Resume extends Component {
             <h5>
               <i className="fa fa-home" aria-hidden="true" /> Address
             </h5>
-            <p>8905 202nd Street, Hollis, NY-11423</p>
+            <p>8000 200nd Street, Hollis, NY-11423</p>
             <h5>
               <i className="fa fa-phone" aria-hidden="true" /> Phone
             </h5>
-            <p>+1(917)561-6554</p>
+            <p>+1(917)561-0000</p>
             <h5>
               <i className="fa fa-phone" aria-hidden="true" /> Email
             </h5>
