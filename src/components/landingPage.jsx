@@ -14,6 +14,7 @@ class LandingPage extends Component {
               alt="avatar"
               className="avatar-image"
               style={{
+                padding: "80px",
                 height: "200px",
                 borderRadius: "50%"
               }}
