@@ -23,10 +23,11 @@ class LandingPage extends Component {
               <h1>Full Stack SQA Engineer</h1>
               <hr />
               <p>
-                Selenium | Protractor | WebDriverIO | Appium | 
+                Selenium(API) | Protractor(API) | WebDriverIO(API) | Appium | 
                 RestAssured | SuperTest | Frisby | PyTest |Python | Java | TestNG |
-                JavaScript | NodeJS | Mocha-Chai | Jira | Xray | POSTMAN | 
-                Confluence | Swagger | Maven | Jenkins | Reporting | ALM | JMeter
+                JavaScript | NodeJS | Mocha-Chai | Jira | Xray | Zephyer | SQL | POSTMAN | 
+                Confluence | Swagger | Maven | Jenkins | Reporting | ALM | JMeter |
+                SonarQube | Checkmarx | Splunk | New Relic.
               </p>
 
               <div className="social-links">
