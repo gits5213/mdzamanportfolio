@@ -64,6 +64,11 @@ class Resume extends Component {
               href="https://www.itnycusa.com">
               Educational WebSite 2
             </a>
+            <a 
+              style={{ textDecoration: "none", color: 'green' }} 
+              href="https://msz5213.github.io/mdzamanportfolio/">
+              Md Zaman's Portfolio
+            </a>
             <hr style={{ borderTop: "3px solid #833fb2", width: "50%" }} />
             <h2>Skills</h2>
             <Skills skill={"Java, C#, Python, SavaScript, Selenium API, Protractor API, WebDriverIO API, Appium, RestAssured, SuperTest, FrisBy, PyTest, Agile-Scrum, JIRA, Xray, Zephyr, Adaptavist, ALM, SQL, CodedUI, Swagger, Confluence, POSTMAN, JMeter, Splunk, New Relic, SonarQube, CheckMarx"} progress={80}/>
@@ -84,7 +89,7 @@ class Resume extends Component {
               startYear="2011"
               endYear="2014"
               schoolName={"The City University of NEW YORK (City College)"}
-              schoolDescription={"2nd bachelor of Computer Engieering"}
+              schoolDescription={"2nd Bachelor's of Computer Engieering"}
             />
           </Cell>
           <Cell col={6} className="resume-right-col">
