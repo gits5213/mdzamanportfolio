@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "596c12b1070a7bd998985d95447c016a",
+    "revision": "7f33019f0056ff42edc4c20aa7678117",
     "url": "/mdzamanportfolio/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/mdzamanportfolio/static/css/2.cd1c2086.chunk.css"
   },
   {
-    "revision": "6421addf923ab0eaac88",
+    "revision": "e0a1b013d706266f7ced",
     "url": "/mdzamanportfolio/static/css/main.19360c2a.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/mdzamanportfolio/static/js/2.a7244ea1.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "6421addf923ab0eaac88",
-    "url": "/mdzamanportfolio/static/js/main.fefe8b4d.chunk.js"
+    "revision": "e0a1b013d706266f7ced",
+    "url": "/mdzamanportfolio/static/js/main.698452de.chunk.js"
   },
   {
     "revision": "a40a410c190dec23a868",
