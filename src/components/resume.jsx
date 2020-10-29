@@ -90,7 +90,7 @@ class Resume extends Component {
               startYear="2011"
               endYear="2014"
               schoolName={"The City University of NEW YORK (City College)"}
-              schoolDescription={"2nd Bachelor's of Computer Engieering"}
+              schoolDescription={"2nd Bachelor's in Computer Engieering"}
             />
           </Cell>
           <Cell col={6} className="resume-right-col">
