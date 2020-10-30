@@ -32,7 +32,7 @@ class Performance extends Component {
               <strong>
                 Description:
               </strong> 
-                Desiging, Developing & Manitaining Appium (XCUITest) Mobile Facebook Application Performance Test 
+                Desiging, Developing & Manitaining JMeter Script Facebook Application for Performance Test 
                 from Scratch to Architechture level.<br/>
               <strong>
                 TechStack:
