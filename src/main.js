@@ -1,15 +1,15 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
-import AboutMe from "../../mdzamanprotfolio/src/components/aboutme";
-import Contact from "../../mdzamanprotfolio/src/components/contact";
-import Home from "../../mdzamanprotfolio/src/components/landingPage";
-import Projects from "../../mdzamanprotfolio/src/components/projects";
-import Resume from "../../mdzamanprotfolio/src/components/resume";
+import AboutMe from "./components/aboutme";
+import Contact from "./components/contact";
+import Landing from "./components/landingPage";
+import Projects from "./components/projects";
+import Resume from "./components/resume";
 
 const Main = () => {
   return (
     <Switch>
-      <Route exact path="/" component={Home} />
+      <Route exact path="/" component={Landing} />
       <Route exact path="/resume" component={Resume} />
       <Route exact path="/aboutme" component={AboutMe} />
       <Route exact path="/projects" component={Projects} />
