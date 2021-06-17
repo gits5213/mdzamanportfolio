@@ -10,11 +10,11 @@ class protractor extends Component {
             style={{
               color: "black",
               height: "300px",
-              background: "url(https://www.globallogic.com/latam/wp-content/uploads/sites/2/2020/01/protractor-300x169.jpeg) center / cover",
+              background: "url(https://blog.knoldus.com/wp-content/uploads/2020/01/cypress-bw.png) center / cover",
               backgroundSize: "100% 100%"
             }}
           >
-            Protractor (Javascript) UI Automation
+            CypressIO (Javascript) UI Automation
           </CardTitle>
             <CardText
               style={{
@@ -25,8 +25,8 @@ class protractor extends Component {
               <strong>Test Case:</strong> Create new account error message | User able to validate error message "What’s your name?" <br/>
               <strong>Description:</strong> Desiging, Developing & Manitaining Protractor UI Automation Framework 
               from Scratch to Architechture level.<br/>
-              <strong>TechStack:</strong> This framework consists of following list: Protractor API, JavaScript, NodeJS, Mocha, Chai, Page Object Model,
-              Data Driven Concept, Page Factory. <br/>
+              <strong>TechStack:</strong> This framework consists of following list: CypressIO API, JavaScript, NodeJS, Mocha, Chai, Page Object Model,
+              Data Driven Concept. <br/>
               <strong>CI/CD Integration:</strong> Integrated with CI (Travis) and Sending Email report. 
             </CardText>
           <CardActions border>
