@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "0604ad45988bafa78ec92ec79521047a",
+    "revision": "757b41f0bcb31109d2b30e8e8e01e874",
     "url": "/mdzamanportfolio/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/mdzamanportfolio/static/css/2.cd1c2086.chunk.css"
   },
   {
-    "revision": "617df16bb8f3b7686056",
+    "revision": "02d20237f524b6e676de",
     "url": "/mdzamanportfolio/static/css/main.19360c2a.chunk.css"
   },
   {
@@ -20,19 +20,19 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/mdzamanportfolio/static/js/2.a7244ea1.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "617df16bb8f3b7686056",
-    "url": "/mdzamanportfolio/static/js/main.dc493de4.chunk.js"
+    "revision": "02d20237f524b6e676de",
+    "url": "/mdzamanportfolio/static/js/main.ab0a3413.chunk.js"
   },
   {
     "revision": "a40a410c190dec23a868",
     "url": "/mdzamanportfolio/static/js/runtime-main.99422cfc.js"
   },
   {
-    "revision": "aa08acda28d39c176b371c01a9539b44",
-    "url": "/mdzamanportfolio/static/media/Md_Zaman_Picture.aa08acda.png"
+    "revision": "1cce9a81bcdd77a7b0bf6c5e211ba749",
+    "url": "/mdzamanportfolio/static/media/Latest_Resume-Md--Shahnewaz-Zaman.1cce9a81.pdf"
   },
   {
-    "revision": "33d88471c2840b76947f84fa1c5a7f85",
-    "url": "/mdzamanportfolio/static/media/resume_md.33d88471.pdf"
+    "revision": "aa08acda28d39c176b371c01a9539b44",
+    "url": "/mdzamanportfolio/static/media/Md_Zaman_Picture.aa08acda.png"
   }
 ]);
