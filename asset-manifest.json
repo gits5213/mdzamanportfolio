@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/mdzamanportfolio/static/css/main.19360c2a.chunk.css",
-    "main.js": "/mdzamanportfolio/static/js/main.c72277fa.chunk.js",
-    "main.js.map": "/mdzamanportfolio/static/js/main.c72277fa.chunk.js.map",
+    "main.js": "/mdzamanportfolio/static/js/main.20411f0a.chunk.js",
+    "main.js.map": "/mdzamanportfolio/static/js/main.20411f0a.chunk.js.map",
     "runtime-main.js": "/mdzamanportfolio/static/js/runtime-main.99422cfc.js",
     "runtime-main.js.map": "/mdzamanportfolio/static/js/runtime-main.99422cfc.js.map",
     "static/css/2.cd1c2086.chunk.css": "/mdzamanportfolio/static/css/2.cd1c2086.chunk.css",
     "static/js/2.a7244ea1.chunk.js": "/mdzamanportfolio/static/js/2.a7244ea1.chunk.js",
     "static/js/2.a7244ea1.chunk.js.map": "/mdzamanportfolio/static/js/2.a7244ea1.chunk.js.map",
     "index.html": "/mdzamanportfolio/index.html",
-    "precache-manifest.e55c37cd9e69b93a209351da10ec83aa.js": "/mdzamanportfolio/precache-manifest.e55c37cd9e69b93a209351da10ec83aa.js",
+    "precache-manifest.0bdd3340a7c28712dd0df2392e7a7668.js": "/mdzamanportfolio/precache-manifest.0bdd3340a7c28712dd0df2392e7a7668.js",
     "service-worker.js": "/mdzamanportfolio/service-worker.js",
     "static/css/2.cd1c2086.chunk.css.map": "/mdzamanportfolio/static/css/2.cd1c2086.chunk.css.map",
     "static/css/main.19360c2a.chunk.css.map": "/mdzamanportfolio/static/css/main.19360c2a.chunk.css.map",
@@ -22,6 +22,6 @@
     "static/css/2.cd1c2086.chunk.css",
     "static/js/2.a7244ea1.chunk.js",
     "static/css/main.19360c2a.chunk.css",
-    "static/js/main.c72277fa.chunk.js"
+    "static/js/main.20411f0a.chunk.js"
   ]
 }
