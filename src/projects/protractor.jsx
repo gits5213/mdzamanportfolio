@@ -36,7 +36,7 @@ class protractor extends Component {
               <a href="https://msz5213@bitbucket.org/msz5213/">
                 <Button colored>BitBucket</Button>
               </a>
-              <a href="https://youtu.be/0A3TZUiNUk8">
+              <a href="https://youtu.be/nc0cOJvO0M4">
                 <Button colored>Live Demo</Button>
               </a>
           </CardActions>

@@ -4,7 +4,7 @@ import Education from "./education";
 import Experience from "./experience";
 import Skills from "./skils";
 import profilePic from '../resourses/images/Md_Zaman_Picture.png';
-import ResumePDF from '../resourses/resume/resume_md.pdf';
+import ResumePDF from '../resourses/resume/Latest_Resume-Md--Shahnewaz-Zaman.pdf';
 
 class Resume extends Component {
   render() {
@@ -27,15 +27,12 @@ class Resume extends Component {
             <h2 style={{ paddingTop: "" }}>Objective</h2>
             <h4 style={{ color: "grey" }}>Full Stack SQA Engineer</h4>
             <hr style={{ borderTop: "3px solid #833fb2", width: "50%" }} />
-            <p style={{ textAlign: "justify", paddingRight: "10px", fontFamily:"fantasy"}}>
-              Full-Stack SQA engineer, practicing SQA principles and methodologies. 10+ years of mentoring and leading full-stack testing efforts & hands-on coding, 
-              leading with the ability to collaborate with software development in all phases of the SDLC & STLC, including 
-              planning, coding, testing, troubleshooting, deploying, and ongoing SQA full-stack automation code maintenance & delivering right product 
-              on time. <br/>
-
-              Expertise on TechStack: Leveraging Python, C#, Java & Javascript on Automation Framework like Selenium, Protractor, WebDriverIO, Appium, 
-              XCUITest, NightWatch, Cypress, RestAssured, SuperTest, Frisby, PyTest, Agile-Scrum, JIRA, Xray, Zephyr, Adaptavist, ALM, SQL, CodedUI, Swagger, Confluence, 
-              POSTMAN, Jmeter, SonarQube, Checkmarx, Splunk & New Relic.
+            <p style={{ textAlign: "justify", paddingRight: "10px", fontFamily:"Monaco"}}>
+              Full-Stack SQA engineer, practicing SQA principles and methodologies. Quite a long time of managing, supervising, mentoring, and leading full-stack testing efforts & hands-on coding, leading with the ability to collaborate with software development in all phases of the SDLC & STLC, including planning, coding, testing, troubleshooting, deploying, and ongoing SQA full-stack automation code maintenance & delivering right product on time.
+              <br/>
+              <br/>
+              Expertise on Tech Stack: Programing Language: Python, Java & Javascript, NodeJS and Automation Framework: Selenium, CypressIO, Protractor, WebDriverIO, Appium, XCUITest, NightWatch, RestAssured, SuperTest,
+              Frisby, PyTest, Agile-Scrum, JIRA, Xray, Rally, Zephyr, Adaptavist, ALM, SQL, CodedUI, Swagger, Confluence, POSTMAN, Splunk, New Relic, SonarQube & CheckMarx, BigData, Figma, JSON, HTML, PhantomJS, Jupiter notebook, Immuta, JMeter (Backend, AWS S3 Storage & UI Load & Stress test), Mainframe, Salesforce, MuleSoft, AS400, Megenta, Bigcommerce
             </p>
             <hr style={{ borderTop: "3px solid #833fb2", width: "50%" }} />
             <h5>
@@ -55,14 +52,8 @@ class Resume extends Component {
             </h5>
             <a 
               style={{ textDecoration: "none", color: 'green' }} 
-              href="https://www.onetechi.com">
-              Educational WebSite 1
-            </a>
-            <br/>
-            <a 
-              style={{ textDecoration: "none", color: 'green' }} 
-              href="https://www.itnycusa.com">
-              Educational WebSite 2
+              href="https://msz5213.github.io/ittciwebsite/">
+              Educational WebSite
             </a>
             <br/>
             <a 
@@ -72,7 +63,7 @@ class Resume extends Component {
             </a>
             <hr style={{ borderTop: "3px solid #833fb2", width: "50%" }} />
             <h2>Skills</h2>
-            <Skills skill={"Java, C#, Python, SavaScript, Selenium API, Protractor API, WebDriverIO API, Appium, RestAssured, SuperTest, FrisBy, PyTest, Agile-Scrum, JIRA, Xray, Zephyr, Adaptavist, ALM, SQL, CodedUI, Swagger, Confluence, POSTMAN, JMeter, Splunk, New Relic, SonarQube, CheckMarx"} progress={80}/>
+            <Skills skill={"Expertise on Tech Stack: Programing Language: Python, Java & Javascript, NodeJS and Automation Framework: Selenium, CypressIO, Protractor, WebDriverIO, Appium, XCUITest, NightWatch, RestAssured, SuperTest, Frisby, PyTest, Agile-Scrum, JIRA, Xray, Rally, Zephyr, Adaptavist, ALM, SQL, CodedUI, Swagger, Confluence, POSTMAN, Splunk, New Relic, SonarQube & CheckMarx, BigData, Figma, JSON, HTML, PhantomJS, Jupiter notebook, Immuta, JMeter (Backend, AWS S3 Storage & UI Load & Stress test), Mainframe, Salesforce, MuleSoft, AS400, Megenta, Bigcommerce"} progress={80}/>
             {/*<Skills skill={"HTML/CSS"} progress={80} />
             <Skills skill={"NodeJS"} progress={50} />
             <Skills skill={"ReactJS"} progress={50} />
