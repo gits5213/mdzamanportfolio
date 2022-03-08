@@ -25,8 +25,8 @@ class LandingPage extends Component {
               <p>
                 Selenium(API) | CypressIO(API) | Protractor(API) | WebDriverIO(API) | Appium | 
                 RestAssured | C#.NET | SuperTest | Frisby | PyTest |Python | Java | TestNG |
-                JavaScript | NodeJS | Mocha-Chai | Jira |Rally | Xray | Zephyer | SQL | POSTMAN | 
-                Confluence | Swagger | Maven | Jenkins | Reporting | ALM | JMeter |
+                JavaScript | NodeJS | Mocha-Chai | Jira | Rally | Xray | Zephyer | SQL | POSTMAN | 
+                Confluence | Swagger | Maven | Gradle | Jenkins | Reporting | ALM | JMeter |
                 SonarQube | Checkmarx | Splunk | New Relic.
               </p>
 
