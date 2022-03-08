@@ -23,9 +23,9 @@ class LandingPage extends Component {
               <h1>Full Stack SQA Engineer</h1>
               <hr />
               <p>
-                Selenium(API) | Protractor(API) | WebDriverIO(API) | Appium | 
-                RestAssured | SuperTest | Frisby | PyTest |Python | Java | TestNG |
-                JavaScript | NodeJS | Mocha-Chai | Jira | Xray | Zephyer | SQL | POSTMAN | 
+                Selenium(API) | CypressIO(API) | Protractor(API) | WebDriverIO(API) | Appium | 
+                RestAssured | C#.NET | SuperTest | Frisby | PyTest |Python | Java | TestNG |
+                JavaScript | NodeJS | Mocha-Chai | Jira |Rally | Xray | Zephyer | SQL | POSTMAN | 
                 Confluence | Swagger | Maven | Jenkins | Reporting | ALM | JMeter |
                 SonarQube | Checkmarx | Splunk | New Relic.
               </p>
