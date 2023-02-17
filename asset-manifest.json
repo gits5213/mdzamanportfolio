@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/mdzamanportfolio/static/css/main.088b79b4.css",
-    "main.js": "/mdzamanportfolio/static/js/main.76a0920a.js",
+    "main.js": "/mdzamanportfolio/static/js/main.adc666de.js",
     "static/media/Md_Zaman_Picture.png": "/mdzamanportfolio/static/media/Md_Zaman_Picture.35c9381fff8fcdc327f4.png",
-    "static/media/Latest_Resume-Md--Shahnewaz-Zaman.pdf": "/mdzamanportfolio/static/media/Latest_Resume-Md--Shahnewaz-Zaman.5cf774c1dbe17ab06065.pdf",
+    "static/media/Md-Zaman-all-uptodate-18-2-23.pdf": "/mdzamanportfolio/static/media/Md-Zaman-all-uptodate-18-2-23.c896b7b5f92210fafb80.pdf",
     "index.html": "/mdzamanportfolio/index.html",
     "main.088b79b4.css.map": "/mdzamanportfolio/static/css/main.088b79b4.css.map",
-    "main.76a0920a.js.map": "/mdzamanportfolio/static/js/main.76a0920a.js.map"
+    "main.adc666de.js.map": "/mdzamanportfolio/static/js/main.adc666de.js.map"
   },
   "entrypoints": [
     "static/css/main.088b79b4.css",
-    "static/js/main.76a0920a.js"
+    "static/js/main.adc666de.js"
   ]
 }
