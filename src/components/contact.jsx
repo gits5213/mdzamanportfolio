@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Grid, Cell, List, ListItem, ListItemContent } from "react-mdl";
 import profilePic from '../resourses/images/Md_Zaman_Picture.png';
+import gpd from '../utilities/data/globalPageData.json';
 
 class Contact extends Component {
   render() {
@@ -8,7 +9,7 @@ class Contact extends Component {
       <div className="contact-body">
         <Grid className="contact-grid">
           <Cell col={6}>
-            <h2>Md Shahnewaz Zaman</h2>
+            <h2>{gpd.contact.name}</h2>
             <img
               src={profilePic}
               alt="avatar"
@@ -26,7 +27,7 @@ class Contact extends Component {
             </p>
           </Cell>
           <Cell col={6}>
-            <h2>Contact Me</h2>
+            <h2>{gpd.contact.contactMe}</h2>
             <hr />
 
             <div className="contact-list">
@@ -36,7 +37,7 @@ class Contact extends Component {
                     style={{ fontSize: "30px", fontFamily: "Anton" }}
                   >
                     <i className="fa fa-phone-square" aria-hidden="true" />
-                    +1(917) 561-0000
+                    {gpd.contact.phoneNumber}
                   </ListItemContent>
                 </ListItem>
                 <ListItem>
@@ -44,7 +45,7 @@ class Contact extends Component {
                     style={{ fontSize: "30px", fontFamily: "Anton" }}
                   >
                     <i className="fa fa-envelope" aria-hidden="true" />
-                    itnycusa@gmail.com
+                    {gpd.contact.email}
                   </ListItemContent>
                 </ListItem>
                 <ListItem>
@@ -52,7 +53,7 @@ class Contact extends Component {
                     style={{ fontSize: "30px", fontFamily: "Anton" }}
                   >
                   <i className="fa fa-internet-explorer"></i>
-                    https://www.onetechi.com
+                  <a href={gpd.links.personalWebsite}>{gpd.content.educationalWebSite}</a>
                   </ListItemContent>
                 </ListItem>
                 <ListItem>
@@ -60,21 +61,22 @@ class Contact extends Component {
                     style={{ fontSize: "30px", fontFamily: "Anton" }}
                   >
                   <i className="fa fa-internet-explorer"></i>
-                    http://www.itnycusa.com
+                  <a href={gpd.links.protfolio}>{gpd.content.mdPortfolio}</a>
                   </ListItemContent>
                 </ListItem>
               </List>
             </div>
             <div className="social-links">
-                <a href="https://www.linkedin.com/in/zamanmd">
+            <a
+                  href={gpd.links.linkedIn}>
                   <i className="fa fa-linkedin-square" />
                 </a>
                 <a
-                  href="https://github.com/msz5213">
+                  href={gpd.links.gitHub}>
                   <i className="fa fa-github-square" />
                 </a>
                 <a
-                  href="https://twitter.com/itnycusa">
+                  href={gpd.links.twitter}>
                   <i className="fa fa-twitter-square" />
                 </a>
               </div>

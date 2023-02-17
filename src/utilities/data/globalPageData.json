@@ -1,0 +1,26 @@
+{
+    "links": {
+        "linkedIn":"https://www.linkedin.com/in/zamanmd",
+        "gitHub":"https://github.com/gits5213",
+        "twitter":"https://twitter.com/gits5213",
+        "protfolio": "https://gits5213.github.io/mdzamanportfolio/",
+        "personalWebsite": "https://gits5213.github.io/gits/"
+    },
+
+    "content": {
+        "fullStackQaEngineer": "Full Stack Quality Assurance Engineer",
+        "aboutMe":"I am a Full-Stack Quality Assurance Engineer, practicing QA principles and methodologies, and quite a long time of managing, supervising, mentoring, and leading full-stack testing efforts & hands-on coding, leading with the ability to collaborate with software development in all phases of the SDLC & STLC, including planning, coding, testing, troubleshooting, deploying, and ongoing QA full-stack automation code maintenance & delivering right product on time.",
+        "techStack":"Expertise in Tech Stack: Programing Language: Python, Java, C#.Net & Javascript, NodeJS Automation Framework: Selenium, CypressIO, Playwright, WebDriverIO, Protractor, Appium, XCUITest, NightWatch, RestAssured, SuperTest, Katalon Studio, Frisby, PyTest, Agile-Scrum, JIRA, Xray, Rally, Zephyr, Adaptavist, ALM, SQL, CodedUI, Swagger, Confluence, POSTMAN, ReadyAPI, Splunk, New Relic, SonarQube & CheckMarx, BigData, Figma, JSON, HTML, PhantomJS, Jupiter notebook, Immuta, JMeter (Backend, AWS S3 Storage & UI Load & Stress test), MySQL, Postgresql, Dbeaver, PGAdmin.",
+        "educationalWebSite": "Educational Website",
+        "mdPortfolio": "MD's Portfolio"
+    },
+
+    "contact":{
+        "name": "MD Shahnewaz Zaman",
+        "contactMe": "Contact Me",
+        "email": "mdzaman.gits@gmail.com",
+        "phoneNumber": "+1(917)561-6554",
+        "address": "0000 202nd Street, Hollis, NY-11423"
+        
+    }
+}

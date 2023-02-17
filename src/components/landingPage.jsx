@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Grid, Cell } from "react-mdl";
 import profilePic from '../resourses/images/Md_Zaman_Picture.png';
-
+import gpd from '../utilities/data/globalPageData.json';
 
 class LandingPage extends Component {
   render() {
@@ -20,26 +20,21 @@ class LandingPage extends Component {
               }}
             />
             <div className="banner-text">
-              <h1>Full Stack SQA Engineer</h1>
+              <h1>{gpd.content.fullStackQaEngineer}</h1>
               <hr />
               <p>
-                Selenium(API) | CypressIO(API) | Protractor(API) | WebDriverIO(API) | Appium | 
-                RestAssured | C#.NET | SuperTest | Frisby | PyTest |Python | Java | TestNG |
-                JavaScript | NodeJS | Mocha-Chai | Jira | Rally | Xray | Zephyer | SQL | POSTMAN | 
-                Confluence | Swagger | Maven | Gradle | Jenkins | Reporting | ALM | JMeter |
-                SonarQube | Checkmarx | Splunk | New Relic.
+                {gpd.content.aboutMe}
               </p>
-
               <div className="social-links">
-                <a href="https://www.linkedin.com/in/zamanmd">
+                <a href={gpd.links.linkedIn}>
                   <i className="fa fa-linkedin-square" />
                 </a>
                 <a
-                  href="https://github.com/msz5213">
+                  href={gpd.links.gitHub}>
                   <i className="fa fa-github-square" />
                 </a>
                 <a
-                  href="https://twitter.com/itnycusa">
+                  href={gpd.links.twitter}>
                   <i className="fa fa-twitter-square" />
                 </a>
               </div>
