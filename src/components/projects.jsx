@@ -9,6 +9,7 @@ import Restassured from '../projects/restassured';
 import Supertest from '../projects/supertest';
 import Appium from '../projects/appium';
 import Performance from '../projects/performance';
+import Playwright from '../projects/playwright';
 
 class Projects extends Component {
   constructor(props) {
@@ -41,17 +42,21 @@ class Projects extends Component {
       )
     }else if(this.state.activeTab === 5) {
       return(
-        <Restassured />
+        <Playwright />
       )
-    } else if(this.state.activeTab === 6) {
+    }else if(this.state.activeTab === 6) {
       return(
-        <Supertest />
+        <Restassured />
       )
     } else if(this.state.activeTab === 7) {
       return(
-        <Appium />
+        <Supertest />
       )
     } else if(this.state.activeTab === 8) {
+      return(
+        <Appium />
+      )
+    } else if(this.state.activeTab === 9) {
       return(
         <Performance />
       )
@@ -71,6 +76,7 @@ class Projects extends Component {
           <Tab>Protractor</Tab>
           <Tab>WebDriverIO</Tab>
           <Tab>CypressIO</Tab>
+          <Tab>Playwright</Tab>
           <Tab>RastAssured</Tab>
           <Tab>SuperTest</Tab>
           <Tab>Appium</Tab>

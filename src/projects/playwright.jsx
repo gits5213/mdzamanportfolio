@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import {Card, CardTitle, CardText, CardActions, Button, CardMenu, IconButton } from "react-mdl";
 import data from '../utilities/data/projectGlobalPage.json';
 
-class javaselenium extends Component {
+class playwright extends Component {
   render() {
     return (
       <div>
@@ -11,24 +11,24 @@ class javaselenium extends Component {
             style={{
               color: "black",
               height: "300px",
-              background: "url(https://1.bp.blogspot.com/-bY5Js-Plm8Y/V1aBSPTLz5I/AAAAAAAABio/Rew-CBamQwkv7K2HfpX_xFvmTjFZLkAPwCPcBGAYYCw/s320/selenium-webdriver-java-online-courses-techtutorr.jpg) center / cover",
+              background: "url(https://raw.githubusercontent.com/github/explore/60cd2530141f67f07a947fa2d310c482e287e387/topics/playwright/playwright.png) center / cover",
               backgroundSize: "100% 100%"
             }}
           >
-            Java Selenium UI Automation
+            Playwright enables reliable end-to-end testing for modern web apps. 
           </CardTitle>
-            <CardText 
+            <CardText
               style={{
                 fontFamily: "Courier",
                 color:"black"
               }}>
               <strong>Domain:</strong> Facebook (Social Website) <br/>
               <strong>Test Case:</strong> Create new account error message | User able to validate error message "What’s your name?" <br/>
-              <strong>Description:</strong> Desiging, Developing & Manitaining Java Selenium UI Automation Framework 
-              from Scratch to Architechture level. <br/>
-              <strong>TechStack:</strong> This framework consists of following list: Selenium API, Java, TestNG, Maven, Page Object Model,
-              Data Driven Concept, Page Factory. <br/>
-              <strong>CI/CD Integration:</strong> Integrated with CI (Travis) and Sending Email report. 
+              <strong>Description:</strong> Desiging, Developing & Manitaining WebDriverIO UI Automation Framework 
+              from Scratch to Architechture level.<br/>
+              <strong>TechStack:</strong> This framework consists of following list: WebDriverIO API, JavaScript, NodeJS, Mocha, Chai, Page Object Model,
+              Data Driven Concept. <br/>
+              <strong>CI/CD Integration:</strong> Integrated with CI (Travis) and Sending Email report.
             </CardText>
           <CardActions border>
             <a href={data.gitHub}>
@@ -49,4 +49,4 @@ class javaselenium extends Component {
     );
   }
 }
-export default javaselenium;
+export default playwright;

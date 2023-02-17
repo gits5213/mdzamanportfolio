@@ -82,7 +82,7 @@ class Resume extends Component {
             />
           </Cell>
           <Cell col={6} className="resume-right-col">
-            <h2>Experience</h2>
+            <h2>{resumePageData.h2.experience}</h2>
             <Experience
               startYear={resumePageData.jobs.jobStartYear}
               endYear={resumePageData.jobs.jobEndYear}
@@ -94,7 +94,7 @@ class Resume extends Component {
               }
             />
             <hr style={{ borderTop: "3px solid #833fb2", width: "70%" }} />
-            <h2>Volunteer Experience</h2>
+            <h2>{resumePageData.h2.volunteerExperience}</h2>
             <Education
               startYear={resumePageData.jobs.volunteerStartYear}
               endYear={resumePageData.jobs.volunteerEndYear}
@@ -111,16 +111,16 @@ class Resume extends Component {
               schoolDescription={resumePageData.licensesCertifications.programDescription1}
             />
             <Education
-              startYear="2013"
-              endYear="2013"
-              schoolName={"SCRUM ORG."}
-              schoolDescription={"Professional Scrum Master Certifications"}
+              startYear={resumePageData.licensesCertifications.programCompletionYear2}
+              endYear={resumePageData.licensesCertifications.programCompletionYear2}
+              schoolName={resumePageData.licensesCertifications.programInstName2}
+              schoolDescription={resumePageData.licensesCertifications.programDescription2}
             />
             <Education
-              startYear="2013"
-              endYear="22013"
-              schoolName={"SCALED AGILE INC."}
-              schoolDescription={"Certified SAFe® 4 Agilist"}
+              startYear={resumePageData.licensesCertifications.programCompletionYear3}
+              endYear={resumePageData.licensesCertifications.programCompletionYear3}
+              schoolName={resumePageData.licensesCertifications.programInstName3}
+              schoolDescription={resumePageData.licensesCertifications.programDescription3}
             />
           </Cell>
         </Grid>

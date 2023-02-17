@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import {Card, CardTitle, CardText, CardActions, Button, CardMenu, IconButton } from "react-mdl";
+import data from '../utilities/data/projectGlobalPage.json';
 
 class webdriverio extends Component {
   render() {
@@ -30,13 +31,13 @@ class webdriverio extends Component {
               <strong>CI/CD Integration:</strong> Integrated with CI (Travis) and Sending Email report.
             </CardText>
           <CardActions border>
-            <a href="https://github.com/msz5213">
+            <a href={data.gitHub}>
               <Button colored>GitHub</Button>
             </a>
-            <a href="https://msz5213@bitbucket.org/msz5213/">
+            <a href={data.bitBucket}>
               <Button colored>BitBucket</Button>
             </a>
-            <a href="https://youtu.be/FAzmzPAig5E">
+            <a href={data.youtube}>
               <Button colored>Live Demo</Button>
             </a>
           </CardActions>
