@@ -4,7 +4,7 @@ import Education from "./education";
 import Experience from "./experience";
 import Skills from "./skils";
 import profilePic from '../resourses/images/Md_Zaman_Picture.png';
-import ResumePDF from '../resourses/resume/Md-Zaman-all-uptodate-18-2-23.pdf';
+import ResumePDF from '../resourses/resume/Md-Zaman-all-Edited-8-2-23.pdf';
 import resumePageData from '../utilities/data/resumePage.json';
 import gpd from '../utilities/data/globalPageData.json';
 
