@@ -111,6 +111,12 @@ class Resume extends Component {
               schoolDescription={resumePageData.licensesCertifications.programDescription1}
             />
             <Education
+              startYear={resumePageData.licensesCertifications.programCompletionYear0}
+              endYear={resumePageData.licensesCertifications.programCompletionYear0}
+              schoolName={resumePageData.licensesCertifications.programInstName0}
+              schoolDescription={resumePageData.licensesCertifications.programDescription0}
+            />
+            <Education
               startYear={resumePageData.licensesCertifications.programCompletionYear2}
               endYear={resumePageData.licensesCertifications.programCompletionYear2}
               schoolName={resumePageData.licensesCertifications.programInstName2}

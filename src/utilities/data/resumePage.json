@@ -28,13 +28,19 @@
     "licensesCertifications": {
         "licensesCertifications": "Licenses & Certifications",
         "programCompletionYear1": "2011",
-        "programInstName1": "ISTQB",
+        "programInstName1": "ASTQB - ISTQB",
         "programDescription1": "Certified Tester Foundation Level (CTFL)",
+        "===Program=0====":"=======Certificate0============",
+        "programCompletionYear0": "2023",
+        "programInstName0": "ASTQB - ISTQB",
+        "programDescription0": "Advanced Test Automation Engineer Exam",
+        "===Program1====":"=======Certificate1============",
         "programCompletionYear2": "2013",
         "programInstName2": "SCALED AGILE INC.",
         "programDescription2": "Certified SAFe® 4 Agilist",
+        "===Program2====":"=======Certificate2============",
         "programCompletionYear3": "2013",
         "programInstName3": "SCRUM ORG.",
-        "programDescription3": "Professional Scrum Master Certifications"
+        "programDescription3": "Professional Scrum Master Certifications",
     }
 }
