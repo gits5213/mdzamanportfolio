@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/mdzamanportfolio/static/css/main.088b79b4.css",
-    "main.js": "/mdzamanportfolio/static/js/main.262c8424.js",
+    "main.js": "/mdzamanportfolio/static/js/main.5221c336.js",
     "static/media/Md_Zaman_Picture.png": "/mdzamanportfolio/static/media/Md_Zaman_Picture.35c9381fff8fcdc327f4.png",
     "static/media/Md-Zaman-all-Edited-8-2-23.pdf": "/mdzamanportfolio/static/media/Md-Zaman-all-Edited-8-2-23.4f00263f8174665daefd.pdf",
     "index.html": "/mdzamanportfolio/index.html",
     "main.088b79b4.css.map": "/mdzamanportfolio/static/css/main.088b79b4.css.map",
-    "main.262c8424.js.map": "/mdzamanportfolio/static/js/main.262c8424.js.map"
+    "main.5221c336.js.map": "/mdzamanportfolio/static/js/main.5221c336.js.map"
   },
   "entrypoints": [
     "static/css/main.088b79b4.css",
-    "static/js/main.262c8424.js"
+    "static/js/main.5221c336.js"
   ]
 }
