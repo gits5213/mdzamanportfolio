@@ -128,6 +128,12 @@ class Resume extends Component {
               schoolName={resumePageData.licensesCertifications.programInstName3}
               schoolDescription={resumePageData.licensesCertifications.programDescription3}
             />
+            <Education
+              startYear={resumePageData.licensesCertifications.programCompletionYear4}
+              endYear={resumePageData.licensesCertifications.programCompletionYear4}
+              schoolName={resumePageData.licensesCertifications.programInstName4}
+              schoolDescription={resumePageData.licensesCertifications.programDescription4}
+            />
           </Cell>
         </Grid>
       </div>
