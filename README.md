@@ -1,17 +1,21 @@
 # Welcome to "MD Shahnewaz Zaman (Shanto)" Personal Protfolio
 
+## Install packages
+```
+    - yarn install
+```
 ## Build the protfolio
 ```
-- npm run build
+    - yarn run build
 ```
 
 ## Start the project
 ```
-- npm run start
+    - yarn run start
 ```
 
 ## Deploy to gitHub page
 ```
-- npm run deploy
+    - yarn run deploy
 ```
 

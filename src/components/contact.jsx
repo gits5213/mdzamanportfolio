@@ -78,12 +78,16 @@ class Contact extends Component {
                   <i className="fa fa-github-square" />
                 </a>
                 <a
-                  href={gpd.links.youtubePlaywright}>
+                  href={gpd.links.twitter}>
                   <i className="fa fa-twitter-square" />
                 </a>
                 <a
+                  href={gpd.links.youtubePlaywright}>
+                  <i className="fa fa-youtube-square" />
+                </a>
+                <a
                   href={gpd.links.youtubeCypressIO}>
-                  <i className="fa fa-twitter-square" />
+                  <i className="fa fa-youtube-square" />
                 </a>
               </div>
           </Cell>

@@ -21,16 +21,17 @@ class LandingPage extends Component {
             />
             <div className="banner-text">
               <h1>{gpd.content.fullStackQaEngineer}</h1>
-              <hr />
-              <p>
+              <p className="aboutMe">
                 {gpd.content.aboutMe} <br/>
-                  Key Highlights:<br/>
-                    ☞ Proven track record in mentoring QA Analysts and Technical Support Engineers.<br/>
-                    ☞ Extensive experience with Agile/Scrum, SAFe methodologies, Shift-left, & SDLC/STLC processes.<br/>
-                    ☞ Expert in full-stack automation, technical documentation, and hands-on coding.<br/>
-                    ☞ Adept at delivering presentations, ensuring compliance with public law, and maintaining relevance to business needs.<br/>
-                    ☞ Strong analytical, communication, problem-solving skills, and ensuring attention to detail & delivering exceptional customer service.<br/>
-                    Let's connect and discuss how my expertise can contribute to the success of your projects! 🚀<br/>
+                <span className="highlight">Key Highlights:</span>
+              <ul className="keyHighlight" style={{listStyleType: "none" }}>
+                <li>☞ Proven track record in mentoring QA Analysts and Technical Support Engineers.</li>
+                <li>☞ Extensive experience with Agile/Scrum, SAFe methodologies, Shift-left, & SDLC/STLC processes.</li>
+                <li>☞ Expert in full-stack automation, technical documentation, and hands-on coding.</li>
+                <li>☞ Adept at delivering presentations, ensuring compliance with public law, and maintaining relevance to business needs.</li>
+                <li>☞ Strong analytical, communication, problem-solving skills, and ensuring attention to detail & delivering exceptional customer service.</li>
+              </ul>
+              Let's connect and discuss how my expertise can contribute to the success of your projects! 🚀
               </p>
               <div className="social-links">
                 <a href={gpd.links.linkedIn}>
