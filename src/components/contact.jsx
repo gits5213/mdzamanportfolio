@@ -20,10 +20,12 @@ class Contact extends Component {
               }}
             />
             <p style={{ width: "75%", margin: "auto", paddingTop: "1em", fontFamily:"fantasy"}}>
-              Hi there! I am a open source tech enthusiast. I spent most of time 
-              wirting code and watching tutorials on Youtube & Udemy. During the weekend I have been coaching 
-              and mentoring three (3) programs <br /> - CodeForKids <br /> - Full Stack SQA Engineering <br /> - Frontend Web Development. <br />
-              A motivated individual with in-depth knowledge of programing languages and SQA Engineering development tools & API's.
+              Hi there! You're an open-source tech enthusiast who spends most of your time coding and diving into tutorials on YouTube and Udemy. 
+              Your dedication to continuous learning and hands-on practice shapes your expertise, making you both knowledgeable and adaptable in the fast-evolving tech world. 
+              During the weekend I have been coaching and mentoring three (3) programs <br /> - CodeForKids <br /> - Full Stack SQA Engineering <br /> - Frontend Web Development. <br />
+              A motivated and dynamic individual with in-depth knowledge of programming languages, software quality assurance (SQA) engineering, 
+              and a range of development tools and APIs. Skilled in automation frameworks, coding standards, and API automation, 
+              they possess expertise in full-stack QA practices and are passionate about enhancing end-to-end software testing processes.
             </p>
           </Cell>
           <Cell col={6}>
@@ -76,7 +78,11 @@ class Contact extends Component {
                   <i className="fa fa-github-square" />
                 </a>
                 <a
-                  href={gpd.links.twitter}>
+                  href={gpd.links.youtubePlaywright}>
+                  <i className="fa fa-twitter-square" />
+                </a>
+                <a
+                  href={gpd.links.youtubeCypressIO}>
                   <i className="fa fa-twitter-square" />
                 </a>
               </div>
