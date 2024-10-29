@@ -46,8 +46,12 @@ class LandingPage extends Component {
                   <i className="fa fa-twitter-square" />
                 </a>
                 <a
-                  href={gpd.links.youtube}>
-                  <i className="fa fa-twitter-square" />
+                  href={gpd.links.youtubePlaywright}>
+                  <i className="fa fa-youtube-square" />
+                </a>
+                <a
+                  href={gpd.links.youtubeCypressIO}>
+                  <i className="fa fa-youtube-square" />
                 </a>
               </div>
             </div>
