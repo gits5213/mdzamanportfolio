@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Grid, Cell } from "react-mdl";
-import profilePic from '../resourses/images/Md_Zaman_Picture.png';
+import profilePic from '../resourses/images/Md_Zaman_Picture.jpg';
 import gpd from '../utilities/data/globalPageData.json';
 
 class LandingPage extends Component {
