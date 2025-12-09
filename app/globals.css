@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gray-50 text-gray-900;
+  }
+}
+
+@layer components {
+  .gradient-header {
+    @apply bg-gradient-to-r from-yellow-400 via-orange-500 to-purple-600;
+  }
+  
+  .gradient-landing {
+    @apply bg-gradient-to-r from-yellow-400 via-green-500 to-blue-900;
+  }
+  
+  .social-link {
+    @apply text-white hover:text-yellow-300 transition-colors duration-300;
+  }
+  
+  .card {
+    @apply bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300;
+  }
+}
+

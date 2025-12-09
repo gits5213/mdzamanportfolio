@@ -1,0 +1,55 @@
+{
+    "h2":{
+        "objective": "Objective",
+        "education": "Education",
+        "skills": "Skills",
+        "volunteerExperience": "Volunteer Experience",
+        "experience": "Experience"
+    },
+    "schools": {
+        "schoolName1":"National University of BD (Govt. Titumir College)",
+        "schoolDescription1": "Bechelor & Master's in Chemistry",
+        "startYear1": "2001",
+        "endYear1": "2007",
+        "schoolName2":"The City University of New York (City College)",
+        "schoolDescription2": "2nd Bachelor's in Computer Engieering",
+        "startYear2": "2011",
+        "endYear2": "2014"
+    },
+    "jobs": {
+        "jobStartYear": "2007",
+        "jobEndYear": "Current",
+        "jobName": "Full Stack Quality Assurance Engineer",
+        "volunteerStartYear": "2018",
+        "volunteerEndYear": "Present",
+        "volunteerPositionName": "AUXILARY NYPD",
+        "volunteerDepartmentName": "NEW YORK CITY POLICE DEPARTMENT"
+    },
+    "licensesCertifications": {
+        "licensesCertifications": "Licenses & Certifications",
+        "programCompletionYear1": "2011",
+        "programInstName1": "ASTQB - ISTQB",
+        "programDescription1": "Certified Tester Foundation Level Certification (CTFL)",
+
+        "===Program=0====":"=======Certificate0============",
+        "programCompletionYear0": "2023",
+        "programInstName0": "ASTQB - ISTQB",
+        "programDescription0": "Advanced Test Automation Engineer Certification (CTAL-TAE)",
+
+        "===Program1====":"=======Certificate1============",
+        "programCompletionYear2": "2013",
+        "programInstName2": "SCALED AGILE INC.",
+        "programDescription2": "Certified SAFe® 4 Agilist",
+
+        "===Program2====":"=======Certificate2============",
+        "programCompletionYear3": "2013",
+        "programInstName3": "SCRUM ORG.",
+        "programDescription3": "Professional Scrum Master Certification",
+
+        "===Program=4====":"=======Certificate4============",
+        "programCompletionYear4": "2023",
+        "programInstName4": "ASTQB - ISTQB",
+        "programDescription4": "Advanced Test Manager Certification (CTAL-TM)"
+        
+    }
+}

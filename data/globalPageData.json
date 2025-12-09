@@ -1,0 +1,28 @@
+{
+    "links": {
+        "linkedIn":"https://www.linkedin.com/in/zamanmd",
+        "gitHub":"https://github.com/gits5213",
+        "twitter":"https://twitter.com/gits5213",
+        "protfolio": "https://gits5213.github.io/mdzamanportfolio/",
+        "personalWebsite": "https://gitsics.com/",
+        "youtubePlaywright": "https://www.youtube.com/@gits15mplaywright",
+        "youtubeCypressIO": "https://www.youtube.com/@CypressIO-tj9cx"
+    },
+
+    "content": {
+        "fullStackQaEngineer": "Full Stack Quality Assurance Engineer",
+        "aboutMe":"Experienced IT leader with over 15 years of expertise in Quality Assurance discipline, specializing in software and hardware testing. Adept at managing cross-functional teams, driving innovation through Agile/Scrum methodologies, and delivering high-quality products within strict deadlines. Strong problem-solving and communication skills with a track record of leading large-scale projects and full-stack automation initiatives.",
+        "techStack":"Expertise in Tech Stack: Programing Language: Python, Java, C#.Net & Javascript, NodeJS Automation Framework: Selenium, CypressIO, Playwright, WebDriverIO, Protractor, Appium, XCUITest, NightWatch, RestAssured, SuperTest, Katalon Studio, Frisby, PyTest, Agile-Scrum, JIRA, Xray, Rally, Zephyr, Adaptavist, ALM, SQL, CodedUI, Swagger, Confluence, POSTMAN, ReadyAPI, Splunk, New Relic, SonarQube & CheckMarx, BigData, Figma, JSON, HTML, PhantomJS, Jupiter notebook, Immuta, JMeter (Backend, AWS S3 Storage & UI Load & Stress test), MySQL, Postgresql, Dbeaver, PGAdmin.",
+        "educationalWebSite": "Educational Website",
+        "mdPortfolio": "MD's Portfolio"
+    },
+
+    "contact":{
+        "name": "MD Shahnewaz Zaman",
+        "contactMe": "Contact Me",
+        "email": "mdzaman.gits@gmail.com",
+        "phoneNumber": "+1(917)561-6554",
+        "address": "0000 202nd Street, Hollis, NY-11423"
+        
+    }
+}
