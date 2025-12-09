@@ -32,13 +32,37 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Debug environment variables
+        run: |
+          echo "USE_CUSTOM_DOMAIN secret value: ${{ secrets.USE_CUSTOM_DOMAIN }}"
+          echo "Will use custom domain: ${{ secrets.USE_CUSTOM_DOMAIN == 'true' && 'YES' || 'NO' }}"
+          if [ "${{ secrets.USE_CUSTOM_DOMAIN }}" == "true" ]; then
+            echo "Building for CUSTOM DOMAIN (basePath will be empty)"
+          else
+            echo "Building for GITHUB PAGES SUBPATH (basePath will be /mdzamanportfolio)"
+          fi
+
       - name: Build with Next.js
         run: npm run build
         env:
-          # Use USE_CUSTOM_DOMAIN: 'true' if deploying to custom domain
-          # Use GITHUB_PAGES: 'true' if deploying to GitHub Pages subpath
-          GITHUB_PAGES: 'true'
+          # Check if custom domain is configured
+          # Set USE_CUSTOM_DOMAIN secret in GitHub repo settings if using custom domain
+          USE_CUSTOM_DOMAIN: ${{ secrets.USE_CUSTOM_DOMAIN }}
+          # Only use GITHUB_PAGES if not using custom domain
+          GITHUB_PAGES: ${{ secrets.USE_CUSTOM_DOMAIN != 'true' && 'true' || '' }}
           NODE_ENV: 'production'
+
+      - name: Verify basePath in built files
+        run: |
+          echo "Checking index.html for basePath usage..."
+          if [ -f "./out/index.html" ]; then
+            if grep -q "/mdzamanportfolio/_next" "./out/index.html"; then
+              echo "⚠️  WARNING: Found /mdzamanportfolio/_next in HTML - basePath is being used!"
+              echo "This will break on custom domain. Check USE_CUSTOM_DOMAIN secret."
+            else
+              echo "✓ No basePath found in HTML - correct for custom domain"
+            fi
+          fi
 
       - name: Verify build output
         run: |
