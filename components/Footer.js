@@ -85,11 +85,8 @@ export default function Footer() {
                 </a>
               </li>
             </ul>
-          </div>
-
-          {/* Social Media */}
-          <div className={styles.footerSection}>
-            <h3 className={styles.footerTitle}>Follow Me</h3>
+            
+            <h3 className={styles.footerTitle} style={{ marginTop: '2rem' }}>Follow Me</h3>
             <div className={styles.socialLinks}>
               {socialLinks.map((social) => {
                 const Icon = social.icon
@@ -107,6 +104,28 @@ export default function Footer() {
                 )
               })}
             </div>
+          </div>
+
+          {/* Legal Links */}
+          <div className={styles.footerSection}>
+            <h3 className={styles.footerTitle}>Legal</h3>
+            <ul className={styles.footerLinks}>
+              <li>
+                <Link href="/privacy-policy" className={styles.footerLink}>Privacy Policy</Link>
+              </li>
+              <li>
+                <Link href="/terms-of-use" className={styles.footerLink}>Terms of Use</Link>
+              </li>
+              <li>
+                <Link href="/copyright-notice" className={styles.footerLink}>Copyright Notice</Link>
+              </li>
+              <li>
+                <Link href="/disclaimer" className={styles.footerLink}>Disclaimer</Link>
+              </li>
+              <li>
+                <Link href="/accessibility-statement" className={styles.footerLink}>Accessibility Statement</Link>
+              </li>
+            </ul>
           </div>
         </div>
 
