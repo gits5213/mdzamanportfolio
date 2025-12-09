@@ -1,0 +1,65 @@
+/* Contact Page Specific Styles */
+.contactContainer {
+  @apply min-h-screen bg-gray-50 py-12 px-4;
+}
+
+.contactContent {
+  @apply max-w-6xl mx-auto;
+}
+
+.contactGrid {
+  @apply grid grid-cols-1 md:grid-cols-2 gap-8;
+}
+
+.leftColumn {
+  @apply bg-white rounded-lg shadow-lg p-8 text-center;
+}
+
+.rightColumn {
+  @apply bg-white rounded-lg shadow-lg p-8;
+}
+
+.sectionTitle {
+  @apply text-3xl font-bold mb-6;
+}
+
+.avatarImage {
+  @apply rounded-full mx-auto border border-gray-300 mb-6;
+}
+
+.bioText {
+  @apply text-gray-700 leading-relaxed text-left font-serif;
+}
+
+.divider {
+  @apply border-t-2 border-gray-300 mb-6;
+}
+
+.contactInfo {
+  @apply space-y-6 mb-8;
+}
+
+.contactItem {
+  @apply flex items-center gap-4;
+}
+
+.contactIcon {
+  @apply text-4xl text-purple-600;
+}
+
+.contactText {
+  @apply text-xl font-semibold;
+}
+
+.contactLink {
+  @apply text-xl font-semibold text-blue-600 hover:text-blue-800;
+}
+
+.socialLinksContainer {
+  @apply flex justify-center items-center gap-6 flex-wrap pt-6 border-t border-gray-300;
+}
+
+.socialIcon {
+  @apply text-5xl text-purple-600 hover:text-purple-800 transition-colors;
+}
+

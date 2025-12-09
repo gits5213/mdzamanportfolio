@@ -1,0 +1,49 @@
+/* Project Card Component Styles */
+.cardContainer {
+  @apply max-w-3xl mx-auto;
+}
+
+.card {
+  @apply bg-white rounded-lg shadow-xl overflow-hidden hover:shadow-2xl transition-shadow duration-300;
+}
+
+.imageContainer {
+  @apply relative h-64 bg-cover bg-center;
+}
+
+.imageOverlay {
+  @apply absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center;
+}
+
+.imageTitle {
+  @apply text-white text-2xl md:text-3xl font-bold text-center px-4;
+}
+
+.cardBody {
+  @apply p-6;
+}
+
+.cardContent {
+  @apply font-mono text-gray-800 space-y-2;
+}
+
+.cardActions {
+  @apply flex flex-wrap gap-4 mt-6 pt-6 border-t border-gray-200;
+}
+
+.actionButton {
+  @apply px-6 py-2 rounded-lg transition-colors;
+}
+
+.buttonGitHub {
+  @apply bg-purple-600 text-white hover:bg-purple-700;
+}
+
+.buttonBitBucket {
+  @apply bg-blue-600 text-white hover:bg-blue-700;
+}
+
+.buttonDemo {
+  @apply bg-red-600 text-white hover:bg-red-700;
+}
+

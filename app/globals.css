@@ -2,13 +2,42 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ============================================
+   GLOBAL BASE STYLES
+   ============================================ */
 @layer base {
+  * {
+    @apply box-border;
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+
   body {
-    @apply bg-gray-50 text-gray-900;
+    @apply bg-gray-50 text-gray-900 antialiased;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold;
+  }
+
+  a {
+    @apply transition-colors duration-200;
+  }
+
+  button {
+    @apply transition-all duration-200;
   }
 }
 
+/* ============================================
+   REUSABLE COMPONENT STYLES
+   ============================================ */
 @layer components {
+  /* Gradient Backgrounds */
   .gradient-header {
     @apply bg-gradient-to-r from-yellow-400 via-orange-500 to-purple-600;
   }
@@ -16,13 +45,141 @@
   .gradient-landing {
     @apply bg-gradient-to-r from-yellow-400 via-green-500 to-blue-900;
   }
-  
+
+  /* Social Links */
   .social-link {
     @apply text-white hover:text-yellow-300 transition-colors duration-300;
   }
-  
+
+  /* Cards */
   .card {
     @apply bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300;
   }
+
+  .card-dark {
+    @apply bg-gray-800 text-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300;
+  }
+
+  /* Buttons */
+  .btn-primary {
+    @apply px-6 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors font-medium;
+  }
+
+  .btn-secondary {
+    @apply px-6 py-3 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors font-medium;
+  }
+
+  .btn-outline {
+    @apply px-6 py-3 border-2 border-purple-600 text-purple-600 rounded-lg hover:bg-purple-600 hover:text-white transition-all font-medium;
+  }
+
+  /* Sections */
+  .section {
+    @apply min-h-screen py-12 px-4;
+  }
+
+  .section-container {
+    @apply max-w-7xl mx-auto;
+  }
+
+  .section-title {
+    @apply text-4xl font-bold text-center mb-8;
+  }
+
+  /* Dividers */
+  .divider {
+    @apply border-t-2 border-gray-300 my-6;
+  }
+
+  .divider-purple {
+    @apply border-t-4 border-purple-500 w-3/4 my-4;
+  }
+
+  /* Text Styles */
+  .text-highlight {
+    @apply font-semibold text-yellow-300;
+  }
+
+  .text-muted {
+    @apply text-gray-600;
+  }
+
+  .text-mono {
+    @apply font-mono;
+  }
+
+  /* Layout Utilities */
+  .container-padding {
+    @apply px-4 sm:px-6 lg:px-8;
+  }
+
+  .content-max-width {
+    @apply max-w-4xl mx-auto;
+  }
+
+  .content-max-width-lg {
+    @apply max-w-6xl mx-auto;
+  }
+
+  .content-max-width-xl {
+    @apply max-w-7xl mx-auto;
+  }
+
+  /* Grid Layouts */
+  .grid-two-col {
+    @apply grid grid-cols-1 lg:grid-cols-2 gap-8;
+  }
+
+  .grid-three-col {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6;
+  }
+
+  /* Spacing Utilities */
+  .spacing-y {
+    @apply space-y-8;
+  }
+
+  .spacing-y-sm {
+    @apply space-y-4;
+  }
+
+  /* Image Styles */
+  .avatar-image {
+    @apply rounded-full border-4 border-white shadow-xl;
+  }
+
+  .avatar-image-sm {
+    @apply rounded-3xl border border-gray-300;
+  }
+
+  /* List Styles */
+  .list-highlight {
+    @apply list-none space-y-2 text-left;
+  }
+
+  .list-item-highlight {
+    @apply flex items-start;
+  }
+
+  .list-bullet {
+    @apply mr-2;
+  }
 }
 
+/* ============================================
+   UTILITY CLASSES
+   ============================================ */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}

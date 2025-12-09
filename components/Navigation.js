@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import { useState } from 'react'
 import { FaBars, FaTimes } from 'react-icons/fa'
+import styles from '@/styles/components/navigation.module.css'
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
@@ -15,20 +16,20 @@ export default function Navigation() {
   ]
 
   return (
-    <nav className="gradient-header shadow-lg sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          <Link href="/" className="text-white text-xl font-bold hover:text-yellow-200 transition-colors">
+    <nav className={`gradient-header ${styles.nav}`}>
+      <div className={styles.navContainer}>
+        <div className={styles.navContent}>
+          <Link href="/" className={styles.logo}>
             Md&apos;s Portfolio
           </Link>
           
           {/* Desktop Navigation */}
-          <div className="hidden md:flex space-x-6">
+          <div className={styles.desktopNav}>
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-white hover:text-yellow-200 transition-colors font-medium"
+                className={styles.navLink}
               >
                 {link.label}
               </Link>
@@ -37,7 +38,7 @@ export default function Navigation() {
 
           {/* Mobile menu button */}
           <button
-            className="md:hidden text-white p-2"
+            className={styles.mobileMenuButton}
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
           >
@@ -47,12 +48,12 @@ export default function Navigation() {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden pb-4">
+          <div className={styles.mobileNav}>
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="block text-white hover:text-yellow-200 py-2 transition-colors"
+                className={styles.mobileNavLink}
                 onClick={() => setIsOpen(false)}
               >
                 {link.label}

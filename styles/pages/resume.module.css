@@ -1,0 +1,85 @@
+/* Resume Page Specific Styles */
+.resumeContainer {
+  @apply min-h-screen bg-gray-50 py-12 px-4;
+}
+
+.resumeContent {
+  @apply max-w-7xl mx-auto;
+}
+
+.resumeGrid {
+  @apply grid grid-cols-1 lg:grid-cols-2 gap-8;
+}
+
+.leftColumn {
+  @apply space-y-8;
+}
+
+.rightColumn {
+  @apply bg-gray-800 text-white p-8 rounded-lg space-y-8;
+}
+
+.avatarSection {
+  @apply text-center;
+}
+
+.avatarImage {
+  @apply rounded-3xl border border-gray-300 mx-auto;
+}
+
+.sectionTitle {
+  @apply text-3xl font-bold mb-4;
+}
+
+.sectionTitleWhite {
+  @apply text-3xl font-bold mb-4 text-white;
+}
+
+.subtitle {
+  @apply text-xl text-gray-600 mb-4;
+}
+
+.divider {
+  @apply border-t-4 border-purple-500 w-3/4 mb-4;
+}
+
+.dividerWhite {
+  @apply border-t-4 border-purple-500 w-3/4 my-4;
+}
+
+.contentText {
+  @apply text-justify pr-4 font-mono text-gray-700 leading-relaxed;
+}
+
+.contentTextWhite {
+  @apply text-gray-300 text-justify pr-4;
+}
+
+.contactInfo {
+  @apply space-y-4;
+}
+
+.contactItem {
+  @apply flex items-center gap-2 text-lg font-semibold mb-2;
+}
+
+.contactIcon {
+  @apply text-gray-600;
+}
+
+.contactText {
+  @apply text-gray-700;
+}
+
+.webLinks {
+  @apply space-y-1;
+}
+
+.webLink {
+  @apply text-green-600 hover:text-green-800 block;
+}
+
+.webLinkWhite {
+  @apply text-blue-400 hover:text-blue-300;
+}
+

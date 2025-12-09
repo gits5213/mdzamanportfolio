@@ -1,0 +1,61 @@
+/* Landing Page Specific Styles */
+.landingContainer {
+  @apply min-h-screen flex items-center justify-center py-20 px-4;
+}
+
+.landingContent {
+  @apply max-w-4xl w-full;
+}
+
+.avatarContainer {
+  @apply text-center mb-8;
+}
+
+.avatarImage {
+  @apply rounded-full mx-auto border-4 border-white shadow-xl;
+}
+
+.contentCard {
+  @apply bg-black bg-opacity-80 rounded-lg p-8 md:p-12 shadow-2xl;
+}
+
+.title {
+  @apply text-4xl md:text-6xl font-bold text-white mb-6;
+}
+
+.contentText {
+  @apply text-white text-lg md:text-xl space-y-4 mb-8;
+}
+
+.highlightsSection {
+  @apply mt-6;
+}
+
+.highlightsTitle {
+  @apply font-semibold text-yellow-300 mb-3;
+}
+
+.highlightsList {
+  @apply list-none space-y-2 text-left;
+}
+
+.highlightItem {
+  @apply flex items-start;
+}
+
+.highlightBullet {
+  @apply mr-2;
+}
+
+.callToAction {
+  @apply mt-6 text-yellow-300;
+}
+
+.socialLinksContainer {
+  @apply flex justify-center items-center gap-6 flex-wrap mt-8;
+}
+
+.socialIcon {
+  @apply text-5xl;
+}
+

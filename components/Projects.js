@@ -11,6 +11,7 @@ import Supertest from './projects/Supertest'
 import Appium from './projects/Appium'
 import Performance from './projects/Performance'
 import Playwright from './projects/Playwright'
+import styles from '@/styles/pages/projects.module.css'
 
 const projectTabs = [
   { id: 0, label: 'JavaSelenium', component: JavaSelenium },
@@ -30,21 +31,21 @@ export default function Projects() {
   const ActiveComponent = projectTabs[activeTab].component
 
   return (
-    <div className="min-h-screen bg-gray-50 py-12 px-4">
-      <div className="max-w-7xl mx-auto">
-        <h1 className="text-4xl font-bold text-center mb-8">My Projects</h1>
+    <div className={styles.projectsContainer}>
+      <div className={styles.projectsContent}>
+        <h1 className={styles.pageTitle}>My Projects</h1>
         
         {/* Tabs */}
-        <div className="mb-8">
-          <div className="flex flex-wrap gap-2 justify-center border-b border-gray-300">
+        <div className={styles.tabsContainer}>
+          <div className={styles.tabsWrapper}>
             {projectTabs.map((tab) => (
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
-                className={`px-6 py-3 font-medium transition-colors ${
+                className={`${styles.tabButton} ${
                   activeTab === tab.id
-                    ? 'text-purple-600 border-b-2 border-purple-600'
-                    : 'text-gray-600 hover:text-gray-900'
+                    ? styles.tabButtonActive
+                    : styles.tabButtonInactive
                 }`}
               >
                 {tab.label}
@@ -54,7 +55,7 @@ export default function Projects() {
         </div>
 
         {/* Content */}
-        <div className="mt-8">
+        <div className={styles.contentSection}>
           <ActiveComponent />
         </div>
       </div>

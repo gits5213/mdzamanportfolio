@@ -1,17 +1,19 @@
+import styles from '@/styles/components/common.module.css'
+
 export default function Skills({ skill, progress }) {
   return (
-    <div className="w-full">
-      <div className="flex items-center gap-4 mb-2">
-        <span className="text-sm font-medium text-gray-700 flex-shrink-0 min-w-[200px]">
+    <div className={styles.skillsContainer}>
+      <div className={styles.skillsRow}>
+        <span className={styles.skillsLabel}>
           {skill}
         </span>
-        <div className="flex-1 bg-gray-200 rounded-full h-4 overflow-hidden">
+        <div className={styles.skillsProgressBar}>
           <div
-            className="bg-gradient-to-r from-purple-500 to-pink-500 h-full rounded-full transition-all duration-500"
+            className={styles.skillsProgressFill}
             style={{ width: `${progress}%` }}
           />
         </div>
-        <span className="text-sm font-medium text-gray-600 w-12 text-right">
+        <span className={styles.skillsPercentage}>
           {progress}%
         </span>
       </div>

@@ -1,0 +1,37 @@
+/* Navigation Component Styles */
+.nav {
+  @apply shadow-lg sticky top-0 z-50;
+}
+
+.navContainer {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.navContent {
+  @apply flex justify-between items-center h-16;
+}
+
+.logo {
+  @apply text-white text-xl font-bold hover:text-yellow-200 transition-colors;
+}
+
+.desktopNav {
+  @apply hidden md:flex space-x-6;
+}
+
+.navLink {
+  @apply text-white hover:text-yellow-200 transition-colors font-medium;
+}
+
+.mobileMenuButton {
+  @apply md:hidden text-white p-2;
+}
+
+.mobileNav {
+  @apply md:hidden pb-4;
+}
+
+.mobileNavLink {
+  @apply block text-white hover:text-yellow-200 py-2 transition-colors;
+}
+

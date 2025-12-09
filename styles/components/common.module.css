@@ -1,0 +1,61 @@
+/* Common Component Styles */
+.educationItem {
+  @apply grid grid-cols-4 gap-4 mb-4;
+}
+
+.educationYear {
+  @apply col-span-1;
+}
+
+.educationYearText {
+  @apply text-gray-600 font-medium;
+}
+
+.educationYearTextWhite {
+  @apply text-gray-300 font-medium;
+}
+
+.educationContent {
+  @apply col-span-3;
+}
+
+.educationTitle {
+  @apply font-semibold text-lg mb-1;
+}
+
+.educationTitleWhite {
+  @apply font-semibold text-lg mb-1 text-white;
+}
+
+.educationDescription {
+  @apply text-gray-700;
+}
+
+.educationDescriptionWhite {
+  @apply text-gray-300 text-justify pr-4;
+}
+
+.skillsContainer {
+  @apply w-full;
+}
+
+.skillsRow {
+  @apply flex items-center gap-4 mb-2;
+}
+
+.skillsLabel {
+  @apply text-sm font-medium text-gray-700 flex-shrink-0 min-w-[200px];
+}
+
+.skillsProgressBar {
+  @apply flex-1 bg-gray-200 rounded-full h-4 overflow-hidden;
+}
+
+.skillsProgressFill {
+  @apply bg-gradient-to-r from-purple-500 to-pink-500 h-full rounded-full transition-all duration-500;
+}
+
+.skillsPercentage {
+  @apply text-sm font-medium text-gray-600 w-12 text-right;
+}
+

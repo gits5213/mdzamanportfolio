@@ -1,30 +1,31 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import projectData from '@/data/projectGlobalPage.json'
+import styles from '@/styles/components/projectCard.module.css'
 
 export default function ProjectCard({ title, imageUrl, children }) {
   return (
-    <div className="max-w-3xl mx-auto">
-      <div className="bg-white rounded-lg shadow-xl overflow-hidden hover:shadow-2xl transition-shadow duration-300">
-        <div className="relative h-64 bg-cover bg-center" style={{ backgroundImage: `url(${imageUrl})` }}>
-          <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
-            <h3 className="text-white text-2xl md:text-3xl font-bold text-center px-4">
+    <div className={styles.cardContainer}>
+      <div className={styles.card}>
+        <div className={styles.imageContainer} style={{ backgroundImage: `url(${imageUrl})` }}>
+          <div className={styles.imageOverlay}>
+            <h3 className={styles.imageTitle}>
               {title}
             </h3>
           </div>
         </div>
         
-        <div className="p-6">
-          <div className="font-mono text-gray-800 space-y-2">
+        <div className={styles.cardBody}>
+          <div className={styles.cardContent}>
             {children}
           </div>
           
-          <div className="flex flex-wrap gap-4 mt-6 pt-6 border-t border-gray-200">
+          <div className={styles.cardActions}>
             <Link
               href={projectData.gitHub}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-6 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors"
+              className={`${styles.actionButton} ${styles.buttonGitHub}`}
             >
               GitHub
             </Link>
@@ -32,7 +33,7 @@ export default function ProjectCard({ title, imageUrl, children }) {
               href={projectData.bitBucket}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+              className={`${styles.actionButton} ${styles.buttonBitBucket}`}
             >
               BitBucket
             </Link>
@@ -40,7 +41,7 @@ export default function ProjectCard({ title, imageUrl, children }) {
               href={projectData.youtube}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-6 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors"
+              className={`${styles.actionButton} ${styles.buttonDemo}`}
             >
               Live Demo
             </Link>
