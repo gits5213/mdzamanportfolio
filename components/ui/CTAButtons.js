@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { getAssetPath } from '@/app/utils/pathUtils'
 
-export default function CTAButtons({ primaryLabel = 'View Portfolio', primaryHref = '/projects', secondaryLabel = 'Download Resume', secondaryHref = '/resume/Md-Zaman-all-Edited-8-2-23.pdf' }) {
+export default function CTAButtons({ primaryLabel = 'View Portfolio', primaryHref = '/projects', secondaryLabel = 'Download Resume', secondaryHref = '/resume/Md Zaman - Resume.pdf' }) {
   return (
     <div className="flex flex-col sm:flex-row gap-4 mt-8">
       <Link
