@@ -1,0 +1,71 @@
+/* Footer Component Styles */
+.footer {
+  @apply bg-gray-900 text-gray-300 mt-auto;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footerContainer {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12;
+}
+
+.footerContent {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8;
+}
+
+.footerSection {
+  @apply space-y-4;
+}
+
+.footerTitle {
+  @apply text-white text-lg font-semibold mb-4;
+}
+
+.footerText {
+  @apply text-gray-400 leading-relaxed;
+}
+
+.footerLinks {
+  @apply space-y-2;
+}
+
+.footerLink {
+  @apply text-gray-400 hover:text-white transition-colors duration-200;
+}
+
+.footerContact {
+  @apply space-y-3;
+}
+
+.footerContactItem {
+  @apply flex items-center gap-3;
+}
+
+.footerIcon {
+  @apply text-indigo-400 text-lg;
+}
+
+.socialLinks {
+  @apply flex gap-4 flex-wrap;
+}
+
+.socialLink {
+  @apply text-gray-400 hover:text-indigo-400 transition-all duration-300 text-2xl;
+  transform: translateY(0);
+}
+
+.socialLink:hover {
+  transform: translateY(-3px) scale(1.1);
+}
+
+.footerBottom {
+  @apply border-t border-gray-800 pt-8 mt-8 text-center;
+}
+
+.copyright {
+  @apply text-gray-500 text-sm mb-2;
+}
+
+.footerNote {
+  @apply text-gray-600 text-xs;
+}
+

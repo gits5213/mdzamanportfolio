@@ -1,49 +1,90 @@
-/* Project Card Component Styles */
+/* Modern Project Card Component Styles */
 .cardContainer {
   @apply max-w-3xl mx-auto;
 }
 
 .card {
-  @apply bg-white rounded-lg shadow-xl overflow-hidden hover:shadow-2xl transition-shadow duration-300;
+  @apply bg-white rounded-3xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-500;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  transform: translateY(0);
+}
+
+.card:hover {
+  transform: translateY(-8px);
 }
 
 .imageContainer {
-  @apply relative h-64 bg-cover bg-center;
+  @apply relative h-64 md:h-80 bg-cover bg-center;
+  position: relative;
+  overflow: hidden;
+}
+
+.imageContainer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.8) 0%, rgba(118, 75, 162, 0.8) 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.card:hover .imageContainer::before {
+  opacity: 1;
 }
 
 .imageOverlay {
   @apply absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center;
+  transition: background-opacity 0.3s ease;
+}
+
+.card:hover .imageOverlay {
+  background: rgba(0, 0, 0, 0.6);
 }
 
 .imageTitle {
-  @apply text-white text-2xl md:text-3xl font-bold text-center px-4;
+  @apply text-white text-2xl md:text-3xl lg:text-4xl font-bold text-center px-4;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+}
+
+.card:hover .imageTitle {
+  transform: scale(1.05);
 }
 
 .cardBody {
-  @apply p-6;
+  @apply p-6 md:p-8;
 }
 
 .cardContent {
-  @apply font-mono text-gray-800 space-y-2;
+  @apply font-mono text-gray-800 space-y-3 text-sm md:text-base;
+  line-height: 1.7;
 }
 
 .cardActions {
-  @apply flex flex-wrap gap-4 mt-6 pt-6 border-t border-gray-200;
+  @apply flex flex-wrap gap-4 mt-8 pt-8 border-t-2 border-gray-100;
 }
 
 .actionButton {
-  @apply px-6 py-2 rounded-lg transition-colors;
+  @apply px-6 py-3 rounded-xl transition-all duration-300 font-semibold shadow-lg;
+  transform: translateY(0);
+}
+
+.actionButton:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .buttonGitHub {
-  @apply bg-purple-600 text-white hover:bg-purple-700;
+  @apply bg-gradient-to-r from-indigo-600 to-purple-600 text-white hover:from-indigo-700 hover:to-purple-700;
 }
 
 .buttonBitBucket {
-  @apply bg-blue-600 text-white hover:bg-blue-700;
+  @apply bg-gradient-to-r from-blue-600 to-cyan-600 text-white hover:from-blue-700 hover:to-cyan-700;
 }
 
 .buttonDemo {
-  @apply bg-red-600 text-white hover:bg-red-700;
+  @apply bg-gradient-to-r from-red-600 to-pink-600 text-white hover:from-red-700 hover:to-pink-700;
 }
-

@@ -23,9 +23,9 @@ export default function LandingPage() {
           <Image
             src={getImagePath("/images/Md_Zaman_Picture.png")}
             alt="Md Zaman"
-            width={200}
-            height={200}
-            className={`${styles.avatarImage} ${styles.avatarImage}`}
+            width={250}
+            height={250}
+            className={styles.avatarImage}
             priority
           />
         </div>
@@ -36,30 +36,30 @@ export default function LandingPage() {
           </h1>
           
           <div className={styles.contentText}>
-            <p>{content.aboutMe}</p>
+            <p className="text-lg md:text-xl leading-relaxed">{content.aboutMe}</p>
             
             <div className={styles.highlightsSection}>
               <p className={styles.highlightsTitle}>Key Highlights:</p>
               <ul className={styles.highlightsList}>
                 <li className={styles.highlightItem}>
-                  <span className={styles.highlightBullet}>☞</span>
-                  <span>Proven track record in mentoring QA Analysts and Technical Support Engineers.</span>
+                  <span className={styles.highlightBullet}>✓</span>
+                  <span className="text-base md:text-lg">Proven track record in mentoring QA Analysts and Technical Support Engineers.</span>
                 </li>
                 <li className={styles.highlightItem}>
-                  <span className={styles.highlightBullet}>☞</span>
-                  <span>Extensive experience with Agile/Scrum, SAFe methodologies, Shift-left, & SDLC/STLC processes.</span>
+                  <span className={styles.highlightBullet}>✓</span>
+                  <span className="text-base md:text-lg">Extensive experience with Agile/Scrum, SAFe methodologies, Shift-left, & SDLC/STLC processes.</span>
                 </li>
                 <li className={styles.highlightItem}>
-                  <span className={styles.highlightBullet}>☞</span>
-                  <span>Expert in full-stack automation, technical documentation, and hands-on coding.</span>
+                  <span className={styles.highlightBullet}>✓</span>
+                  <span className="text-base md:text-lg">Expert in full-stack automation, technical documentation, and hands-on coding.</span>
                 </li>
                 <li className={styles.highlightItem}>
-                  <span className={styles.highlightBullet}>☞</span>
-                  <span>Adept at delivering presentations, ensuring compliance with public law, and maintaining relevance to business needs.</span>
+                  <span className={styles.highlightBullet}>✓</span>
+                  <span className="text-base md:text-lg">Adept at delivering presentations, ensuring compliance with public law, and maintaining relevance to business needs.</span>
                 </li>
                 <li className={styles.highlightItem}>
-                  <span className={styles.highlightBullet}>☞</span>
-                  <span>Strong analytical, communication, problem-solving skills, and ensuring attention to detail & delivering exceptional customer service.</span>
+                  <span className={styles.highlightBullet}>✓</span>
+                  <span className="text-base md:text-lg">Strong analytical, communication, problem-solving skills, and ensuring attention to detail & delivering exceptional customer service.</span>
                 </li>
               </ul>
             </div>

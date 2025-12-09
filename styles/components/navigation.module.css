@@ -1,6 +1,8 @@
-/* Navigation Component Styles */
+/* Modern Navigation Component Styles */
 .nav {
-  @apply shadow-lg sticky top-0 z-50;
+  @apply shadow-lg sticky top-0 z-50 backdrop-blur-md;
+  background: rgba(102, 126, 234, 0.95);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .navContainer {
@@ -8,30 +10,63 @@
 }
 
 .navContent {
-  @apply flex justify-between items-center h-16;
+  @apply flex justify-between items-center h-16 md:h-20;
 }
 
 .logo {
-  @apply text-white text-xl font-bold hover:text-yellow-200 transition-colors;
+  @apply text-white text-xl md:text-2xl font-bold hover:text-yellow-200 transition-all duration-300;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transform: translateY(0);
+}
+
+.logo:hover {
+  transform: translateY(-2px);
 }
 
 .desktopNav {
-  @apply hidden md:flex space-x-6;
+  @apply hidden md:flex space-x-8;
 }
 
 .navLink {
-  @apply text-white hover:text-yellow-200 transition-colors font-medium;
+  @apply text-white hover:text-yellow-200 transition-all duration-300 font-medium text-base relative;
+  padding: 0.5rem 0;
+}
+
+.navLink::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #fbbf24, #f59e0b);
+  transition: width 0.3s ease;
+}
+
+.navLink:hover::after {
+  width: 100%;
 }
 
 .mobileMenuButton {
-  @apply md:hidden text-white p-2;
+  @apply md:hidden text-white p-2 rounded-lg hover:bg-white hover:bg-opacity-20 transition-all duration-200;
 }
 
 .mobileNav {
-  @apply md:hidden pb-4;
+  @apply md:hidden pb-4 pt-2;
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .mobileNavLink {
-  @apply block text-white hover:text-yellow-200 py-2 transition-colors;
+  @apply block text-white hover:text-yellow-200 py-3 px-4 rounded-lg hover:bg-white hover:bg-opacity-10 transition-all duration-200;
 }
-

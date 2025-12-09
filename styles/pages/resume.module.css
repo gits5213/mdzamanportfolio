@@ -1,6 +1,6 @@
-/* Resume Page Specific Styles */
+/* Modern Resume Page Styles */
 .resumeContainer {
-  @apply min-h-screen bg-gray-50 py-12 px-4;
+  @apply min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-100 py-12 md:py-16 px-4;
 }
 
 .resumeContent {
@@ -8,78 +8,112 @@
 }
 
 .resumeGrid {
-  @apply grid grid-cols-1 lg:grid-cols-2 gap-8;
+  @apply grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12;
 }
 
 .leftColumn {
   @apply space-y-8;
+  animation: fadeInUp 0.6s ease-out;
 }
 
 .rightColumn {
-  @apply bg-gray-800 text-white p-8 rounded-lg space-y-8;
+  @apply bg-gradient-to-br from-gray-800 to-gray-900 text-white p-8 md:p-10 rounded-3xl shadow-2xl space-y-8;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  animation: fadeInUp 0.6s ease-out 0.2s both;
+}
+
+.rightColumn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #667eea, #764ba2, #f093fb);
+  border-radius: 3px 3px 0 0;
 }
 
 .avatarSection {
   @apply text-center;
+  animation: scaleIn 0.6s ease-out;
 }
 
 .avatarImage {
-  @apply rounded-3xl border border-gray-300 mx-auto;
+  @apply rounded-3xl border-4 border-white shadow-2xl mx-auto;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.2));
+}
+
+.avatarImage:hover {
+  transform: scale(1.05) rotate(-2deg);
 }
 
 .sectionTitle {
-  @apply text-3xl font-bold mb-4;
+  @apply text-3xl md:text-4xl font-bold mb-6 text-gray-900;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .sectionTitleWhite {
-  @apply text-3xl font-bold mb-4 text-white;
+  @apply text-3xl md:text-4xl font-bold mb-6 text-white;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
 .subtitle {
-  @apply text-xl text-gray-600 mb-4;
+  @apply text-xl md:text-2xl text-gray-600 mb-6 font-semibold;
 }
 
 .divider {
-  @apply border-t-4 border-purple-500 w-3/4 mb-4;
+  @apply border-t-4 border-transparent bg-gradient-to-r from-purple-500 via-pink-500 to-purple-500 w-3/4 mb-6;
+  height: 4px;
+  border-radius: 2px;
 }
 
 .dividerWhite {
-  @apply border-t-4 border-purple-500 w-3/4 my-4;
+  @apply border-t-4 border-transparent bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400 w-3/4 my-6;
+  height: 4px;
+  border-radius: 2px;
 }
 
 .contentText {
-  @apply text-justify pr-4 font-mono text-gray-700 leading-relaxed;
+  @apply text-justify pr-4 font-mono text-gray-700 leading-relaxed text-base md:text-lg;
 }
 
 .contentTextWhite {
-  @apply text-gray-300 text-justify pr-4;
+  @apply text-gray-200 text-justify pr-4 leading-relaxed text-base md:text-lg;
 }
 
 .contactInfo {
-  @apply space-y-4;
+  @apply space-y-5;
 }
 
 .contactItem {
-  @apply flex items-center gap-2 text-lg font-semibold mb-2;
+  @apply flex items-center gap-3 text-lg font-semibold mb-3;
 }
 
 .contactIcon {
-  @apply text-gray-600;
+  @apply text-gray-600 text-2xl;
 }
 
 .contactText {
-  @apply text-gray-700;
+  @apply text-gray-700 text-base md:text-lg;
 }
 
 .webLinks {
-  @apply space-y-1;
+  @apply space-y-2;
 }
 
 .webLink {
-  @apply text-green-600 hover:text-green-800 block;
+  @apply text-indigo-600 hover:text-indigo-800 block transition-colors duration-200 font-medium;
+  text-decoration: underline;
+  text-underline-offset: 4px;
 }
 
 .webLinkWhite {
-  @apply text-blue-400 hover:text-blue-300;
+  @apply text-blue-400 hover:text-blue-300 transition-colors duration-200;
+  text-decoration: underline;
+  text-underline-offset: 4px;
 }
-

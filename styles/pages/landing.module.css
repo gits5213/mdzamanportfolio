@@ -1,61 +1,102 @@
-/* Landing Page Specific Styles */
+/* Modern Landing Page Styles */
 .landingContainer {
-  @apply min-h-screen flex items-center justify-center py-20 px-4;
+  @apply min-h-screen flex items-center justify-center py-12 md:py-20 px-4 relative;
+  position: relative;
 }
 
 .landingContent {
-  @apply max-w-4xl w-full;
+  @apply max-w-5xl w-full relative z-10;
+  animation: fadeInUp 0.8s ease-out;
 }
 
 .avatarContainer {
-  @apply text-center mb-8;
+  @apply text-center mb-8 md:mb-12;
+  animation: fadeInUp 0.6s ease-out 0.2s both;
 }
 
 .avatarImage {
-  @apply rounded-full mx-auto border-4 border-white shadow-xl;
+  @apply rounded-full mx-auto border-4 border-white shadow-2xl;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.3));
+}
+
+.avatarImage:hover {
+  transform: scale(1.05) rotate(2deg);
 }
 
 .contentCard {
-  @apply bg-black bg-opacity-80 rounded-lg p-8 md:p-12 shadow-2xl;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  @apply rounded-3xl p-8 md:p-12 lg:p-16 shadow-2xl;
+  animation: fadeInUp 0.8s ease-out 0.4s both;
 }
 
 .title {
-  @apply text-4xl md:text-6xl font-bold text-white mb-6;
+  @apply text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 md:mb-8;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(135deg, #ffffff 0%, #fbbf24 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .contentText {
-  @apply text-white text-lg md:text-xl space-y-4 mb-8;
+  @apply text-white text-lg md:text-xl space-y-6 mb-8;
+  line-height: 1.8;
 }
 
 .highlightsSection {
-  @apply mt-6;
+  @apply mt-8 md:mt-10;
 }
 
 .highlightsTitle {
-  @apply font-semibold text-yellow-300 mb-3;
+  @apply font-bold text-yellow-300 mb-4 text-xl md:text-2xl;
+  text-shadow: 0 2px 10px rgba(251, 191, 36, 0.3);
 }
 
 .highlightsList {
-  @apply list-none space-y-2 text-left;
+  @apply list-none space-y-4 text-left;
 }
 
 .highlightItem {
-  @apply flex items-start;
+  @apply flex items-start gap-3 p-3 rounded-lg hover:bg-white hover:bg-opacity-5 transition-all duration-300;
+  animation: slideInRight 0.5s ease-out both;
 }
 
+.highlightItem:nth-child(1) { animation-delay: 0.1s; }
+.highlightItem:nth-child(2) { animation-delay: 0.2s; }
+.highlightItem:nth-child(3) { animation-delay: 0.3s; }
+.highlightItem:nth-child(4) { animation-delay: 0.4s; }
+.highlightItem:nth-child(5) { animation-delay: 0.5s; }
+
 .highlightBullet {
-  @apply mr-2;
+  @apply text-yellow-400 text-xl md:text-2xl flex-shrink-0 mt-1 font-bold;
+  filter: drop-shadow(0 2px 4px rgba(251, 191, 36, 0.5));
 }
 
 .callToAction {
-  @apply mt-6 text-yellow-300;
+  @apply mt-8 text-yellow-300 text-xl md:text-2xl font-semibold text-center;
+  text-shadow: 0 2px 10px rgba(251, 191, 36, 0.3);
+  animation: fadeIn 1s ease-out 0.8s both;
 }
 
 .socialLinksContainer {
-  @apply flex justify-center items-center gap-6 flex-wrap mt-8;
+  @apply flex justify-center items-center gap-6 md:gap-8 flex-wrap mt-10 md:mt-12;
+  animation: fadeInUp 0.8s ease-out 1s both;
 }
 
 .socialIcon {
-  @apply text-5xl;
+  @apply text-4xl md:text-5xl;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
 }
 
+.socialIcon:hover {
+  transform: translateY(-8px) scale(1.15);
+  filter: drop-shadow(0 8px 16px rgba(251, 191, 36, 0.4));
+}

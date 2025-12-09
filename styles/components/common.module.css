@@ -1,6 +1,13 @@
-/* Common Component Styles */
+/* Modern Common Component Styles */
 .educationItem {
-  @apply grid grid-cols-4 gap-4 mb-4;
+  @apply grid grid-cols-4 gap-4 md:gap-6 mb-6 p-4 rounded-xl hover:bg-gray-50 transition-all duration-300;
+  border-left: 4px solid transparent;
+  transition: border-color 0.3s ease;
+}
+
+.educationItem:hover {
+  border-left-color: #667eea;
+  background: rgba(102, 126, 234, 0.05);
 }
 
 .educationYear {
@@ -8,11 +15,11 @@
 }
 
 .educationYearText {
-  @apply text-gray-600 font-medium;
+  @apply text-gray-600 font-semibold text-sm md:text-base;
 }
 
 .educationYearTextWhite {
-  @apply text-gray-300 font-medium;
+  @apply text-gray-300 font-semibold text-sm md:text-base;
 }
 
 .educationContent {
@@ -20,42 +27,44 @@
 }
 
 .educationTitle {
-  @apply font-semibold text-lg mb-1;
+  @apply font-bold text-lg md:text-xl mb-2 text-gray-900;
 }
 
 .educationTitleWhite {
-  @apply font-semibold text-lg mb-1 text-white;
+  @apply font-bold text-lg md:text-xl mb-2 text-white;
 }
 
 .educationDescription {
-  @apply text-gray-700;
+  @apply text-gray-700 text-sm md:text-base;
+  line-height: 1.6;
 }
 
 .educationDescriptionWhite {
-  @apply text-gray-300 text-justify pr-4;
+  @apply text-gray-300 text-sm md:text-base text-justify pr-4;
+  line-height: 1.6;
 }
 
 .skillsContainer {
-  @apply w-full;
+  @apply w-full mb-4;
 }
 
 .skillsRow {
-  @apply flex items-center gap-4 mb-2;
+  @apply flex items-center gap-4 mb-4 p-3 rounded-lg hover:bg-gray-50 transition-all duration-300;
 }
 
 .skillsLabel {
-  @apply text-sm font-medium text-gray-700 flex-shrink-0 min-w-[200px];
+  @apply text-sm md:text-base font-medium text-gray-700 flex-shrink-0 min-w-[200px];
 }
 
 .skillsProgressBar {
-  @apply flex-1 bg-gray-200 rounded-full h-4 overflow-hidden;
+  @apply flex-1 bg-gray-200 rounded-full h-4 md:h-5 overflow-hidden shadow-inner;
 }
 
 .skillsProgressFill {
-  @apply bg-gradient-to-r from-purple-500 to-pink-500 h-full rounded-full transition-all duration-500;
+  @apply bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 h-full rounded-full transition-all duration-700 ease-out;
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.4);
 }
 
 .skillsPercentage {
-  @apply text-sm font-medium text-gray-600 w-12 text-right;
+  @apply text-sm md:text-base font-semibold text-gray-600 w-12 text-right;
 }
-
