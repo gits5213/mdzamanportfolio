@@ -14,14 +14,31 @@
 }
 
 .logo {
-  @apply text-sky-400 text-xl md:text-2xl font-bold hover:text-sky-300 transition-all duration-300;
-  font-family: var(--font-heading);
-  font-weight: 700;
+  @apply flex items-center gap-3 hover:opacity-80 transition-all duration-300;
   transform: translateY(0);
 }
 
 .logo:hover {
   transform: translateY(-2px);
+}
+
+.logoImage {
+  @apply rounded-full border-2 border-sky-400/50;
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  transition: all 0.3s ease;
+}
+
+.logo:hover .logoImage {
+  border-color: var(--primary-accent);
+  box-shadow: 0 0 12px rgba(56, 189, 248, 0.4);
+}
+
+.logoText {
+  @apply text-sky-400 text-lg md:text-xl font-bold hover:text-sky-300 transition-colors duration-300;
+  font-family: var(--font-heading);
+  font-weight: 700;
 }
 
 .desktopNav {

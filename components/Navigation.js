@@ -1,8 +1,10 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { useState } from 'react'
 import { FaBars, FaTimes } from 'react-icons/fa'
+import { getImagePath } from '@/app/utils/imagePath'
 import styles from '@/styles/components/navigation.module.css'
 
 export default function Navigation() {
@@ -23,7 +25,15 @@ export default function Navigation() {
       <div className={styles.navContainer}>
         <div className={styles.navContent}>
           <Link href="/" className={styles.logo}>
-            Md&apos;s Portfolio
+            <Image
+              src={getImagePath("/images/Md_Zaman_Picture.png")}
+              alt="MD Shahnewaz Zaman"
+              width={40}
+              height={40}
+              className={styles.logoImage}
+              priority
+            />
+            <span className={styles.logoText}>MD Zaman</span>
           </Link>
           
           {/* Desktop Navigation */}
