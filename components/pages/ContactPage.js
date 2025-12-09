@@ -5,7 +5,7 @@ import Section from '@/components/ui/Section'
 import PageHeader from '@/components/ui/PageHeader'
 import Card from '@/components/ui/Card'
 import Link from 'next/link'
-import { FaLinkedin, FaGithub, FaTwitter, FaYoutube, FaEnvelope, FaPhone } from 'react-icons/fa'
+import { FaLinkedin, FaGithub, FaTwitter, FaYoutube, FaEnvelope, FaPhone, FaCheckCircle, FaExclamationCircle } from 'react-icons/fa'
 import globalPageData from '@/data/globalPageData.json'
 
 export default function ContactPage() {
@@ -13,14 +13,87 @@ export default function ContactPage() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    reason: 'Job Opportunity'
+    reason: 'Job Opportunity',
+    message: ''
   })
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitStatus, setSubmitStatus] = useState('idle') // 'idle' | 'success' | 'error'
+  const [submitMessage, setSubmitMessage] = useState('')
 
-  const handleSubmit = (e) => {
+  // Google Apps Script Web App URL - Configure in .env.local file
+  // See GOOGLE_DRIVE_SETUP.md for setup instructions
+  const GOOGLE_SCRIPT_URL = process.env.NEXT_PUBLIC_GOOGLE_SCRIPT_URL || ''
+
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    // Handle form submission
-    const mailtoLink = `mailto:${contact.email}?subject=${encodeURIComponent(`Contact from ${formData.name}`)}&body=${encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\nReason: ${formData.reason}\n\nMessage: [Your message here]`)}`
-    window.location.href = mailtoLink
+    setIsSubmitting(true)
+    setSubmitStatus('idle')
+    setSubmitMessage('')
+
+    try {
+      // If Google Script URL is configured, use it to save to Google Drive/Sheets
+      if (GOOGLE_SCRIPT_URL) {
+        const response = await fetch(GOOGLE_SCRIPT_URL, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            name: formData.name,
+            email: formData.email,
+            reason: formData.reason,
+            message: formData.message,
+            timestamp: new Date().toISOString()
+          })
+        })
+
+        // Try to parse response if available
+        let result
+        try {
+          result = await response.json()
+        } catch (e) {
+          // If response parsing fails, assume success (Google Script may not return JSON)
+          result = { success: true }
+        }
+
+        if (result.success !== false) {
+          setSubmitStatus('success')
+          setSubmitMessage('Thank you! Your message has been sent successfully. I will get back to you soon.')
+          
+          // Reset form
+          setFormData({
+            name: '',
+            email: '',
+            reason: 'Job Opportunity',
+            message: ''
+          })
+        } else {
+          throw new Error(result.error || 'Submission failed')
+        }
+      } else {
+        // Fallback to mailto if Google Script is not configured
+        const mailtoLink = `mailto:${contact.email}?subject=${encodeURIComponent(`Contact from ${formData.name} - ${formData.reason}`)}&body=${encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\nReason: ${formData.reason}\n\nMessage:\n${formData.message}`)}`
+        window.location.href = mailtoLink
+        
+        // Show success message after a short delay
+        setTimeout(() => {
+          setSubmitStatus('success')
+          setSubmitMessage('Thank you! Your email client should open. If it doesn\'t, please email me directly at ' + contact.email)
+          setFormData({
+            name: '',
+            email: '',
+            reason: 'Job Opportunity',
+            message: ''
+          })
+        }, 500)
+      }
+    } catch (error) {
+      console.error('Form submission error:', error)
+      setSubmitStatus('error')
+      setSubmitMessage('Sorry, there was an error sending your message. Please try again or email me directly at ' + contact.email)
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   const socialLinks = [
@@ -91,12 +164,43 @@ export default function ContactPage() {
                 </select>
               </div>
 
+              <div>
+                <label htmlFor="message" className="block text-sm font-medium text-slate-300 mb-2">
+                  Message
+                </label>
+                <textarea
+                  id="message"
+                  required
+                  rows={5}
+                  value={formData.message}
+                  onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                  className="w-full px-4 py-3 rounded-lg bg-slate-900 border border-slate-700 text-slate-100 focus:border-sky-500 focus:outline-none transition-colors resize-none"
+                  placeholder="Tell me about your project, opportunity, or how I can help..."
+                />
+              </div>
+
+              {/* Success/Error Messages */}
+              {submitStatus === 'success' && (
+                <div className="flex items-start gap-3 p-4 rounded-lg bg-emerald-500/10 border border-emerald-500/30">
+                  <FaCheckCircle className="text-emerald-400 text-xl flex-shrink-0 mt-0.5" />
+                  <p className="text-emerald-300 text-sm">{submitMessage}</p>
+                </div>
+              )}
+
+              {submitStatus === 'error' && (
+                <div className="flex items-start gap-3 p-4 rounded-lg bg-red-500/10 border border-red-500/30">
+                  <FaExclamationCircle className="text-red-400 text-xl flex-shrink-0 mt-0.5" />
+                  <p className="text-red-300 text-sm">{submitMessage}</p>
+                </div>
+              )}
+
               <button
                 type="submit"
-                className="w-full px-6 py-3 rounded-lg bg-sky-500 hover:bg-sky-400 text-slate-950 font-semibold transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg"
+                disabled={isSubmitting}
+                className="w-full px-6 py-3 rounded-lg bg-sky-500 hover:bg-sky-400 text-slate-950 font-semibold transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-y-0"
                 style={{ fontFamily: 'var(--font-heading)' }}
               >
-                Send Message
+                {isSubmitting ? 'Sending...' : 'Send Message'}
               </button>
             </form>
           </Card>
