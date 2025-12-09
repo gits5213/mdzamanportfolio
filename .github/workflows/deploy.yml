@@ -35,7 +35,10 @@ jobs:
       - name: Build with Next.js
         run: npm run build
         env:
+          # Use USE_CUSTOM_DOMAIN: 'true' if deploying to custom domain
+          # Use GITHUB_PAGES: 'true' if deploying to GitHub Pages subpath
           GITHUB_PAGES: 'true'
+          NODE_ENV: 'production'
 
       - name: Verify build output
         run: |

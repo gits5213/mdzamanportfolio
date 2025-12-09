@@ -4,18 +4,30 @@
 
 /**
  * Get the base path for the application
- * This works for both local development and GitHub Pages deployment
+ * This works for both local development, GitHub Pages deployment, and custom domains
  */
 export function getBasePath() {
   if (typeof window !== 'undefined') {
-    // Client-side: check if we're on GitHub Pages
+    // Client-side: check the current URL
+    const hostname = window.location.hostname
     const pathname = window.location.pathname
+    
+    // If using custom domain (not github.io), basePath should be empty
+    if (!hostname.includes('github.io') && !hostname.includes('github.com')) {
+      return ''
+    }
+    
+    // If on GitHub Pages subpath, return the basePath
     if (pathname.startsWith('/mdzamanportfolio')) {
       return '/mdzamanportfolio'
     }
   }
   
-  // Server-side or local development
+  // Server-side: check environment variables
+  if (process.env.USE_CUSTOM_DOMAIN === 'true') {
+    return ''
+  }
+  
   if (process.env.GITHUB_PAGES === 'true') {
     return '/mdzamanportfolio'
   }
