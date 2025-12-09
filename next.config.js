@@ -1,7 +1,12 @@
 /** @type {import('next').NextConfig} */
+const isGitHubPages = process.env.GITHUB_PAGES === 'true'
+const basePath = isGitHubPages ? '/mdzamanportfolio' : ''
+
 const nextConfig = {
   reactStrictMode: true,
   output: 'export',
+  basePath: basePath,
+  trailingSlash: true,
   images: {
     unoptimized: true,
   },
@@ -11,9 +16,6 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
-  // If deploying to GitHub Pages with a base path, uncomment the line below
-  // basePath: '/mdzamanportfolio',
-  // trailingSlash: true,
 }
 
 module.exports = nextConfig

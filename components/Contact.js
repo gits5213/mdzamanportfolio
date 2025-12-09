@@ -2,6 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { FaLinkedin, FaGithub, FaTwitter, FaYoutube, FaPhone, FaEnvelope, FaGlobe } from 'react-icons/fa'
 import globalPageData from '@/data/globalPageData.json'
+import { getImagePath } from '@/app/utils/imagePath'
 
 export default function Contact() {
   const { contact, links, content } = globalPageData
@@ -22,7 +23,7 @@ export default function Contact() {
           <div className="bg-white rounded-lg shadow-lg p-8 text-center">
             <h2 className="text-3xl font-bold mb-6">{contact.name}</h2>
             <Image
-              src="/images/Md_Zaman_Picture.png"
+              src={getImagePath("/images/Md_Zaman_Picture.png")}
               alt="Md Zaman"
               width={200}
               height={200}

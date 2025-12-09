@@ -2,6 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { FaLinkedin, FaGithub, FaTwitter, FaYoutube } from 'react-icons/fa'
 import globalPageData from '@/data/globalPageData.json'
+import { getImagePath } from '@/app/utils/imagePath'
 
 export default function LandingPage() {
   const { links, content } = globalPageData
@@ -19,7 +20,7 @@ export default function LandingPage() {
       <div className="max-w-4xl w-full">
         <div className="text-center mb-8">
           <Image
-            src="/images/Md_Zaman_Picture.png"
+            src={getImagePath("/images/Md_Zaman_Picture.png")}
             alt="Md Zaman"
             width={200}
             height={200}

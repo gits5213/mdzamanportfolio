@@ -5,6 +5,8 @@ import Experience from './Experience'
 import Skills from './Skills'
 import globalPageData from '@/data/globalPageData.json'
 import resumePageData from '@/data/resumePage.json'
+import { getImagePath } from '@/app/utils/imagePath'
+import { getAssetPath } from '@/app/utils/pathUtils'
 
 export default function Resume() {
   const { content, contact, links } = globalPageData
@@ -18,7 +20,7 @@ export default function Resume() {
           <div className="space-y-8">
             <div className="text-center">
               <Image
-                src="/images/Md_Zaman_Picture.png"
+                src={getImagePath("/images/Md_Zaman_Picture.png")}
                 alt="Md Zaman"
                 width={200}
                 height={200}
@@ -108,7 +110,7 @@ export default function Resume() {
                 endYear={jobs.jobEndYear}
                 jobName={jobs.jobName}
                 jobDescription={
-                  <Link href="/resume/Md-Zaman-all-Edited-8-2-23.pdf" target="_blank" className="text-blue-400 hover:text-blue-300">
+                  <Link href={getAssetPath("/resume/Md-Zaman-all-Edited-8-2-23.pdf")} target="_blank" className="text-blue-400 hover:text-blue-300">
                     <span className="mr-2">📥</span>Download Resume
                   </Link>
                 }
