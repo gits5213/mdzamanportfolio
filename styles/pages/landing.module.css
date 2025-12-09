@@ -6,12 +6,10 @@
 
 .landingContent {
   @apply max-w-5xl w-full relative z-10;
-  animation: fadeInUp 0.8s ease-out;
 }
 
 .avatarContainer {
   @apply text-center mb-8 md:mb-12;
-  animation: fadeInUp 0.6s ease-out 0.2s both;
 }
 
 .avatarImage {
@@ -31,7 +29,6 @@
   border: 1px solid rgba(255, 255, 255, 0.2);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   @apply rounded-3xl p-8 md:p-12 lg:p-16 shadow-2xl;
-  animation: fadeInUp 0.8s ease-out 0.4s both;
 }
 
 .title {
@@ -65,14 +62,7 @@
 
 .highlightItem {
   @apply flex items-start gap-3 p-3 rounded-lg hover:bg-white hover:bg-opacity-5 transition-all duration-300;
-  animation: slideInRight 0.5s ease-out both;
 }
-
-.highlightItem:nth-child(1) { animation-delay: 0.1s; }
-.highlightItem:nth-child(2) { animation-delay: 0.2s; }
-.highlightItem:nth-child(3) { animation-delay: 0.3s; }
-.highlightItem:nth-child(4) { animation-delay: 0.4s; }
-.highlightItem:nth-child(5) { animation-delay: 0.5s; }
 
 .highlightBullet {
   @apply text-yellow-400 text-xl md:text-2xl flex-shrink-0 mt-1 font-bold;
@@ -82,12 +72,10 @@
 .callToAction {
   @apply mt-8 text-yellow-300 text-xl md:text-2xl font-semibold text-center;
   text-shadow: 0 2px 10px rgba(251, 191, 36, 0.3);
-  animation: fadeIn 1s ease-out 0.8s both;
 }
 
 .socialLinksContainer {
   @apply flex justify-center items-center gap-6 md:gap-8 flex-wrap mt-10 md:mt-12;
-  animation: fadeInUp 0.8s ease-out 1s both;
 }
 
 .socialIcon {
