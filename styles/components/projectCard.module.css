@@ -59,8 +59,10 @@
 }
 
 .cardContent {
-  @apply font-mono text-gray-800 space-y-3 text-sm md:text-base;
+  @apply text-gray-800 space-y-3 text-sm md:text-base;
+  font-family: var(--font-sans);
   line-height: 1.7;
+  font-weight: 400;
 }
 
 .cardActions {

@@ -79,7 +79,9 @@
 }
 
 .contentText {
-  @apply text-justify pr-4 font-mono text-gray-700 leading-relaxed text-base md:text-lg;
+  @apply text-justify pr-4 text-gray-700 leading-relaxed text-base md:text-lg;
+  font-family: var(--font-sans);
+  font-weight: 400;
 }
 
 .contentTextWhite {
