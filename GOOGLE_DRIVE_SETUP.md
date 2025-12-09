@@ -22,8 +22,34 @@ This guide will help you set up Google Apps Script to store form submissions in 
 
 function doPost(e) {
   try {
-    // Parse the JSON data from the form
-    const data = JSON.parse(e.postData.contents);
+    let data;
+    
+    // Handle both JSON and form data
+    if (e.postData && e.postData.contents) {
+      try {
+        // Try to parse as JSON first
+        data = JSON.parse(e.postData.contents);
+      } catch (e) {
+        // If not JSON, parse as form data
+        data = {};
+        const params = e.parameter;
+        data.name = params.name || '';
+        data.email = params.email || '';
+        data.reason = params.reason || '';
+        data.message = params.message || '';
+        data.timestamp = params.timestamp || new Date().toISOString();
+      }
+    } else {
+      // Handle form data from POST request
+      const params = e.parameter;
+      data = {
+        name: params.name || '',
+        email: params.email || '',
+        reason: params.reason || '',
+        message: params.message || '',
+        timestamp: params.timestamp || new Date().toISOString()
+      };
+    }
     
     // Get the active spreadsheet
     const sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
@@ -37,7 +63,62 @@ function doPost(e) {
       data.message || ''
     ]);
     
-    // Return success response with CORS headers
+    // Send email notification
+    const recipientEmail = 'mdzaman.jobs@gmail.com'; // Change this to your email
+    const emailSubject = `New Contact Form Submission: ${data.reason}`;
+    const emailBody = `
+New contact form submission received:
+
+Name: ${data.name}
+Email: ${data.email}
+Reason: ${data.reason}
+Timestamp: ${data.timestamp || new Date().toISOString()}
+
+Message:
+${data.message}
+
+---
+This email was sent automatically from your portfolio contact form.
+You can reply directly to ${data.email} to respond.
+    `.trim();
+    
+    const emailHtml = `
+      <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
+        <h2 style="color: #2563eb;">New Contact Form Submission</h2>
+        <div style="background-color: #f3f4f6; padding: 20px; border-radius: 8px; margin: 20px 0;">
+          <p><strong>Name:</strong> ${data.name}</p>
+          <p><strong>Email:</strong> <a href="mailto:${data.email}">${data.email}</a></p>
+          <p><strong>Reason:</strong> ${data.reason}</p>
+          <p><strong>Timestamp:</strong> ${data.timestamp || new Date().toISOString()}</p>
+        </div>
+        <div style="margin: 20px 0;">
+          <h3 style="color: #1f2937;">Message:</h3>
+          <div style="background-color: #ffffff; padding: 15px; border-left: 4px solid #2563eb; margin: 10px 0;">
+            <p style="white-space: pre-wrap; line-height: 1.6;">${data.message}</p>
+          </div>
+        </div>
+        <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #e5e7eb; color: #6b7280; font-size: 12px;">
+          <p>This email was sent automatically from your portfolio contact form.</p>
+          <p>You can reply directly to <a href="mailto:${data.email}">${data.email}</a> to respond.</p>
+        </div>
+      </div>
+    `;
+    
+    try {
+      MailApp.sendEmail({
+        to: recipientEmail,
+        subject: emailSubject,
+        body: emailBody,
+        htmlBody: emailHtml,
+        replyTo: data.email // Set reply-to so you can reply directly
+      });
+    } catch (emailError) {
+      // Log email error but don't fail the form submission
+      console.error('Email notification failed:', emailError);
+      // You can optionally log this to the sheet or send to a different email
+    }
+    
+    // Return success response
     return ContentService
       .createTextOutput(JSON.stringify({ 
         success: true, 
@@ -165,40 +246,22 @@ import { GOOGLE_SCRIPT_URL } from '@/app/config/contact'
 - **Form not submitting**: Check browser console for errors
 - **Environment variable not working**: Make sure to restart your dev server after adding `.env.local`
 
-## Optional: Email Notifications
+## Email Notifications
 
-You can enhance the script to send email notifications:
+The script now includes email notifications! When a form is submitted, you'll receive an email with:
+- Form submission details (name, email, reason, message)
+- HTML formatted email for better readability
+- Reply-to set to the submitter's email for easy response
 
-```javascript
-function doPost(e) {
-  try {
-    const data = JSON.parse(e.postData.contents);
-    const sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
-    
-    sheet.appendRow([
-      data.timestamp || new Date().toISOString(),
-      data.name || '',
-      data.email || '',
-      data.reason || '',
-      data.message || ''
-    ]);
-    
-    // Send email notification
-    MailApp.sendEmail({
-      to: 'your-email@gmail.com',
-      subject: `New Contact Form Submission: ${data.reason}`,
-      body: `Name: ${data.name}\nEmail: ${data.email}\nReason: ${data.reason}\n\nMessage:\n${data.message}`
-    });
-    
-    return ContentService
-      .createTextOutput(JSON.stringify({ success: true }))
-      .setMimeType(ContentService.MimeType.JSON);
-      
-  } catch (error) {
-    return ContentService
-      .createTextOutput(JSON.stringify({ success: false, error: error.toString() }))
-      .setMimeType(ContentService.MimeType.JSON);
-  }
-}
-```
+**To customize the recipient email:**
+1. In the `doPost` function, find the line: `const recipientEmail = 'mdzaman.jobs@gmail.com';`
+2. Change it to your preferred email address
+3. Save and redeploy the script
+
+**Email Features:**
+- ✅ Sends to: `mdzaman.jobs@gmail.com` (configurable)
+- ✅ Reply-to: Set to submitter's email for easy response
+- ✅ HTML formatted for better readability
+- ✅ Includes all form data
+- ✅ Won't fail form submission if email fails (error handling included)
 

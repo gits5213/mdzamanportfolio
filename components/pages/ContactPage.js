@@ -7,6 +7,7 @@ import Card from '@/components/ui/Card'
 import Link from 'next/link'
 import { FaLinkedin, FaGithub, FaTwitter, FaYoutube, FaEnvelope, FaPhone, FaCheckCircle, FaExclamationCircle } from 'react-icons/fa'
 import globalPageData from '@/data/globalPageData.json'
+import { GOOGLE_SCRIPT_URL as configUrl } from '@/app/config/contact'
 
 export default function ContactPage() {
   const { contact, links } = globalPageData
@@ -20,9 +21,10 @@ export default function ContactPage() {
   const [submitStatus, setSubmitStatus] = useState('idle') // 'idle' | 'success' | 'error'
   const [submitMessage, setSubmitMessage] = useState('')
 
-  // Google Apps Script Web App URL - Configure in .env.local file
+  // Google Apps Script Web App URL - Configure in .env.local (dev) or app/config/contact.js (production)
   // See GOOGLE_DRIVE_SETUP.md for setup instructions
-  const GOOGLE_SCRIPT_URL = process.env.NEXT_PUBLIC_GOOGLE_SCRIPT_URL || ''
+  // For production (GitHub Pages), use the config file since env vars don't work with static export
+  const GOOGLE_SCRIPT_URL = process.env.NEXT_PUBLIC_GOOGLE_SCRIPT_URL || configUrl || ''
 
   const handleSubmit = async (e) => {
     e.preventDefault()
@@ -33,43 +35,56 @@ export default function ContactPage() {
     try {
       // If Google Script URL is configured, use it to save to Google Drive/Sheets
       if (GOOGLE_SCRIPT_URL) {
-        const response = await fetch(GOOGLE_SCRIPT_URL, {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({
-            name: formData.name,
-            email: formData.email,
-            reason: formData.reason,
-            message: formData.message,
-            timestamp: new Date().toISOString()
-          })
+        const payload = {
+          name: formData.name,
+          email: formData.email,
+          reason: formData.reason,
+          message: formData.message,
+          timestamp: new Date().toISOString()
+        }
+
+        // Use a hidden iframe approach for Google Apps Script to avoid CORS issues
+        // This is a workaround since Google Apps Script Web Apps have CORS limitations
+        const form = document.createElement('form')
+        form.method = 'POST'
+        form.action = GOOGLE_SCRIPT_URL
+        form.target = 'hidden_iframe'
+        form.style.display = 'none'
+
+        // Add form fields
+        Object.keys(payload).forEach(key => {
+          const input = document.createElement('input')
+          input.type = 'hidden'
+          input.name = key
+          input.value = payload[key]
+          form.appendChild(input)
         })
 
-        // Try to parse response if available
-        let result
-        try {
-          result = await response.json()
-        } catch (e) {
-          // If response parsing fails, assume success (Google Script may not return JSON)
-          result = { success: true }
+        // Create hidden iframe if it doesn't exist
+        let iframe = document.getElementById('hidden_iframe')
+        if (!iframe) {
+          iframe = document.createElement('iframe')
+          iframe.id = 'hidden_iframe'
+          iframe.name = 'hidden_iframe'
+          iframe.style.display = 'none'
+          document.body.appendChild(iframe)
         }
 
-        if (result.success !== false) {
-          setSubmitStatus('success')
-          setSubmitMessage('Thank you! Your message has been sent successfully. I will get back to you soon.')
-          
-          // Reset form
-          setFormData({
-            name: '',
-            email: '',
-            reason: 'Job Opportunity',
-            message: ''
-          })
-        } else {
-          throw new Error(result.error || 'Submission failed')
-        }
+        document.body.appendChild(form)
+        form.submit()
+        document.body.removeChild(form)
+
+        // Show success message (we can't verify success with iframe method)
+        setSubmitStatus('success')
+        setSubmitMessage('Thank you! Your message has been sent successfully. I will get back to you soon.')
+        
+        // Reset form
+        setFormData({
+          name: '',
+          email: '',
+          reason: 'Job Opportunity',
+          message: ''
+        })
       } else {
         // Fallback to mailto if Google Script is not configured
         const mailtoLink = `mailto:${contact.email}?subject=${encodeURIComponent(`Contact from ${formData.name} - ${formData.reason}`)}&body=${encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\nReason: ${formData.reason}\n\nMessage:\n${formData.message}`)}`
