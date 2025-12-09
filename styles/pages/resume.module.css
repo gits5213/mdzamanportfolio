@@ -7,25 +7,21 @@
   @apply max-w-7xl mx-auto;
 }
 
-.resumeGrid {
-  @apply grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12;
-}
-
-.leftColumn {
-  @apply space-y-8;
+.mainSection {
+  @apply space-y-8 mb-12;
   animation: fadeInUp 0.6s ease-out;
 }
 
-.rightColumn {
+.experienceSection {
   background: linear-gradient(135deg, #1e293b 0%, #0f172a 50%, #1e293b 100%);
-  @apply text-white p-8 md:p-10 rounded-3xl shadow-2xl space-y-8;
+  @apply text-white p-8 md:p-10 rounded-3xl shadow-2xl mb-8;
   border: 1px solid rgba(102, 126, 234, 0.2);
   position: relative;
-  animation: fadeInUp 0.6s ease-out 0.2s both;
+  animation: fadeInUp 0.6s ease-out;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(102, 126, 234, 0.1);
 }
 
-.rightColumn::before {
+.experienceSection::before {
   content: '';
   position: absolute;
   top: 0;
@@ -107,19 +103,25 @@
 }
 
 .contactInfo {
-  @apply space-y-5;
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6;
 }
 
 .contactItem {
-  @apply flex items-center gap-3 text-lg font-semibold mb-3;
+  @apply flex items-start gap-3 p-4 rounded-lg bg-white border border-gray-200 hover:border-indigo-300 hover:shadow-md transition-all duration-300;
 }
 
 .contactIcon {
-  @apply text-gray-600 text-2xl;
+  @apply text-indigo-600 text-2xl flex-shrink-0 mt-1;
+}
+
+.contactLabel {
+  @apply text-gray-900 font-semibold text-sm md:text-base mb-1;
+  font-family: var(--font-heading);
 }
 
 .contactText {
-  @apply text-gray-700 text-base md:text-lg;
+  @apply text-gray-700 text-sm md:text-base;
+  line-height: 1.5;
 }
 
 .webLinks {
