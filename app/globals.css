@@ -6,31 +6,31 @@
    MODERN DESIGN SYSTEM - CSS VARIABLES
    ============================================ */
 :root {
-  /* Modern Color Palette */
-  --primary: #6366f1;
-  --primary-dark: #4f46e5;
-  --primary-light: #818cf8;
-  --secondary: #ec4899;
-  --accent: #f59e0b;
-  --success: #10b981;
+  /* Dark Theme Color Palette - DevSecOps + QA */
+  --bg-primary: #020617;
+  --bg-surface: #02081A;
+  --bg-nav: #0B1120;
+  --bg-card: rgba(15, 23, 42, 0.6);
   
-  /* Neutral Colors */
-  --gray-50: #f9fafb;
-  --gray-100: #f3f4f6;
-  --gray-200: #e5e7eb;
-  --gray-300: #d1d5db;
-  --gray-400: #9ca3af;
-  --gray-500: #6b7280;
-  --gray-600: #4b5563;
-  --gray-700: #374151;
-  --gray-800: #1f2937;
-  --gray-900: #111827;
+  /* Accent Colors */
+  --primary-accent: #38BDF8; /* sky-400 */
+  --secondary-accent: #22C55E; /* emerald-500 */
+  --primary-accent-hover: #0EA5E9; /* sky-500 */
   
-  /* Typography - Modern 2025 Font Stack */
+  /* Text Colors */
+  --text-primary: #E5E7EB; /* gray-200 */
+  --text-muted: #9CA3AF; /* gray-400 */
+  --text-secondary: #6B7280; /* gray-500 */
+  
+  /* Borders & Separators */
+  --border-color: #1F2937; /* gray-800 */
+  --border-accent: rgba(56, 189, 248, 0.3);
+  
+  /* Typography - DevSecOps + QA Font Stack */
   --font-sans: var(--font-inter), -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-  --font-heading: var(--font-space-grotesk), -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  --font-mono: var(--font-jetbrains-mono), 'SF Mono', 'Monaco', 'Inconsolata', 'Roboto Mono', monospace;
+  --font-heading: var(--font-heading), -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono: var(--font-mono), 'SF Mono', 'Monaco', 'Inconsolata', 'Roboto Mono', monospace;
   
   /* Spacing */
   --spacing-xs: 0.5rem;
@@ -75,7 +75,8 @@
   }
 
   body {
-    @apply bg-gray-50 text-gray-900 antialiased;
+    background: var(--bg-primary);
+    color: var(--text-primary);
     font-family: var(--font-sans);
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
@@ -227,30 +228,20 @@
    REUSABLE COMPONENT STYLES
    ============================================ */
 @layer components {
-  /* Modern Gradient Backgrounds */
-  .gradient-header {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
-    background-size: 200% 200%;
-    animation: gradient 15s ease infinite;
-  }
-  
-  .gradient-landing {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 25%, #f093fb 50%, #4facfe 75%, #00f2fe 100%);
-    background-size: 400% 400%;
-    animation: gradient 20s ease infinite;
+  /* Dark Theme Backgrounds */
+  .bg-gradient-hero {
+    background: linear-gradient(135deg, var(--bg-primary) 0%, #0F172A 50%, var(--bg-primary) 100%);
     position: relative;
-    overflow: hidden;
   }
 
-  .gradient-landing::before {
+  .bg-gradient-hero::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+    background: radial-gradient(circle at 50% 50%, rgba(56, 189, 248, 0.1), transparent 70%);
     pointer-events: none;
   }
 
@@ -272,7 +263,7 @@
 
   /* Social Links */
   .social-link {
-    @apply text-white hover:text-yellow-300 transition-all duration-300;
+    @apply text-slate-300 hover:text-sky-400 transition-all duration-300;
     transform: translateY(0);
   }
 
@@ -280,29 +271,23 @@
     transform: translateY(-5px) scale(1.1);
   }
 
-  /* Modern Cards */
+  /* Modern Cards - Dark Theme */
   .card {
-    @apply bg-white rounded-2xl shadow-lg p-6 md:p-8 hover:shadow-2xl transition-all duration-300;
-    border: 1px solid rgba(0, 0, 0, 0.05);
+    @apply rounded-2xl border border-slate-800 bg-slate-950/60 backdrop-blur-sm shadow-[0_0_60px_rgba(15,23,42,0.7)] p-6 md:p-8;
+    transition: all 0.3s ease;
   }
 
   .card:hover {
     transform: translateY(-4px);
+    box-shadow: 0 20px 60px rgba(15, 23, 42, 0.9);
+    border-color: rgba(56, 189, 248, 0.3);
   }
 
-  .card-dark {
-    @apply bg-gray-800 text-white rounded-2xl shadow-lg p-6 md:p-8 hover:shadow-2xl transition-all duration-300;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-  }
-
-  .card-dark:hover {
-    transform: translateY(-4px);
-  }
-
-  /* Modern Buttons */
+  /* Modern Buttons - Dark Theme */
   .btn-primary {
-    @apply px-6 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-xl hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 font-semibold shadow-lg hover:shadow-xl;
+    @apply px-6 py-3 bg-sky-500 hover:bg-sky-400 text-slate-950 rounded-lg transition-all duration-300 font-semibold shadow-lg hover:shadow-xl;
     transform: translateY(0);
+    font-family: var(--font-heading);
   }
 
   .btn-primary:hover {
@@ -310,11 +295,13 @@
   }
 
   .btn-secondary {
-    @apply px-6 py-3 bg-gray-600 text-white rounded-xl hover:bg-gray-700 transition-all duration-300 font-semibold shadow-lg hover:shadow-xl;
+    @apply px-6 py-3 border border-slate-600 text-slate-100 hover:border-sky-500 hover:text-sky-400 rounded-lg transition-all duration-300 font-semibold;
+    font-family: var(--font-heading);
   }
 
   .btn-outline {
-    @apply px-6 py-3 border-2 border-indigo-600 text-indigo-600 rounded-xl hover:bg-indigo-600 hover:text-white transition-all duration-300 font-semibold;
+    @apply px-6 py-3 border-2 border-sky-500 text-sky-400 rounded-lg hover:bg-sky-500 hover:text-slate-950 transition-all duration-300 font-semibold;
+    font-family: var(--font-heading);
   }
 
   /* Sections */
@@ -327,39 +314,36 @@
   }
 
   .section-title {
-    @apply text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-12;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    @apply text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-12 text-slate-100;
+    font-family: var(--font-heading);
   }
 
-  /* Modern Dividers */
+  /* Modern Dividers - Dark Theme */
   .divider {
-    @apply border-t-2 border-gray-200 my-8;
+    @apply border-t border-slate-800 my-8;
   }
 
   .divider-gradient {
     height: 2px;
-    background: linear-gradient(90deg, transparent, #667eea, transparent);
+    background: linear-gradient(90deg, transparent, var(--primary-accent), transparent);
     border: none;
     margin: 2rem 0;
   }
 
-  /* Text Styles */
+  /* Text Styles - Dark Theme */
   .text-gradient {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, var(--primary-accent) 0%, var(--secondary-accent) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
 
   .text-highlight {
-    @apply font-semibold text-yellow-300;
+    @apply font-semibold text-sky-400;
   }
 
   .text-muted {
-    @apply text-gray-600;
+    @apply text-slate-400;
   }
 
   .text-mono {

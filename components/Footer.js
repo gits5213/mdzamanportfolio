@@ -36,10 +36,19 @@ export default function Footer() {
                 <Link href="/" className={styles.footerLink}>Home</Link>
               </li>
               <li>
-                <Link href="/resume" className={styles.footerLink}>Resume</Link>
+                <Link href="/experience" className={styles.footerLink}>Experience</Link>
+              </li>
+              <li>
+                <Link href="/skills" className={styles.footerLink}>Skills</Link>
               </li>
               <li>
                 <Link href="/projects" className={styles.footerLink}>Projects</Link>
+              </li>
+              <li>
+                <Link href="/training" className={styles.footerLink}>Training</Link>
+              </li>
+              <li>
+                <Link href="/community" className={styles.footerLink}>Community</Link>
               </li>
               <li>
                 <Link href="/contact" className={styles.footerLink}>Contact</Link>

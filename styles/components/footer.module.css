@@ -1,7 +1,9 @@
 /* Footer Component Styles */
 .footer {
-  @apply bg-gray-900 text-gray-300 mt-auto;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  @apply mt-auto;
+  background: var(--bg-nav);
+  color: var(--text-primary);
+  border-top: 1px solid var(--border-color);
 }
 
 .footerContainer {
@@ -17,11 +19,12 @@
 }
 
 .footerTitle {
-  @apply text-white text-lg font-semibold mb-4;
+  @apply text-sky-400 text-lg font-semibold mb-4;
+  font-family: var(--font-heading);
 }
 
 .footerText {
-  @apply text-gray-400 leading-relaxed;
+  @apply text-slate-400 leading-relaxed;
 }
 
 .footerLinks {
@@ -29,7 +32,7 @@
 }
 
 .footerLink {
-  @apply text-gray-400 hover:text-white transition-colors duration-200;
+  @apply text-slate-400 hover:text-sky-400 transition-colors duration-200;
 }
 
 .footerContact {
@@ -41,7 +44,7 @@
 }
 
 .footerIcon {
-  @apply text-indigo-400 text-lg;
+  @apply text-sky-400 text-lg;
 }
 
 .socialLinks {
@@ -49,7 +52,7 @@
 }
 
 .socialLink {
-  @apply text-gray-400 hover:text-indigo-400 transition-all duration-300 text-2xl;
+  @apply text-slate-400 hover:text-sky-400 transition-all duration-300 text-2xl;
   transform: translateY(0);
 }
 
@@ -58,14 +61,14 @@
 }
 
 .footerBottom {
-  @apply border-t border-gray-800 pt-8 mt-8 text-center;
+  @apply border-t border-slate-800 pt-8 mt-8 text-center;
 }
 
 .copyright {
-  @apply text-gray-500 text-sm mb-2;
+  @apply text-slate-500 text-sm mb-2;
 }
 
 .footerNote {
-  @apply text-gray-600 text-xs;
+  @apply text-slate-600 text-xs;
 }
 

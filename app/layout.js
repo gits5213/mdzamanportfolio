@@ -2,11 +2,11 @@ import './globals.css'
 import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
 import { getFaviconPath } from './utils/faviconPath'
-import { Inter, Space_Grotesk, JetBrains_Mono } from 'next/font/google'
+import { Inter, Plus_Jakarta_Sans, JetBrains_Mono } from 'next/font/google'
 
 const faviconPath = getFaviconPath()
 
-// Modern 2025 Font Stack
+// Modern DevSecOps + QA Font Stack
 const inter = Inter({
   subsets: ['latin'],
   variable: '--font-inter',
@@ -14,9 +14,9 @@ const inter = Inter({
   preload: true,
 })
 
-const spaceGrotesk = Space_Grotesk({
+const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ['latin'],
-  variable: '--font-space-grotesk',
+  variable: '--font-heading',
   display: 'swap',
   weight: ['400', '500', '600', '700'],
   preload: true,
@@ -24,7 +24,7 @@ const spaceGrotesk = Space_Grotesk({
 
 const jetbrainsMono = JetBrains_Mono({
   subsets: ['latin'],
-  variable: '--font-jetbrains-mono',
+  variable: '--font-mono',
   display: 'swap',
   preload: false,
 })
@@ -41,8 +41,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`h-full ${inter.variable} ${spaceGrotesk.variable} ${jetbrainsMono.variable}`}>
-      <body className="flex flex-col min-h-screen font-sans">
+    <html lang="en" className={`h-full ${inter.variable} ${plusJakartaSans.variable} ${jetbrainsMono.variable}`}>
+      <body className="flex flex-col min-h-screen font-sans bg-slate-950 text-slate-100">
         <Navigation />
         <main className="flex-grow">{children}</main>
         <Footer />

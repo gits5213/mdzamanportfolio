@@ -10,13 +10,16 @@ export default function Navigation() {
 
   const navLinks = [
     { href: '/', label: 'Home' },
-    { href: '/resume', label: 'Resume' },
-    { href: '/projects', label: 'Projects' },
-    { href: '/contact', label: 'Contact' },
+    { href: '/experience', label: 'Experience' },
+    { href: '/skills', label: 'Skills & Tech Stack' },
+    { href: '/projects', label: 'Projects & Case Studies' },
+    { href: '/training', label: 'Training & Certifications' },
+    { href: '/community', label: 'Community & Leadership' },
+    { href: '/contact', label: 'Contact / Hire Me' },
   ]
 
   return (
-    <nav className={`gradient-header ${styles.nav}`}>
+    <nav className={styles.nav}>
       <div className={styles.navContainer}>
         <div className={styles.navContent}>
           <Link href="/" className={styles.logo}>

@@ -1,8 +1,8 @@
-/* Modern Navigation Component Styles */
+/* Modern Dark Theme Navigation */
 .nav {
-  @apply shadow-lg sticky top-0 z-50 backdrop-blur-md;
-  background: rgba(102, 126, 234, 0.95);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  @apply sticky top-0 z-50 backdrop-blur-md border-b;
+  background: rgba(11, 17, 32, 0.95);
+  border-color: var(--border-color);
 }
 
 .navContainer {
@@ -14,8 +14,9 @@
 }
 
 .logo {
-  @apply text-white text-xl md:text-2xl font-bold hover:text-yellow-200 transition-all duration-300;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  @apply text-sky-400 text-xl md:text-2xl font-bold hover:text-sky-300 transition-all duration-300;
+  font-family: var(--font-heading);
+  font-weight: 700;
   transform: translateY(0);
 }
 
@@ -24,12 +25,13 @@
 }
 
 .desktopNav {
-  @apply hidden md:flex space-x-8;
+  @apply hidden md:flex space-x-6 lg:space-x-8;
 }
 
 .navLink {
-  @apply text-white hover:text-yellow-200 transition-all duration-300 font-medium text-base relative;
+  @apply text-slate-300 hover:text-sky-400 transition-all duration-300 font-medium text-sm lg:text-base relative;
   padding: 0.5rem 0;
+  font-family: var(--font-heading);
 }
 
 .navLink::after {
@@ -39,7 +41,7 @@
   left: 0;
   width: 0;
   height: 2px;
-  background: linear-gradient(90deg, #fbbf24, #f59e0b);
+  background: var(--primary-accent);
   transition: width 0.3s ease;
 }
 
@@ -48,11 +50,11 @@
 }
 
 .mobileMenuButton {
-  @apply md:hidden text-white p-2 rounded-lg hover:bg-white hover:bg-opacity-20 transition-all duration-200;
+  @apply md:hidden text-slate-300 p-2 rounded-lg hover:bg-slate-800 hover:text-sky-400 transition-all duration-200;
 }
 
 .mobileNav {
-  @apply md:hidden pb-4 pt-2;
+  @apply md:hidden pb-4 pt-2 border-t border-slate-800;
   animation: slideDown 0.3s ease-out;
 }
 
@@ -68,5 +70,6 @@
 }
 
 .mobileNavLink {
-  @apply block text-white hover:text-yellow-200 py-3 px-4 rounded-lg hover:bg-white hover:bg-opacity-10 transition-all duration-200;
+  @apply block text-slate-300 hover:text-sky-400 py-3 px-4 rounded-lg hover:bg-slate-800 transition-all duration-200;
+  font-family: var(--font-heading);
 }
