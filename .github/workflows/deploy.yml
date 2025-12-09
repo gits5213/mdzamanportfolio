@@ -34,6 +34,17 @@ jobs:
 
       - name: Build with Next.js
         run: npm run build
+        env:
+          GITHUB_PAGES: 'true'
+
+      - name: Verify build output
+        run: |
+          if [ ! -d "./out" ]; then
+            echo "Error: Build output directory 'out' not found!"
+            exit 1
+          fi
+          echo "Build output verified. Files:"
+          ls -la ./out/ | head -20
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
