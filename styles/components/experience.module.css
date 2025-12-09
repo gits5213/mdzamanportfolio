@@ -1,0 +1,48 @@
+/* Modern Experience Component Styles */
+.experienceItem {
+  @apply grid grid-cols-4 gap-4 md:gap-6 mb-6 p-5 rounded-xl transition-all duration-300;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(102, 126, 234, 0.2);
+  border-left: 4px solid transparent;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.experienceItem:hover {
+  background: rgba(102, 126, 234, 0.15);
+  border-left-color: #667eea;
+  border-color: rgba(102, 126, 234, 0.4);
+  transform: translateX(4px);
+  box-shadow: 0 8px 24px rgba(102, 126, 234, 0.2);
+}
+
+.experienceYear {
+  @apply col-span-1;
+}
+
+.experienceYearText {
+  @apply text-indigo-300 font-semibold text-sm md:text-base;
+  font-family: var(--font-heading);
+}
+
+.experienceContent {
+  @apply col-span-3;
+}
+
+.experienceTitle {
+  @apply font-bold text-lg md:text-xl mb-2 text-white;
+  font-family: var(--font-heading);
+  font-weight: 600;
+}
+
+.experienceDescription {
+  @apply text-gray-300 text-sm md:text-base text-justify pr-4;
+  line-height: 1.7;
+  font-weight: 400;
+}
+
+.experienceDescription a {
+  @apply text-indigo-300 hover:text-indigo-200 transition-colors duration-200;
+  font-weight: 500;
+}
+

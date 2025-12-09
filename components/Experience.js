@@ -1,16 +1,16 @@
-import styles from '@/styles/components/common.module.css'
+import styles from '@/styles/components/experience.module.css'
 
 export default function Experience({ startYear, endYear, jobName, jobDescription }) {
   return (
-    <div className={styles.educationItem}>
-      <div className={styles.educationYear}>
-        <p className={styles.educationYearTextWhite}>
+    <div className={styles.experienceItem}>
+      <div className={styles.experienceYear}>
+        <p className={styles.experienceYearText}>
           {startYear}-{endYear}
         </p>
       </div>
-      <div className={styles.educationContent}>
-        <h4 className={styles.educationTitleWhite}>{jobName}</h4>
-        <p className={styles.educationDescriptionWhite}>{jobDescription}</p>
+      <div className={styles.experienceContent}>
+        <h4 className={styles.experienceTitle}>{jobName}</h4>
+        <div className={styles.experienceDescription}>{jobDescription}</div>
       </div>
     </div>
   )

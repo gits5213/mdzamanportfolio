@@ -17,10 +17,12 @@
 }
 
 .rightColumn {
-  @apply bg-gradient-to-br from-gray-800 to-gray-900 text-white p-8 md:p-10 rounded-3xl shadow-2xl space-y-8;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: linear-gradient(135deg, #1e293b 0%, #0f172a 50%, #1e293b 100%);
+  @apply text-white p-8 md:p-10 rounded-3xl shadow-2xl space-y-8;
+  border: 1px solid rgba(102, 126, 234, 0.2);
   position: relative;
   animation: fadeInUp 0.6s ease-out 0.2s both;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(102, 126, 234, 0.1);
 }
 
 .rightColumn::before {
@@ -30,8 +32,19 @@
   left: 0;
   right: 0;
   height: 4px;
-  background: linear-gradient(90deg, #667eea, #764ba2, #f093fb);
+  background: linear-gradient(90deg, #667eea, #764ba2, #f093fb, #667eea);
+  background-size: 200% 100%;
+  animation: gradient-shift 3s ease infinite;
   border-radius: 3px 3px 0 0;
+}
+
+@keyframes gradient-shift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
 }
 
 .avatarSection {
@@ -59,7 +72,12 @@
 
 .sectionTitleWhite {
   @apply text-3xl md:text-4xl font-bold mb-6 text-white;
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  font-family: var(--font-heading);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(135deg, #ffffff 0%, #e0e7ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .subtitle {
