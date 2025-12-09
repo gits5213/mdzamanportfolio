@@ -35,36 +35,36 @@ export default function HomePage() {
 
   const featuredProjects = [
     {
+      title: 'HD Supply – Enterprise e-Commerce Platform',
+      role: 'Tech Lead QA Engineer (SDET)',
+      context: 'Lead QA and automation strategy establishing end-to-end testing processes',
+      stack: ['Playwright', 'CypressIO', 'GraphQL', 'AWS', 'Azure DevOps'],
+      impact: [
+        'Established automation standards and 508 compliance',
+        'Implemented Agile 3-Amigos processes',
+        'Delivered real-time QA dashboards and metrics'
+      ]
+    },
+    {
       title: 'Payment Modernization – American Airlines',
-      role: 'Tech Lead QA Engineer / SDET',
-      context: 'Microservices-based payment system modernization',
-      stack: ['Cypress', 'Playwright', 'GraphQL', 'AWS'],
+      role: 'Tech Lead QA Engineer (SDET)',
+      context: 'Payment system modernization with Adyen gateway integration',
+      stack: ['Playwright', 'Cypress', 'GraphQL', 'PostgreSQL', 'AWS'],
       impact: [
-        'Improved CI pipeline execution time by 40%',
-        'Reduced production defects by 60%',
-        'Introduced accessibility and 508 compliance'
+        'Migrated frameworks from Protractor → Cypress → Playwright',
+        'Transitioned REST API endpoints to GraphQL',
+        'Drove security & accessibility testing (508 compliance)'
       ]
     },
     {
-      title: 'Enterprise Platform – Raytheon',
-      role: 'Senior SDET',
-      context: 'Large-scale enterprise platform testing',
-      stack: ['Selenium', 'Java', 'Jenkins', 'Azure'],
+      title: 'Enterprise Digital Accelerators – Raytheon',
+      role: 'Tech Lead QE',
+      context: 'Digital accelerators across aviation, defense, and space programs',
+      stack: ['Playwright', 'CypressIO', 'Java', 'Python', 'AWS', 'Docker'],
       impact: [
-        'Automated 80% of regression testing',
-        'Reduced test execution time by 50%',
-        'Enhanced test coverage to 95%'
-      ]
-    },
-    {
-      title: 'Banking System – Wells Fargo',
-      role: 'QA Automation Lead',
-      context: 'Critical banking application testing',
-      stack: ['Tosca', 'AccelQ', 'API Testing', 'DevSecOps'],
-      impact: [
-        'Achieved 100% automation coverage',
-        'Zero critical defects in production',
-        'Compliant with banking regulations'
+        'Built automation frameworks for 7+ mission-critical projects',
+        'Migrated frameworks improving efficiency and reliability',
+        'Delivered QA Metrics Dashboards across EDX'
       ]
     }
   ]

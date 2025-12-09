@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { FaLinkedin, FaGithub, FaTwitter, FaYoutube, FaEnvelope, FaPhone } from 'react-icons/fa'
+import { FaLinkedin, FaGithub, FaTwitter, FaYoutube, FaEnvelope, FaPhone, FaMapMarkerAlt, FaFacebook } from 'react-icons/fa'
 import globalPageData from '@/data/globalPageData.json'
 import styles from '@/styles/components/footer.module.css'
 
@@ -10,6 +10,7 @@ export default function Footer() {
     { href: links.linkedIn, icon: FaLinkedin, label: 'LinkedIn' },
     { href: links.gitHub, icon: FaGithub, label: 'GitHub' },
     { href: links.twitter, icon: FaTwitter, label: 'Twitter' },
+    { href: 'https://www.facebook.com/globalitechsol', icon: FaFacebook, label: 'Facebook' },
     { href: links.youtubePlaywright, icon: FaYoutube, label: 'YouTube Playwright' },
     { href: links.youtubeCypressIO, icon: FaYoutube, label: 'YouTube CypressIO' },
   ]
@@ -24,7 +25,7 @@ export default function Footer() {
           <div className={styles.footerSection}>
             <h3 className={styles.footerTitle}>About</h3>
             <p className={styles.footerText}>
-              Full Stack Quality Assurance Engineer with 15+ years of experience in software and hardware testing.
+              Full-Stack Software Engineer & SDET including DevOps Solutions with 15+ years of expertise in Software Development, Automation, DevOps, and end-to-end software and hardware Testing—Focused on Building Reliable, Scalable, and High-performing Systems.
             </p>
           </div>
 
@@ -60,6 +61,17 @@ export default function Footer() {
           <div className={styles.footerSection}>
             <h3 className={styles.footerTitle}>Contact</h3>
             <ul className={styles.footerContact}>
+              <li className={styles.footerContactItem}>
+                <FaMapMarkerAlt className={styles.footerIcon} />
+                <a 
+                  href="https://www.google.com/maps/search/?api=1&query=202nd+Street+%26+Hillside+Ave+Cross+Street,+Hollis,+NY+11423" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.footerLink}
+                >
+                  202nd Street & Hillside Ave Cross Street, Hollis, NY-11423
+                </a>
+              </li>
               <li className={styles.footerContactItem}>
                 <FaEnvelope className={styles.footerIcon} />
                 <a href={`mailto:${contact.email}`} className={styles.footerLink}>
@@ -102,9 +114,6 @@ export default function Footer() {
         <div className={styles.footerBottom}>
           <p className={styles.copyright}>
             © {currentYear} MD Shahnewaz Zaman. All rights reserved.
-          </p>
-          <p className={styles.footerNote}>
-            Built with Next.js & Tailwind CSS
           </p>
         </div>
       </div>
