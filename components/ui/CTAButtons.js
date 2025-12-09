@@ -16,7 +16,7 @@ export default function CTAButtons({ primaryLabel = 'View Portfolio', primaryHre
       >
         {primaryLabel}
       </Link>
-      <Link
+      <a
         href={getAssetPath(secondaryHref)}
         target="_blank"
         rel="noopener noreferrer"
@@ -29,7 +29,7 @@ export default function CTAButtons({ primaryLabel = 'View Portfolio', primaryHre
         style={{ fontFamily: 'var(--font-heading)' }}
       >
         {secondaryLabel}
-      </Link>
+      </a>
     </div>
   )
 }

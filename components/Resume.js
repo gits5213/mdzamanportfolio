@@ -113,9 +113,9 @@ export default function Resume() {
             endYear={jobs.jobEndYear}
             jobName={jobs.jobName}
             jobDescription={
-              <Link href={getAssetPath("/resume/Md Zaman - Resume.pdf")} target="_blank" className={styles.webLinkWhite}>
+              <a href={getAssetPath("/resume/Md Zaman - Resume.pdf")} target="_blank" rel="noopener noreferrer" className={styles.webLinkWhite}>
                 <span className="mr-2">📥</span>Download Resume
-              </Link>
+              </a>
             }
           />
         </div>
