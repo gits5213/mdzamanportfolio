@@ -117,8 +117,7 @@ export default function HomePage() {
           {/* Left: Hero Text */}
           <div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-slate-100 leading-tight" style={{ fontFamily: 'var(--font-heading)' }}>
-              Full-Stack Quality Assurance Engineer
-              <span className="block text-sky-400 mt-2">(SDET | Tech Lead)</span>
+              Software Engineer | Test Architect | SDET | Tech Lead | Full-Stack Quality Assurance Engineer
             </h1>
             <p className="text-lg md:text-xl text-slate-300 mb-8 leading-relaxed">
               15+ years of expertise in QA, automation, DevSecOps, and leadership. 

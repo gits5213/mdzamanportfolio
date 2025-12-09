@@ -30,8 +30,8 @@ const jetbrainsMono = JetBrains_Mono({
 })
 
 export const metadata = {
-  title: "MD Shahnewaz Zaman | Full Stack QA Engineer Portfolio",
-  description: "Experienced Full Stack Quality Assurance Engineer with 15+ years of expertise in software and hardware testing. Specializing in automation frameworks, Agile/Scrum methodologies, and full-stack QA practices.",
+  title: "MD Shahnewaz Zaman | Software Engineer | Test Architect | SDET | Tech Lead",
+  description: "Software Engineer | Test Architect | SDET | Tech Lead | Full-Stack Quality Assurance Engineer with 15+ years of expertise in software and hardware testing. Specializing in automation frameworks, Agile/Scrum methodologies, and full-stack QA practices.",
   icons: {
     icon: faviconPath,
     shortcut: faviconPath,
