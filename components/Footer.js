@@ -84,6 +84,26 @@ export default function Footer() {
                   {contact.phoneNumber}
                 </a>
               </li>
+              <li className={styles.footerContactItem}>
+                <a 
+                  href="https://gits5213.github.io/gits/" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.footerLink}
+                >
+                  Education Website
+                </a>
+              </li>
+              <li className={styles.footerContactItem}>
+                <a 
+                  href="http://visiblehomeinspections.com/" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.footerLink}
+                >
+                  Visible Home Inspections LLC
+                </a>
+              </li>
             </ul>
             
             <h3 className={styles.footerTitle} style={{ marginTop: '2rem' }}>Follow Me</h3>
