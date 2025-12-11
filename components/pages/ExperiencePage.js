@@ -15,7 +15,7 @@ export default function ExperiencePage() {
       startDate: 'Apr 2024',
       endDate: 'Present',
       bullets: [
-        'Lead end-to-end quality engineering for enterprise clients (e.g., HD Supply), collaborating with business and engineering teams to deliver precise, high-quality products',
+        'Lead end-to-end quality engineering for enterprise clients, collaborating with business and engineering teams to deliver precise, high-quality products',
         'Drive QA strategy by establishing automation standards, 508 compliance, Agile 3-Amigos processes, and real-time QA dashboards/metrics',
         'Hands-on expertise in UI, API, Middleware, Accessibility, and Mobile Automation using CypressIO, Playwright, Selenium, Appium, TestCafe, ReadyAPI, GraphQL, and AI-powered testing (Claude Code, ChatGPT, CodeGPT, Copilot, Gemini)',
         'Designed and maintained automation frameworks with CI/CD pipelines across Azure DevOps, GitHub Actions, Jenkins, GitLab, and AWS (S3, DynamoDB, CloudWatch, Amazon Connect, Genesys)',
