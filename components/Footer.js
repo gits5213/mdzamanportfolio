@@ -86,12 +86,22 @@ export default function Footer() {
               </li>
               <li className={styles.footerContactItem}>
                 <a 
+                  href="https://gitsics.com/" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.footerLink}
+                >
+                  Global I Tech Solutions (GITS)
+                </a>
+              </li>
+              <li className={styles.footerContactItem}>
+                <a 
                   href="https://gits5213.github.io/gits/" 
                   target="_blank"
                   rel="noopener noreferrer"
                   className={styles.footerLink}
                 >
-                  Education Website
+                  Educational Website
                 </a>
               </li>
               <li className={styles.footerContactItem}>
