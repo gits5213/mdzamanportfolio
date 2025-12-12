@@ -10,6 +10,7 @@ export default function ProjectsPage() {
       role: 'Tech Lead QA Engineer (SDET)',
       context: 'Lead QA and automation strategy for enterprise e-commerce client, establishing end-to-end testing processes and quality standards',
       stack: ['Playwright', 'CypressIO', 'Selenium', 'GraphQL', 'AWS', 'Azure DevOps', 'GitHub Actions', 'Jenkins', 'GitLab CI/CD', 'Docker', 'DynamoDB', 'CloudWatch'],
+      qaEngineersLed: '8+ QA Engineers (Onshore + Offshore)',
       impact: [
         'Established automation standards and 508 compliance across enterprise platform',
         'Implemented Agile 3-Amigos processes improving collaboration and quality',
@@ -26,6 +27,7 @@ export default function ProjectsPage() {
       role: 'Tech Lead QA Engineer (SDET)',
       context: 'Payment system modernization testing payment authorization, capture, refund, cancel, 3DS, and reconciliation via Adyen gateway',
       stack: ['Playwright', 'Cypress', 'Selenium', 'GraphQL', 'PostgreSQL', 'Python', 'Java', 'C#', 'JavaScript', 'SoapUI', 'ReadyAPI', 'Postman', 'AWS', 'ADO', 'Jenkins', 'Docker', 'BrowserStack', 'SauceLabs', 'LamdaTest', 'SonarQube', 'JMeter', 'AXE', 'WAVE', 'JAWS', 'NVDA', 'PA11Y'],
+      qaEngineersLed: '6+ QA Engineers (Onshore + Offshore)',
       impact: [
         'Led QA efforts for Payment Modernization program across M&A, capital markets, trading, and liquidity/payment domains',
         'Migrated frameworks from NightwatchJS/Protractor → Cypress → Playwright improving stability by 40%',
@@ -43,6 +45,7 @@ export default function ProjectsPage() {
       role: 'Tech Lead QE',
       context: 'Digital accelerators across aviation, defense, and space programs delivering intelligent QA solutions',
       stack: ['Playwright', 'CypressIO', 'Protractor', 'NightwatchJS', 'Selenium', 'Java', 'Python', 'C#', 'JavaScript', 'AWS', 'ADO', 'Jenkins', 'SauceLabs', 'BrowserStack', 'LamdaTest', 'Docker', 'PySpark', 'AXE', 'Pa11y', 'JAWS', 'NVDA', 'GitHub', 'Bitbucket', 'GitLab', 'SVN'],
+      qaEngineersLed: '12+ QA Engineers',
       impact: [
         'Built automation frameworks from scratch for mission-critical projects: Sensitech STM, Reliability Prism, FPO, Rotor Design System, XetaCloud, Digital Twin, SAP Migration',
         'Drove migration of automation frameworks (NightwatchJS → Protractor → CypressIO → Playwright) improving efficiency and reliability',
@@ -60,6 +63,7 @@ export default function ProjectsPage() {
       role: 'Lead Software Engineer in Test',
       context: 'Internal portal merger management microservice for equity, lending, trading, risk management, and payments',
       stack: ['Cucumber', 'Java', 'Selenium', 'XCUITest', 'Android Studio', 'TestNG', 'Maven', 'AXE', 'SoapUI', 'GraphQL', 'Allure Reports', 'Cypress', 'Python', 'PySpark', 'CircleCI', 'Docker', 'AWS S3', 'ANDI', 'JAWS', 'NVDA', 'WAVE', 'PA11Y'],
+      qaEngineersLed: '5+ QA Engineers (Onshore + Offshore)',
       impact: [
         'Built automation from scratch for Web, iOS, and Android microservices',
         'Automated internal web apps with Cypress (POM, data-driven) integrated into CircleCI, Docker, and AWS S3',
@@ -75,6 +79,7 @@ export default function ProjectsPage() {
       role: 'Sr. DevOps/Automation Engineer',
       context: 'Digital strategy for 30+ magazine brand websites across fashion, beauty, lifestyle, automotive, food, and family domains',
       stack: ['NightwatchJS', 'Protractor', 'RestAssured', 'SuperTest', 'GraphQL', 'AWS', 'ADO', 'Jenkins', 'SonarQube', 'Docker', 'Postman', 'Swagger', 'ReadyAPI', 'JAWS', 'NVDA', 'ANDI', 'AXE', 'WAVE', 'PA11Y'],
+      qaEngineersLed: '4+ QA Engineers',
       impact: [
         'Built automation frameworks from scratch using NightwatchJS & Protractor integrated with CI/CD pipelines',
         'Automated RESTful & GraphQL API endpoints leveraging RestAssured & SuperTest',
@@ -90,6 +95,7 @@ export default function ProjectsPage() {
       role: 'Lead Software Engineer in Test',
       context: 'Cloud9 trading platform (desktop & web) microservice applications for financial trading',
       stack: ['C#.NET', 'NUnit', 'NightwatchJS', 'Protractor', 'SuperTest', 'AWS', 'ADO', 'Jenkins', 'SonarQube', 'Docker', 'Postman', 'Swagger', 'ReadyAPI', 'ANDI', 'JAWS', 'NVDA', 'AXE', 'WAVE', 'PA11Y'],
+      qaEngineersLed: '3+ QA Engineers',
       impact: [
         'Automated desktop trading app from scratch using C#.NET & NUnit integrated with CI/CD pipelines',
         'Automated web applications (user management & support) using NightwatchJS, Protractor, SuperTest',
@@ -105,6 +111,7 @@ export default function ProjectsPage() {
       role: 'Lead Automation Engineer ASE6',
       context: 'Customer Information View and Contact Center microservice applications for banking operations',
       stack: ['Selenium', 'Cucumber', 'Java', 'TestNG', 'RestAssured', 'Empirix', 'Cyara', 'AWS', 'ADO', 'Jenkins', 'SonarQube', 'AccelQ', 'SauceLabs', 'Postman', 'Swagger', 'ReadyAPI', 'SoapUI', 'SuperTest', 'ANDI', 'JAWS', 'NVDA', 'AXE', 'WAVE', 'PA11Y'],
+      qaEngineersLed: '19+ QA Engineers (Onshore & Offshore)',
       impact: [
         'Enhanced Selenium, Cucumber, Java, TestNG framework by applying KISS/DRY coding standards and QA best practices',
         'Automated contact center master call flow with Empirix & Cyara across multiple IDEs (VS Code, PyCharm, Eclipse, IntelliJ)',
@@ -120,6 +127,7 @@ export default function ProjectsPage() {
       role: 'SDET - ITS3',
       context: 'State\'s SACWIS case management system used by public and private caseworkers to maintain official child and family service records',
       stack: ['Java', 'C#.NET', 'Selenium', 'Cucumber', 'CodedUI', 'XCUITest', 'Android Studio', 'JMeter', 'SQL', 'ADO', 'Jenkins', 'SonarQube', 'Postman', 'Swagger', 'ReadyAPI', 'C# NUnit', 'JAWS', 'NVDA', 'ANDI', 'AXE', 'WAVE', 'PA11Y'],
+      qaEngineersLed: '4+ QA Engineers',
       impact: [
         'Automated end-to-end case management workflows for Web and Desktop apps',
         'Integrated automation with CI/CD pipelines and cloud environments via ADO, Jenkins, and SonarQube',
@@ -135,6 +143,7 @@ export default function ProjectsPage() {
       role: 'Sr. Test Engineer',
       context: 'Sales, Service & Support web domain driving improvements in test processes and quality assurance practices',
       stack: ['Java', 'Cucumber', 'Selenium', 'TestNG', 'Maven', 'RestAssured', 'Keynote', 'JMeter', 'Dynatrace', 'Git', 'GitHub', 'Postman', 'Swagger', 'ReadyAPI', 'ANDI', 'JAWS', 'NVDA', 'AXE', 'WAVE', 'PA11Y'],
+      qaEngineersLed: '9+ QA Engineers (Onshore + Offshore)',
       impact: [
         'Built a performance testing framework using Keynote & JMeter, monitored with Dynatrace',
         'Designed, developed, and automated test cases with Java, Cucumber, Selenium (API), TestNG, Maven across multiple IDEs',
@@ -163,6 +172,16 @@ export default function ProjectsPage() {
               </h3>
               <p className="text-sm text-emerald-400 mb-3 font-medium">{project.role}</p>
               <p className="text-slate-300 mb-4 text-sm leading-relaxed">{project.context}</p>
+              
+              {/* QA Engineers Led */}
+              {project.qaEngineersLed && (
+                <div className="mb-4 p-3 rounded-lg bg-slate-900/50 border border-slate-800">
+                  <div className="flex items-center justify-between">
+                    <span className="text-slate-400 text-xs uppercase tracking-wider">QA Engineers Led</span>
+                    <span className="text-sky-400 font-semibold text-sm">{project.qaEngineersLed}</span>
+                  </div>
+                </div>
+              )}
               
               <div className="flex flex-wrap gap-2 mb-4">
                 {project.stack.map((tech, i) => (
