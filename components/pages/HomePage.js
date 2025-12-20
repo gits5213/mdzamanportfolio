@@ -539,7 +539,7 @@ export default function HomePage() {
                     </h4>
                   </div>
                   <div className="flex flex-wrap gap-2">
-                    {['REST', 'GraphQL', 'SQL', 'RestAssured', 'SuperTest', 'POSTMAN', 'ReadyAPI', 'Swagger', 'JMeter'].map((tool, index) => (
+                    {['REST', 'SOAP', 'GraphQL', 'SQL', 'RestAssured', 'SuperTest', 'POSTMAN', 'ReadyAPI', 'Swagger', 'JMeter'].map((tool, index) => (
                       <span key={index} className="px-2.5 py-1 bg-sky-500/10 text-sky-300 rounded-md text-xs border border-sky-500/20">
                         {tool}
                       </span>
@@ -556,7 +556,7 @@ export default function HomePage() {
                     </h4>
                   </div>
                   <div className="flex flex-wrap gap-2">
-                    {['Azure DevOps', 'Jenkins', 'GitHub Actions', 'shift-left'].map((tool, index) => (
+                    {['Azure DevOps', 'Jenkins', 'GitHub Actions'].map((tool, index) => (
                       <span key={index} className="px-2.5 py-1 bg-yellow-500/10 text-yellow-300 rounded-md text-xs border border-yellow-500/20">
                         {tool}
                       </span>
