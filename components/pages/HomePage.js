@@ -137,33 +137,163 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 opacity-50"></div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(56,189,248,0.1),transparent_70%)]"></div>
         
-        <div className="relative grid md:grid-cols-2 gap-12 items-center">
-          {/* Left: Hero Text */}
-          <div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-slate-100 leading-tight" style={{ fontFamily: 'var(--font-heading)' }}>
-              Software Engineer | Test Architect | SDET | Tech Lead | Full-Stack Quality Assurance Engineer
-            </h1>
-            <p className="text-lg md:text-xl text-slate-300 mb-8 leading-relaxed">
-              15+ years of expertise in QA, automation, DevSecOps, and leadership. 
-              Leading enterprise-scale testing initiatives for Fortune 500 companies.
-            </p>
-            <CTAButtons />
-          </div>
+        <div className="relative max-w-7xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            {/* Left: Hero Text */}
+            <div className="space-y-6">
+              <div>
+                <p className="text-lg md:text-xl text-sky-400 mb-3 font-medium tracking-wide">
+                  Welcome
+                </p>
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-slate-100 leading-tight" style={{ fontFamily: 'var(--font-heading)' }}>
+                  Hi, I&apos;m <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-emerald-400">MD S Zaman</span>
+                </h1>
+              </div>
 
-          {/* Right: Avatar */}
-          <div className="flex justify-center md:justify-end">
-            <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-sky-400 to-emerald-500 rounded-full blur-2xl opacity-30"></div>
-              <Image
-                src={getImagePath("/images/Md_Zaman_Picture.png")}
-                alt="MD Shahnewaz Zaman"
-                width={300}
-                height={300}
-                className="relative rounded-full border-4 border-sky-500/50 shadow-2xl"
-                priority
-              />
+              {/* Role Titles */}
+              <div className="space-y-3">
+                <p className="text-sm md:text-base text-slate-400 uppercase tracking-wider font-semibold">
+                  Independent Professional
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  <span className="px-4 py-2 bg-sky-500/20 text-sky-300 rounded-lg text-sm md:text-base font-medium border border-sky-500/30">
+                    Software Engineer
+                  </span>
+                  <span className="px-4 py-2 bg-sky-500/20 text-sky-300 rounded-lg text-sm md:text-base font-medium border border-sky-500/30">
+                    Test Architect
+                  </span>
+                  <span className="px-4 py-2 bg-sky-500/20 text-sky-300 rounded-lg text-sm md:text-base font-medium border border-sky-500/30">
+                    Tech Lead QE Automation Engineer
+                  </span>
+                  <span className="px-4 py-2 bg-emerald-500/20 text-emerald-300 rounded-lg text-sm md:text-base font-medium border border-emerald-500/30">
+                    Full-Stack QA Engineer
+                  </span>
+                  <span className="px-4 py-2 bg-sky-500/20 text-sky-300 rounded-lg text-sm md:text-base font-medium border border-sky-500/30">
+                    Sr. SDET
+                  </span>
+                  <span className="px-4 py-2 bg-sky-500/20 text-sky-300 rounded-lg text-sm md:text-base font-medium border border-sky-500/30">
+                    SDET
+                  </span>
+                  <span className="px-4 py-2 bg-sky-500/20 text-sky-300 rounded-lg text-sm md:text-base font-medium border border-sky-500/30">
+                    Sr. QA Automation Engineer
+                  </span>
+                  <span className="px-4 py-2 bg-sky-500/20 text-sky-300 rounded-lg text-sm md:text-base font-medium border border-sky-500/30">
+                    Quality Assurance Engineer
+                  </span>
+                  <span className="px-4 py-2 bg-sky-500/20 text-sky-300 rounded-lg text-sm md:text-base font-medium border border-sky-500/30">
+                    QA Engineer
+                  </span>
+                </div>
+              </div>
+
+              {/* Experience Summary */}
+              <div className="pt-4 border-t border-slate-700">
+                <p className="text-base md:text-lg text-slate-300 mb-4 leading-relaxed">
+                  <span className="text-sky-400 font-semibold">15+ years</span> of hands-on experience across diverse industries and enterprise platforms.
+                </p>
+                
+                {/* Industry Tags */}
+                <div className="flex flex-wrap gap-2 mt-4">
+                  {['Banking', 'Finance', 'Trading', 'Ecommerce', 'Insurance', 'Health', 'Digital Media', 'Telecommunication', 'Blockchain', 'Crypto', 'Aviation & Defense', 'Education', 'Logistics', 'CRM', 'CMS', 'Salesforce'].map((industry, index) => (
+                    <span 
+                      key={index}
+                      className="px-3 py-1.5 bg-slate-800/50 text-slate-300 rounded-md text-xs md:text-sm border border-slate-700 hover:border-sky-500/50 hover:text-sky-300 transition-colors"
+                    >
+                      {industry}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              <div className="pt-4">
+                <CTAButtons />
+              </div>
+            </div>
+
+            {/* Right: Avatar */}
+            <div className="flex justify-center md:justify-end">
+              <div className="relative">
+                <div className="absolute inset-0 bg-gradient-to-r from-sky-400 to-emerald-500 rounded-full blur-2xl opacity-30 animate-pulse"></div>
+                <Image
+                  src={getImagePath("/images/Md_Zaman_Picture.png")}
+                  alt="MD Shahnewaz Zaman"
+                  width={320}
+                  height={320}
+                  className="relative rounded-full border-4 border-sky-500/50 shadow-2xl"
+                  priority
+                />
+              </div>
             </div>
           </div>
+        </div>
+      </Section>
+
+      {/* Why I Do This Work & What I Want Next - Combined Section */}
+      <Section className="bg-gradient-to-r from-slate-900/50 to-slate-800/50 rounded-3xl">
+        <div className="max-w-6xl mx-auto">
+          <Card className="p-8 md:p-12 border-sky-500/30 bg-slate-950/80">
+            <div className="grid md:grid-cols-2 gap-8 md:gap-12">
+              {/* Why I Do This Work */}
+              <div className="space-y-4">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-1 h-12 bg-gradient-to-b from-emerald-400 to-sky-400 rounded-full"></div>
+                  <h2 className="text-xl md:text-2xl font-bold text-emerald-400 font-mono tracking-wide">
+                    // Why I Do This Work
+                  </h2>
+                </div>
+                <div className="bg-slate-900/60 border border-slate-700 rounded-lg p-5 md:p-6 font-mono text-sm md:text-base leading-relaxed">
+                  <div className="text-slate-500 mb-2">/*</div>
+                  <div className="text-slate-300 space-y-2 pl-4">
+                    <div className="text-emerald-400">I&apos;m happiest</div>
+                    <div className="text-slate-400">when I&apos;m solving hard problems—</div>
+                    <div className="text-sky-300">untangling complex systems,</div>
+                    <div className="text-slate-400">improving test reliability,</div>
+                    <div className="text-slate-400">and making sure technology works</div>
+                    <div className="text-emerald-300">for everyone,</div>
+                    <div className="text-slate-400">including users who rely on</div>
+                    <div className="text-sky-300">accessibility tools.</div>
+                    <div className="mt-3 text-emerald-400">I enjoy mentoring engineers,</div>
+                    <div className="text-slate-400">simplifying processes,</div>
+                    <div className="text-slate-400">and leaving systems</div>
+                    <div className="text-sky-300">better than I found them.</div>
+                    <div className="mt-3 text-emerald-400">Quality, to me,</div>
+                    <div className="text-slate-400">isn&apos;t just about finding bugs—</div>
+                    <div className="text-emerald-300">it&apos;s about building trust.</div>
+                  </div>
+                  <div className="text-slate-500 mt-2">*/</div>
+                </div>
+              </div>
+
+              {/* What I Want to Work On Next */}
+              <div className="space-y-4">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-1 h-12 bg-gradient-to-b from-yellow-400 to-emerald-400 rounded-full"></div>
+                  <h2 className="text-xl md:text-2xl font-bold text-yellow-400 font-mono tracking-wide">
+                    // What I Want to Work On Next
+                  </h2>
+                </div>
+                <div className="bg-slate-900/60 border border-slate-700 rounded-lg p-5 md:p-6 font-mono text-sm md:text-base leading-relaxed">
+                  <div className="text-slate-500 mb-2">/*</div>
+                  <div className="text-slate-300 space-y-2 pl-4">
+                    <div className="text-yellow-400">I want to work on</div>
+                    <div className="text-emerald-300">meaningful, large-scale systems</div>
+                    <div className="text-slate-400">where quality, accessibility,</div>
+                    <div className="text-slate-400">and reliability truly matter.</div>
+                    <div className="mt-3 text-yellow-400">I&apos;m excited by environments</div>
+                    <div className="text-slate-400">that value strong engineering practices,</div>
+                    <div className="text-sky-300">collaboration,</div>
+                    <div className="text-slate-400">and thoughtful leadership—</div>
+                    <div className="text-slate-400">where I can continue to</div>
+                    <div className="text-emerald-300">build modern automation frameworks,</div>
+                    <div className="text-slate-400">ensure inclusive digital experiences,</div>
+                    <div className="text-slate-400">and mentor teams toward</div>
+                    <div className="text-yellow-300">higher standards of quality.</div>
+                  </div>
+                  <div className="text-slate-500 mt-2">*/</div>
+                </div>
+              </div>
+            </div>
+          </Card>
         </div>
       </Section>
 
@@ -331,8 +461,11 @@ export default function HomePage() {
         </div>
       </Section>
 
-      {/* Key Highlights */}
+      {/* What I'm Experienced In */}
       <Section>
+        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-slate-100 text-center mb-12" style={{ fontFamily: 'var(--font-heading)' }}>
+          What I&apos;m Experienced In
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {highlights.map((highlight, index) => (
             <Card key={index} className="p-6">
@@ -346,21 +479,177 @@ export default function HomePage() {
             </Card>
           ))}
         </div>
+        
+        {/* Additional Experience Details */}
+        <div className="mt-12 max-w-4xl mx-auto">
+          <Card className="p-8 md:p-12 border-slate-700 bg-gradient-to-br from-slate-900/50 to-slate-800/30">
+            <div className="text-center mb-10">
+              <h3 className="text-3xl md:text-4xl font-bold mb-3 text-slate-100" style={{ fontFamily: 'var(--font-heading)' }}>
+                My Technical Expertise
+              </h3>
+              <div className="w-24 h-1 bg-gradient-to-r from-sky-400 to-emerald-400 mx-auto rounded-full"></div>
+            </div>
+
+            <div className="space-y-8">
+              {/* Automation Frameworks & Tools */}
+              <div className="p-6 rounded-xl bg-slate-800/40 border border-slate-700 hover:border-sky-500/30 transition-all">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-1 h-8 bg-gradient-to-b from-sky-400 to-emerald-400 rounded-full"></div>
+                  <h4 className="text-xl font-semibold text-sky-400" style={{ fontFamily: 'var(--font-heading)' }}>
+                    Automation Frameworks & Tools
+                  </h4>
+                </div>
+                <div className="flex flex-wrap gap-2">
+                  {['Selenium', 'Gauge', 'CypressIO', 'Playwright', 'SpecFlow', 'RestSharp', 'CodedUI', 'WebDriverIO', 'Protractor', 'TestCafe', 'Xcode', 'Appium', 'XCUITest', 'NightWatch', 'RestAssured', 'Cucumber', 'Gherkin', 'SuperTest', 'Katalon Studio', 'SauceLabe', 'BrowserStack', 'LamdaTest', 'Frisby', 'PyTest', 'ReadyAPI', 'Jupiter notebook', 'Maven', 'Gradle', 'npm', 'Git', 'GitHub', 'Bitbucket', 'Eclipse', 'Intellij', 'SVN', 'Unix/Linux', 'CircleCI', 'Jenkins', 'AWS', 'S3', 'IAM', 'EC2', 'Amazon Connect', 'DynamoDB', 'Cloud Watch', 'Azure', 'EventHub', 'Kafka', 'GraphQL', 'Axe', 'Pa11y', 'PowerBI', 'Tableau', 'SOAPUI', 'REST API', 'TMW', 'Tosca', 'ChatGPT', 'Prompt Engineering', 'AccelQ', 'Subject7', 'Cyara', 'Botium', 'MCP Claude', 'Gemini', 'GPT-40', 'CoPilot', 'PowerShell'].map((tech, index) => (
+                    <span 
+                      key={index}
+                      className="px-3 py-1.5 bg-slate-700/50 text-slate-200 rounded-lg text-xs md:text-sm border border-slate-600 hover:border-sky-500/50 hover:text-sky-300 hover:bg-sky-500/10 transition-all"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              {/* Testing Categories Grid */}
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {/* Accessibility Testing */}
+                <div className="p-5 rounded-xl bg-slate-800/40 border border-slate-700 hover:border-emerald-500/30 transition-all">
+                  <div className="flex items-center gap-2 mb-3">
+                    <span className="text-2xl">♿</span>
+                    <h4 className="text-lg font-semibold text-emerald-400" style={{ fontFamily: 'var(--font-heading)' }}>
+                      Accessibility Testing
+                    </h4>
+                  </div>
+                  <div className="flex flex-wrap gap-2">
+                    {['JAWS', 'NVDA', 'ANDI', 'axe', 'pa11y', '508 compliance'].map((tool, index) => (
+                      <span key={index} className="px-2.5 py-1 bg-emerald-500/10 text-emerald-300 rounded-md text-xs border border-emerald-500/20">
+                        {tool}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                {/* API & Backend Testing */}
+                <div className="p-5 rounded-xl bg-slate-800/40 border border-slate-700 hover:border-sky-500/30 transition-all">
+                  <div className="flex items-center gap-2 mb-3">
+                    <span className="text-2xl">🔌</span>
+                    <h4 className="text-lg font-semibold text-sky-400" style={{ fontFamily: 'var(--font-heading)' }}>
+                      API & Backend Testing
+                    </h4>
+                  </div>
+                  <div className="flex flex-wrap gap-2">
+                    {['REST', 'GraphQL', 'SQL', 'RestAssured', 'SuperTest', 'POSTMAN', 'ReadyAPI', 'Swagger', 'JMeter'].map((tool, index) => (
+                      <span key={index} className="px-2.5 py-1 bg-sky-500/10 text-sky-300 rounded-md text-xs border border-sky-500/20">
+                        {tool}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                {/* CI/CD Quality Pipelines */}
+                <div className="p-5 rounded-xl bg-slate-800/40 border border-slate-700 hover:border-yellow-500/30 transition-all">
+                  <div className="flex items-center gap-2 mb-3">
+                    <span className="text-2xl">🚀</span>
+                    <h4 className="text-lg font-semibold text-yellow-400" style={{ fontFamily: 'var(--font-heading)' }}>
+                      CI/CD Quality Pipelines
+                    </h4>
+                  </div>
+                  <div className="flex flex-wrap gap-2">
+                    {['Azure DevOps', 'Jenkins', 'GitHub Actions', 'shift-left'].map((tool, index) => (
+                      <span key={index} className="px-2.5 py-1 bg-yellow-500/10 text-yellow-300 rounded-md text-xs border border-yellow-500/20">
+                        {tool}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Performance Testing */}
+                <div className="p-5 rounded-xl bg-slate-800/40 border border-slate-700 hover:border-purple-500/30 transition-all">
+                  <div className="flex items-center gap-2 mb-3">
+                    <span className="text-2xl">⚡</span>
+                    <h4 className="text-lg font-semibold text-purple-400" style={{ fontFamily: 'var(--font-heading)' }}>
+                      Performance Testing
+                    </h4>
+                  </div>
+                  <div className="flex flex-wrap gap-2">
+                    {['Apache JMeter', 'BlazeMeter', 'Locust', 'Lighthouse'].map((tool, index) => (
+                      <span key={index} className="px-2.5 py-1 bg-purple-500/10 text-purple-300 rounded-md text-xs border border-purple-500/20">
+                        {tool}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Security Testing */}
+                <div className="p-5 rounded-xl bg-slate-800/40 border border-slate-700 hover:border-red-500/30 transition-all">
+                  <div className="flex items-center gap-2 mb-3">
+                    <span className="text-2xl">🔒</span>
+                    <h4 className="text-lg font-semibold text-red-400" style={{ fontFamily: 'var(--font-heading)' }}>
+                      Security Testing
+                    </h4>
+                  </div>
+                  <div className="flex flex-wrap gap-2">
+                    {['SonarQube', 'Checkmarx', 'Veracode', 'Black Duck', 'Postman Security', 'ReadyApi', 'Kali Linux'].map((tool, index) => (
+                      <span key={index} className="px-2.5 py-1 bg-red-500/10 text-red-300 rounded-md text-xs border border-red-500/20">
+                        {tool}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Supporting & Monitoring Tools */}
+                <div className="p-5 rounded-xl bg-slate-800/40 border border-slate-700 hover:border-cyan-500/30 transition-all">
+                  <div className="flex items-center gap-2 mb-3">
+                    <span className="text-2xl">📊</span>
+                    <h4 className="text-lg font-semibold text-cyan-400" style={{ fontFamily: 'var(--font-heading)' }}>
+                      Supporting & Monitoring Tools
+                    </h4>
+                  </div>
+                  <div className="flex flex-wrap gap-2">
+                    {['Grafana', 'Prometheus', 'Dynatrace', 'New Relic', 'AppDynamics', 'Splunk', 'Wireshark'].map((tool, index) => (
+                      <span key={index} className="px-2.5 py-1 bg-cyan-500/10 text-cyan-300 rounded-md text-xs border border-cyan-500/20">
+                        {tool}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              {/* Mentorship & Quality Leadership */}
+              <div className="mt-8 pt-8 border-t border-slate-700">
+                <div className="p-6 rounded-xl bg-gradient-to-r from-sky-500/10 to-emerald-500/10 border border-sky-500/20">
+                  <div className="flex items-center gap-3 mb-4">
+                    <span className="text-3xl">👥</span>
+                    <h4 className="text-xl font-semibold text-sky-400" style={{ fontFamily: 'var(--font-heading)' }}>
+                      Mentorship & Quality Leadership
+                    </h4>
+                  </div>
+                  <p className="text-slate-300 text-sm md:text-base leading-relaxed">
+                    I&apos;ve mentored QA engineers across multiple organizations, established automation standards, 
+                    and led teams of 6-12+ engineers on enterprise projects. I excel at translating technical concepts 
+                    into actionable strategies and fostering collaborative quality cultures.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </Card>
+        </div>
       </Section>
 
       {/* Current Role */}
       <Section className="bg-gradient-to-r from-slate-900/50 to-slate-800/50 rounded-3xl">
         <Card className="p-8 md:p-12 border-sky-500/30">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-slate-100" style={{ fontFamily: 'var(--font-heading)' }}>
-            Current Role
+            What I&apos;m Doing Now
           </h2>
           <p className="text-lg text-slate-300 leading-relaxed mb-4">
-            Leading QA initiatives at <span className="text-sky-400 font-semibold">Global iTech Solutions</span> for enterprise clients, 
-            focusing on automation strategy, AI-driven testing, and DevSecOps integration. 
-            Architecting scalable test frameworks and mentoring teams to deliver high-quality software solutions.
+            I&apos;m leading QA initiatives at <span className="text-sky-400 font-semibold">Global iTech Solutions</span> for enterprise clients, 
+            where I focus on automation strategy, AI-driven testing, and DevSecOps integration. 
+            I architect scalable test frameworks and mentor teams to deliver high-quality software solutions.
           </p>
           <p className="text-base text-slate-400 mb-6">
-            Specializing in full-stack automation, accessibility compliance, and cutting-edge testing methodologies 
+            I specialize in full-stack automation, accessibility compliance, and cutting-edge testing methodologies 
             that drive business value and reduce time-to-market.
           </p>
           
@@ -374,42 +663,42 @@ export default function HomePage() {
                 <span className="text-sky-400 text-xl mt-0.5">👥</span>
                 <div>
                   <h4 className="text-base font-semibold text-sky-400 mb-1">Team Leadership</h4>
-                  <p className="text-slate-400 text-sm">Leading cross-functional QA teams, mentoring engineers, and establishing best practices across organizations</p>
+                  <p className="text-slate-400 text-sm">I lead cross-functional QA teams, mentor engineers, and establish best practices across organizations</p>
                 </div>
               </div>
               <div className="flex items-start gap-3 p-4 rounded-lg bg-slate-900/50 border border-slate-800">
                 <span className="text-sky-400 text-xl mt-0.5">🤝</span>
                 <div>
                   <h4 className="text-base font-semibold text-sky-400 mb-1">Stakeholder Collaboration</h4>
-                  <p className="text-slate-400 text-sm">Collaborating with product owners, developers, and senior leadership to align QA strategy with business objectives</p>
+                  <p className="text-slate-400 text-sm">I collaborate with product owners, developers, and senior leadership to align QA strategy with business objectives</p>
                 </div>
               </div>
               <div className="flex items-start gap-3 p-4 rounded-lg bg-slate-900/50 border border-slate-800">
                 <span className="text-sky-400 text-xl mt-0.5">📊</span>
                 <div>
                   <h4 className="text-base font-semibold text-sky-400 mb-1">Strategic Planning</h4>
-                  <p className="text-slate-400 text-sm">Developing automation roadmaps, defining quality standards, and driving organizational change initiatives</p>
+                  <p className="text-slate-400 text-sm">I develop automation roadmaps, define quality standards, and drive organizational change initiatives</p>
                 </div>
               </div>
               <div className="flex items-start gap-3 p-4 rounded-lg bg-slate-900/50 border border-slate-800">
                 <span className="text-sky-400 text-xl mt-0.5">🎓</span>
                 <div>
                   <h4 className="text-base font-semibold text-sky-400 mb-1">Mentorship & Training</h4>
-                  <p className="text-slate-400 text-sm">Mentoring junior and mid-level engineers, conducting training sessions, and fostering knowledge sharing</p>
+                  <p className="text-slate-400 text-sm">I mentor junior and mid-level engineers, conduct training sessions, and foster knowledge sharing</p>
                 </div>
               </div>
               <div className="flex items-start gap-3 p-4 rounded-lg bg-slate-900/50 border border-slate-800">
                 <span className="text-sky-400 text-xl mt-0.5">💬</span>
                 <div>
                   <h4 className="text-base font-semibold text-sky-400 mb-1">Communication & Presentation</h4>
-                  <p className="text-slate-400 text-sm">Presenting automation strategies, metrics, and results to stakeholders and executive leadership</p>
+                  <p className="text-slate-400 text-sm">I present automation strategies, metrics, and results to stakeholders and executive leadership</p>
                 </div>
               </div>
               <div className="flex items-start gap-3 p-4 rounded-lg bg-slate-900/50 border border-slate-800">
                 <span className="text-sky-400 text-xl mt-0.5">⚡</span>
                 <div>
                   <h4 className="text-base font-semibold text-sky-400 mb-1">Agile Leadership</h4>
-                  <p className="text-slate-400 text-sm">Leading Agile ceremonies, facilitating 3-Amigos processes, and driving continuous improvement</p>
+                  <p className="text-slate-400 text-sm">I lead Agile ceremonies, facilitate 3-Amigos processes, and drive continuous improvement</p>
                 </div>
               </div>
             </div>
@@ -492,14 +781,14 @@ export default function HomePage() {
         </div>
       </Section>
 
-      {/* CTA Section */}
+      {/* CTA Section - Personal Direction */}
       <Section className="bg-gradient-to-r from-slate-900/50 to-slate-800/50 rounded-3xl">
         <Card className="p-8 md:p-12 text-center border-sky-500/30">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-slate-100" style={{ fontFamily: 'var(--font-heading)' }}>
-            Let&apos;s Work Together
+            What&apos;s Next
           </h2>
-          <p className="text-lg text-slate-300 mb-8 max-w-2xl mx-auto">
-            Ready to elevate your testing strategy? Let&apos;s discuss how my expertise can drive quality and innovation in your projects.
+          <p className="text-lg md:text-xl text-slate-200 mb-8 max-w-3xl mx-auto leading-relaxed">
+            I&apos;m currently open to opportunities where I can contribute as a hands-on Independent Test Architect | Sr. SDET | SDET | Tech Lead | Full-Stack Quality Assurance Engineer | QA Engineer Specialist on impactful systems. If my background resonates with your needs, I&apos;d be happy to connect.
           </p>
           <CTAButtons 
             primaryLabel="View Full Portfolio"
