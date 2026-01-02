@@ -21,12 +21,53 @@ export default function Footer() {
     <footer className={styles.footer}>
       <div className={styles.footerContainer}>
         <div className={styles.footerContent}>
-          {/* About Section */}
+          {/* Contact Info */}
           <div className={styles.footerSection}>
-            <h3 className={styles.footerTitle}>About</h3>
-            <p className={styles.footerText}>
-              Full-Stack Software Engineer & SDET including DevOps Solutions with 15+ years of expertise in Software Development, Automation, DevOps, and end-to-end software and hardware Testing—Focused on Building Reliable, Scalable, and High-performing Systems.
-            </p>
+            <h3 className={styles.footerTitle}>Contact</h3>
+            <ul className={styles.footerContact}>
+              <li className={styles.footerContactItem}>
+                <FaMapMarkerAlt className={styles.footerIcon} />
+                <a 
+                  href="https://www.google.com/maps/search/?api=1&query=202nd+Street+%26+Hillside+Ave+Cross+Street,+Hollis,+NY+11423" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.footerLink}
+                >
+                  202nd Street & Hillside Ave Cross Street, Hollis, NY-11423
+                </a>
+              </li>
+              <li className={styles.footerContactItem}>
+                <FaEnvelope className={styles.footerIcon} />
+                <a href={`mailto:${contact.email}`} className={styles.footerLink}>
+                  {contact.email}
+                </a>
+              </li>
+              <li className={styles.footerContactItem}>
+                <FaPhone className={styles.footerIcon} />
+                <a href={`tel:${contact.phoneNumber}`} className={styles.footerLink}>
+                  {contact.phoneNumber}
+                </a>
+              </li>
+            </ul>
+            
+            <h3 className={styles.footerTitle} style={{ marginTop: '2rem' }}>Follow Me</h3>
+            <div className={styles.socialLinks}>
+              {socialLinks.map((social) => {
+                const Icon = social.icon
+                return (
+                  <a
+                    key={social.label}
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={styles.socialLink}
+                    aria-label={social.label}
+                  >
+                    <Icon />
+                  </a>
+                )
+              })}
+            </div>
           </div>
 
           {/* Quick Links */}
@@ -57,85 +98,6 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Contact Info */}
-          <div className={styles.footerSection}>
-            <h3 className={styles.footerTitle}>Contact</h3>
-            <ul className={styles.footerContact}>
-              <li className={styles.footerContactItem}>
-                <FaMapMarkerAlt className={styles.footerIcon} />
-                <a 
-                  href="https://www.google.com/maps/search/?api=1&query=202nd+Street+%26+Hillside+Ave+Cross+Street,+Hollis,+NY+11423" 
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={styles.footerLink}
-                >
-                  202nd Street & Hillside Ave Cross Street, Hollis, NY-11423
-                </a>
-              </li>
-              <li className={styles.footerContactItem}>
-                <FaEnvelope className={styles.footerIcon} />
-                <a href={`mailto:${contact.email}`} className={styles.footerLink}>
-                  {contact.email}
-                </a>
-              </li>
-              <li className={styles.footerContactItem}>
-                <FaPhone className={styles.footerIcon} />
-                <a href={`tel:${contact.phoneNumber}`} className={styles.footerLink}>
-                  {contact.phoneNumber}
-                </a>
-              </li>
-              <li className={styles.footerContactItem}>
-                <a 
-                  href="https://gitsics.com/" 
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={styles.footerLink}
-                >
-                  Global I Tech Solutions (GITS)
-                </a>
-              </li>
-              <li className={styles.footerContactItem}>
-                <a 
-                  href="https://gits5213.github.io/gits/" 
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={styles.footerLink}
-                >
-                  Educational Website
-                </a>
-              </li>
-              <li className={styles.footerContactItem}>
-                <a 
-                  href="http://visiblehomeinspections.com/" 
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={styles.footerLink}
-                >
-                  Visible Home Inspections LLC
-                </a>
-              </li>
-            </ul>
-            
-            <h3 className={styles.footerTitle} style={{ marginTop: '2rem' }}>Follow Me</h3>
-            <div className={styles.socialLinks}>
-              {socialLinks.map((social) => {
-                const Icon = social.icon
-                return (
-                  <a
-                    key={social.label}
-                    href={social.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={styles.socialLink}
-                    aria-label={social.label}
-                  >
-                    <Icon />
-                  </a>
-                )
-              })}
-            </div>
-          </div>
-
           {/* Legal Links */}
           <div className={styles.footerSection}>
             <h3 className={styles.footerTitle}>Legal</h3>
@@ -154,6 +116,120 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="/accessibility-statement" className={styles.footerLink}>Accessibility Statement</Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Projects */}
+          <div className={styles.footerSection}>
+            <h3 className={styles.footerTitle}>Projects</h3>
+            <ul className={styles.footerLinks}>
+              <li>
+                <a 
+                  href="https://gitsics.com/" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.footerLink}
+                >
+                  Global I Tech Solutions Inc.
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="https://gits5213.github.io/gits/" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.footerLink}
+                >
+                  Educational Training Center
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="https://gits5213.github.io/qrcode/" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.footerLink}
+                >
+                  QR Code Generate
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="https://lisufoundationbd.org/en" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.footerLink}
+                >
+                  LiSu Foundation
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="https://gitsbd.github.io/mumadrasaorphanagebd/" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.footerLink}
+                >
+                  Madinatul Uloom Madrasa & Orphanage
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="https://visiblehomeinspections.com/" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.footerLink}
+                >
+                  Visible Home Inspections LLC
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Projects-1 */}
+          <div className={styles.footerSection}>
+            <h3 className={styles.footerTitle}>Projects-1</h3>
+            <ul className={styles.footerLinks}>
+              <li>
+                <a 
+                  href="https://bmbusa.us/" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.footerLink}
+                >
+                  Brihottor Mymensinghbashi USA Inc.
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="https://gits5213.github.io/hjff-website/" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.footerLink}
+                >
+                  Hollis Jamaica F&F
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="https://mhossainusa.com/" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.footerLink}
+                >
+                  Mosarraf Portfolio
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="https://gits5213.github.io/shazzad-hossain-bio-data/" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.footerLink}
+                >
+                  Shazzad Bio-Data
+                </a>
               </li>
             </ul>
           </div>
