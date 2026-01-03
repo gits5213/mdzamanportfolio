@@ -231,6 +231,16 @@ export default function Footer() {
                   Shazzad Bio-Data
                 </a>
               </li>
+              <li>
+                <a 
+                  href="https://gitsbd.github.io/makkahmadinah/" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.footerLink}
+                >
+                  Umrah & Hajj Guide
+                </a>
+              </li>
             </ul>
           </div>
         </div>
