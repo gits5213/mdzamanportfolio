@@ -42,6 +42,13 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`h-full ${inter.variable} ${plusJakartaSans.variable} ${jetbrainsMono.variable}`}>
+      <head>
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9112023534705295"
+          crossOrigin="anonymous"
+        />
+      </head>
       <body className="flex flex-col min-h-screen font-sans bg-slate-950 text-slate-100">
         <Navigation />
         <main className="flex-grow">{children}</main>
