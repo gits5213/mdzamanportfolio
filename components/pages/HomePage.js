@@ -6,6 +6,7 @@ import CTAButtons from '@/components/ui/CTAButtons'
 import TechBadge from '@/components/ui/TechBadge'
 import { getImagePath } from '@/app/utils/imagePath'
 import globalPageData from '@/data/globalPageData.json'
+import { BannerAd, InArticleAd } from '@/components/ads/AdSense'
 
 export default function HomePage() {
   const { content, links } = globalPageData
@@ -226,6 +227,11 @@ export default function HomePage() {
             </div>
           </div>
         </div>
+      </Section>
+
+      {/* AdSense Banner Ad - After Hero Section */}
+      <Section className="py-4">
+        <BannerAd />
       </Section>
 
       {/* Why I Do This Work & What I Want Next - Combined Section */}
@@ -459,6 +465,11 @@ export default function HomePage() {
             </div>
           </Card>
         </div>
+      </Section>
+
+      {/* AdSense Banner Ad */}
+      <Section className="py-4">
+        <BannerAd />
       </Section>
 
       {/* What I'm Experienced In */}

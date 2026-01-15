@@ -2,6 +2,7 @@ import Section from '@/components/ui/Section'
 import PageHeader from '@/components/ui/PageHeader'
 import Card from '@/components/ui/Card'
 import TechBadge from '@/components/ui/TechBadge'
+import { BannerAd, InFeedAd } from '@/components/ads/AdSense'
 
 export default function ProjectsPage() {
   const caseStudies = [
@@ -164,6 +165,11 @@ export default function ProjectsPage() {
           subtitle="Enterprise-scale testing initiatives delivering measurable impact"
         />
 
+        {/* AdSense Banner Ad */}
+        <div className="mb-8">
+          <BannerAd />
+        </div>
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {caseStudies.map((project, index) => (
             <Card key={index} className="p-6">
@@ -211,6 +217,11 @@ export default function ProjectsPage() {
               )}
             </Card>
           ))}
+        </div>
+
+        {/* AdSense In-Feed Ad */}
+        <div className="mt-8">
+          <InFeedAd />
         </div>
       </Section>
     </div>

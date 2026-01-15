@@ -3,6 +3,7 @@ import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
 import { getFaviconPath } from './utils/faviconPath'
 import { Inter, Plus_Jakarta_Sans, JetBrains_Mono } from 'next/font/google'
+import AdSenseScript from '@/components/ads/AdSenseScript'
 
 const faviconPath = getFaviconPath()
 
@@ -42,14 +43,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`h-full ${inter.variable} ${plusJakartaSans.variable} ${jetbrainsMono.variable}`}>
-      <head>
-        <script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9112023534705295"
-          crossOrigin="anonymous"
-        />
-      </head>
+      <head />
       <body className="flex flex-col min-h-screen font-sans bg-slate-950 text-slate-100">
+        {/* Google AdSense Script - Loaded via client component to avoid data-nscript attribute */}
+        <AdSenseScript />
         <Navigation />
         <main className="flex-grow">{children}</main>
         <Footer />
