@@ -35,6 +35,31 @@
   @apply text-slate-400 hover:text-sky-400 transition-colors duration-200;
 }
 
+.footerDropdown {
+  @apply mt-2;
+}
+
+.footerDropdownSummary {
+  @apply text-slate-400 hover:text-sky-400 transition-colors duration-200 cursor-pointer list-none;
+}
+
+.footerDropdownSummary::-webkit-details-marker {
+  display: none;
+}
+
+.footerDropdownSummary::before {
+  content: '▸ ';
+  @apply text-sky-400;
+}
+
+details[open] .footerDropdownSummary::before {
+  content: '▾ ';
+}
+
+.footerDropdownLinks {
+  @apply mt-2 ml-4 space-y-2;
+}
+
 .footerContact {
   @apply space-y-3;
 }

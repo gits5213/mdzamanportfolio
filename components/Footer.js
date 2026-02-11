@@ -145,44 +145,71 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a 
-                  href="https://gits5213.github.io/qrcode/" 
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={styles.footerLink}
-                >
-                  QR Code Generate
-                </a>
-              </li>
-              <li>
-                <a 
-                  href="https://lisufoundationbd.org/en" 
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={styles.footerLink}
-                >
-                  LiSu Foundation
-                </a>
-              </li>
-              <li>
-                <a 
-                  href="https://gitsbd.github.io/mumadrasaorphanagebd/" 
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={styles.footerLink}
-                >
-                  Madinatul Uloom Madrasa & Orphanage
-                </a>
-              </li>
-              <li>
-                <a 
-                  href="https://visiblehomeinspections.com/" 
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={styles.footerLink}
-                >
-                  Visible Home Inspections LLC
-                </a>
+                <details className={styles.footerDropdown}>
+                  <summary className={styles.footerDropdownSummary}>More Projects</summary>
+                  <ul className={styles.footerDropdownLinks}>
+                    <li>
+                      <a 
+                        href="https://gits5213.github.io/qrcode/" 
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={styles.footerLink}
+                      >
+                        QR Code Generate
+                      </a>
+                    </li>
+                    <li>
+                      <a 
+                        href="https://lisufoundationbd.org/en" 
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={styles.footerLink}
+                      >
+                        LiSu Foundation
+                      </a>
+                    </li>
+                    <li>
+                      <a 
+                        href="https://gitsbd.github.io/mumadrasaorphanagebd/" 
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={styles.footerLink}
+                      >
+                        Madinatul Uloom Madrasa & Orphanage
+                      </a>
+                    </li>
+                    <li>
+                      <a 
+                        href="https://visiblehomeinspections.com/" 
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={styles.footerLink}
+                      >
+                        Visible Home Inspections LLC
+                      </a>
+                    </li>
+                    <li>
+                      <a 
+                        href="https://gits5213.github.io/resume-builder/" 
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={styles.footerLink}
+                      >
+                        Build your resume
+                      </a>
+                    </li>
+                    <li>
+                      <a 
+                        href="https://github.com/gits5213/gits-invoice" 
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={styles.footerLink}
+                      >
+                        Generate Invoice
+                      </a>
+                    </li>
+                  </ul>
+                </details>
               </li>
             </ul>
           </div>
