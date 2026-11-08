@@ -208,6 +208,16 @@ export default function Footer() {
                         Generate Invoice
                       </a>
                     </li>
+                    <li>
+                      <a 
+                        href="https://gits5213.github.io/gitsImageResize/" 
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={styles.footerLink}
+                      >
+                        Image Resize Pro
+                      </a>
+                    </li>
                   </ul>
                 </details>
               </li>
